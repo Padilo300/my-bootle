@@ -1,0 +1,55 @@
+<style>
+  .breadcrumb {
+  margin: 0px 0px 20px;
+  padding: 8px 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(221, 221, 221);
+  border-image: initial;
+  margin:  10px 0;
+  }
+  .breadcrumb {
+      margin-bottom: 20px;
+      background-color: rgb(245, 245, 245);
+      padding: 8px 15px;
+      list-style: none;
+      border-radius: 4px;
+  }
+  .breadcrumb > li {
+      text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+      position: relative;
+      white-space: nowrap;
+      padding: 0px 20px;
+  }
+  .breadcrumb > li {
+      display: inline-block;
+  }
+  .breadcrumb > li:after {
+      content: " \27A4";
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: -1px;
+      right: -15px;
+      font-size: 1.1rem;
+      color: #5ad9f9;
+  }
+  .breadcrumb > li:last-child::after{
+    display: none;
+  }
+  .breadcrumb > li a {
+      color: #5ad9f9;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+        <ul class="breadcrumb">
+            {% for breadcrumb in breadcrumbs %}
+            <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+  </div>
+</div>

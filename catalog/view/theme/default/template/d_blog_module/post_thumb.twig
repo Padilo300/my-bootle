@@ -1,0 +1,31 @@
+<div class="col col-12">
+    <div class="row wrapArticle">
+        <div class="col col-12 cartArticle">
+            <h2>
+                {{post.title}}
+            </h2>
+            {% if setting.post_thumb.date_display %}
+                <span class="articleDate">
+                    {{post.date_published}}
+                </span>
+            {% endif %}
+            <div class="row">
+                <div class="col col-12 col-md-4 col-lg-4">
+                    <img src="{{post.thumb}}" class="img" alt="{{post.image_alt}}" title="{{post.image_title}}" >
+                </div>
+                <div class="col col-12 col-md-8 col-lg-8">
+                   <p>
+                    {{post.short_description}}
+                   </p>
+                   
+                    <a href="{{post.href}}">
+                        {{text_read_more}}
+                    </a>
+                </div>
+            </div>
+            <div class="hr"></div>
+        </div><!-- end cartArticle -->
+    </div><!-- end row wrapArticle -->
+</div><!-- end col -->
+
+

@@ -1,0 +1,90 @@
+<footer class="footer container">
+    <div class="row">
+        <div class="col col-6 col-md-6 col-lg-3">
+            <section class="footer_info">
+            {% if informations %}
+                <h6>{{ text_information }}</h6>
+                <ul class="list-unstyled">
+                {% for information in informations %}
+                  <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+                  {% endfor %}
+                </ul>
+            {% endif %}
+            </section>
+        </div>
+        <div class="col col-6 col-md-6 col-lg-3">
+            <section class="footer_info">
+              <h6>{{ text_extra }}</h6>
+            <ul class="list-unstyled">
+              <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+              <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
+              <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
+              <li><a href="{{ special }}">{{ text_special }}</a></li>
+            </ul>
+            </section>
+        </div>
+        <div class="col col-12 col-md-12 col-lg-6">
+            <section class="footer_Subscription">
+                <h6>
+                    NEWSLETTER
+                </h6>
+                <p>
+                    Zapisz się do newslettera! Otrzymasz <mark> 40 zł </mark>  rabatu
+                </p>
+                <form action="/" method="POST" class="footer_formSubscription formSubscription">
+                    <input type="text" name="formSubscription" placeholder="Twoj adress e-mail">
+                    <button type="submit">
+                        Zapisz sie
+                    </button>
+                </form>
+                <img src="catalog/view/theme/my-bottle/img/body/card.png" class="visaCart" alt="visa">
+            </section>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script src="catalog/view/javascript/common.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous" defer ></script>
+<script src="catalog/view/theme/my-bottle/js/libs/bootstrap.min.js"     defer ></script>
+<script src="catalog/view/theme/my-bottle/js/libs/numerator.js"         defer ></script>
+<script src="catalog/view/theme/my-bottle/js/libs/slow_scroll.js"       defer ></script>
+<script src="catalog/view/theme/my-bottle/js/libs/slick.min.js"         defer ></script>
+<script src="catalog/view/theme/my-bottle/js/libs/wow.js"               defer ></script>
+<script src="catalog/view/theme/my-bottle/js/my.js"                     defer ></script>
+<script>
+    $(document).ready(function(){
+        new WOW().init();
+
+        $(function() {
+            // настройки скролла   
+            // Default
+            jQuery.scrollSpeed(120, 1000);
+
+            // Custom Easing
+            // jQuery.scrollSpeed(100, 800, 'easeOutCubic');
+        });
+
+        $('.homeSlider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            prevArrow: '<i class="fa slickArr slickArr-prev fa-angle-left" aria-hidden="true"></i>',
+            nextArrow: '<i class="fa slickArr slickArr-next fa-angle-right" aria-hidden="true"></i>'
+        });
+  });
+</script>
+{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+</body></html>

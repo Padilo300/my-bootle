@@ -1,0 +1,19 @@
+
+
+
+    <section class="specialProduct container">
+        <div class="row">
+        {% for product in products %}
+            <div class="col col-12 col-lg-3 col-md-6">
+                <section class="specialProductItem">
+                    <a href="{{ product.href }}" class="specialProductWrapImg">
+                        <img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" >
+                    </a>
+                    <a href="{{ product.href }}" class="blueButton">
+                        BUY NOW <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                </section>
+            </div>
+          {% endfor %}
+        </div>
+    </section>

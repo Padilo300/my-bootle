@@ -1,0 +1,24 @@
+<div class="list-group">
+  {% if not logged %}
+  <a href="{{ login }}"     class="list-group-item list-group-item-action list-group-item-light">{{ text_login }}</a> 
+  <a href="{{ register }}"  class="list-group-item list-group-item-action list-group-item-light">{{ text_register }}</a> 
+  <a href="{{ forgotten }}" class="list-group-item list-group-item-action list-group-item-light">{{ text_forgotten }}</a>
+  {% endif %}
+  <a href="{{ account }}"   class="list-group-item list-group-item-action list-group-item-light">{{ text_account }}</a>
+  {% if logged %}
+  <a href="{{ edit }}"      class="list-group-item list-group-item-action list-group-item-light">{{ text_edit }}</a> 
+  <a href="{{ password }}"  class="list-group-item list-group-item-action list-group-item-light">{{ text_password }}</a>
+  {% endif %}
+  <a href="{{ address }}"   class="list-group-item list-group-item-action list-group-item-light">{{ text_address }}</a> 
+  <a href="{{ wishlist }}"  class="list-group-item list-group-item-action list-group-item-light">{{ text_wishlist }}</a> 
+  <a href="{{ order }}"     class="list-group-item list-group-item-action list-group-item-light">{{ text_order }}</a> 
+  <a href="{{ download }}"  class="list-group-item list-group-item-action list-group-item-light">{{ text_download }}</a>
+  <a href="{{ recurring }}" class="list-group-item list-group-item-action list-group-item-light">{{ text_recurring }}</a> 
+  <a href="{{ reward }}"    class="list-group-item list-group-item-action list-group-item-light">{{ text_reward }}</a> 
+  <a href="{{ return }}"    class="list-group-item list-group-item-action list-group-item-light">{{ text_return }}</a> 
+  <a href="{{ transaction }}" class="list-group-item list-group-item-action list-group-item-light">{{ text_transaction }}</a> 
+  <a href="{{ newsletter }}"  class="list-group-item list-group-item-action list-group-item-light">{{ text_newsletter }}</a>
+  {% if logged %}
+  <a href="{{ logout }}"    class="list-group-item list-group-item-action list-group-item-light">{{ text_logout }}</a>
+  {% endif %}
+</div>

@@ -1,0 +1,60 @@
+{{header}}
+<style>
+    {{custom_style}}
+</style>
+
+<img src="{{thumb}}" class="img100"  title="{{image_title}}" alt="{{image_alt}}">
+{% include template('partial/d_breadcrumb') %}
+{% include template('partial/d_layout_open') %}
+
+
+
+<section class="article container">
+    <div class="row">
+        <div class="col col-12">
+            <div class="cartArticle">
+
+                    <h2>
+                        {{heading_title}}
+                    </h2>
+
+                    <span class="articleDate">
+                        {{date_published}}
+                    </span>
+                    
+                    <div class="hr"></div>
+            </div><!-- end cartArticle -->
+            
+                {{description}}
+            
+            {% if post_videos %}
+            <div class="bm-videos">
+                    {% for post_video in post_videos %}
+                        <div class="bm-video">
+                            <h2>{{post_video.text}}</h2>
+                            <div style="text-align: center;">
+                                {{post_video.code}}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div> <!-- end col -->
+    </div><!-- end row -->
+</section> <!-- end article -->
+
+    
+
+
+        <script>
+        $(function(){
+            $('.popup').magnificPopup({
+                type:'image',
+                gallery: {
+                    enabled:true
+                }
+            });
+        })
+        </script>
+    {% include template('partial/d_layout_close') %}
+{{footer}}
