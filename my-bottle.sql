@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:3306
--- Время создания: Окт 10 2018 г., 17:16
+-- Время создания: Окт 25 2018 г., 17:14
 -- Версия сервера: 10.1.26-MariaDB-0+deb9u1
 -- Версия PHP: 7.0.30-0+deb9u1
 
@@ -146,7 +146,29 @@ INSERT INTO `oc_attribute_description` (`attribute_id`, `language_id`, `name`) V
 (9, 1, 'test 6'),
 (10, 1, 'test 7'),
 (11, 1, 'test 8'),
-(3, 1, 'Clockspeed');
+(3, 1, 'Clockspeed'),
+(1, 2, 'Description'),
+(2, 2, 'No. of Cores'),
+(4, 2, 'test 1'),
+(5, 2, 'test 2'),
+(6, 2, 'test 3'),
+(7, 2, 'test 4'),
+(8, 2, 'test 5'),
+(9, 2, 'test 6'),
+(10, 2, 'test 7'),
+(11, 2, 'test 8'),
+(3, 2, 'Clockspeed'),
+(1, 3, 'Description'),
+(2, 3, 'No. of Cores'),
+(4, 3, 'test 1'),
+(5, 3, 'test 2'),
+(6, 3, 'test 3'),
+(7, 3, 'test 4'),
+(8, 3, 'test 5'),
+(9, 3, 'test 6'),
+(10, 3, 'test 7'),
+(11, 3, 'test 8'),
+(3, 3, 'Clockspeed');
 
 -- --------------------------------------------------------
 
@@ -189,7 +211,15 @@ INSERT INTO `oc_attribute_group_description` (`attribute_group_id`, `language_id
 (3, 1, 'Memory'),
 (4, 1, 'Technical'),
 (5, 1, 'Motherboard'),
-(6, 1, 'Processor');
+(6, 1, 'Processor'),
+(3, 2, 'Memory'),
+(4, 2, 'Technical'),
+(5, 2, 'Motherboard'),
+(6, 2, 'Processor'),
+(3, 3, 'Memory'),
+(4, 3, 'Technical'),
+(5, 3, 'Motherboard'),
+(6, 3, 'Processor');
 
 -- --------------------------------------------------------
 
@@ -246,7 +276,35 @@ INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `language_id`, `t
 (90, 8, 1, 'Disney', '', 'catalog/demo/manufacturer/disney.png', 0),
 (80, 7, 1, 'MacBookAir', '', 'catalog/demo/banners/MacBookAir.jpg', 0),
 (97, 8, 1, 'Starbucks', '', 'catalog/demo/manufacturer/starbucks.png', 0),
-(98, 8, 1, 'Nintendo', '', 'catalog/demo/manufacturer/nintendo.png', 0);
+(98, 8, 1, 'Nintendo', '', 'catalog/demo/manufacturer/nintendo.png', 0),
+(99, 7, 2, 'iPhone 6', 'index.php?route=product/product&amp;path=57&amp;product_id=49', 'catalog/demo/banners/iPhone6.jpg', 0),
+(100, 6, 2, 'HP Banner', 'index.php?route=product/manufacturer/info&amp;manufacturer_id=7', 'catalog/demo/compaq_presario.jpg', 0),
+(101, 8, 2, 'NFL', '', 'catalog/demo/manufacturer/nfl.png', 0),
+(102, 8, 2, 'RedBull', '', 'catalog/demo/manufacturer/redbull.png', 0),
+(103, 8, 2, 'Sony', '', 'catalog/demo/manufacturer/sony.png', 0),
+(104, 8, 2, 'Coca Cola', '', 'catalog/demo/manufacturer/cocacola.png', 0),
+(105, 8, 2, 'Burger King', '', 'catalog/demo/manufacturer/burgerking.png', 0),
+(106, 8, 2, 'Canon', '', 'catalog/demo/manufacturer/canon.png', 0),
+(107, 8, 2, 'Harley Davidson', '', 'catalog/demo/manufacturer/harley.png', 0),
+(108, 8, 2, 'Dell', '', 'catalog/demo/manufacturer/dell.png', 0),
+(109, 8, 2, 'Disney', '', 'catalog/demo/manufacturer/disney.png', 0),
+(110, 7, 2, 'MacBookAir', '', 'catalog/demo/banners/MacBookAir.jpg', 0),
+(111, 8, 2, 'Starbucks', '', 'catalog/demo/manufacturer/starbucks.png', 0),
+(112, 8, 2, 'Nintendo', '', 'catalog/demo/manufacturer/nintendo.png', 0),
+(113, 7, 3, 'iPhone 6', 'index.php?route=product/product&amp;path=57&amp;product_id=49', 'catalog/demo/banners/iPhone6.jpg', 0),
+(114, 6, 3, 'HP Banner', 'index.php?route=product/manufacturer/info&amp;manufacturer_id=7', 'catalog/demo/compaq_presario.jpg', 0),
+(115, 8, 3, 'NFL', '', 'catalog/demo/manufacturer/nfl.png', 0),
+(116, 8, 3, 'RedBull', '', 'catalog/demo/manufacturer/redbull.png', 0),
+(117, 8, 3, 'Sony', '', 'catalog/demo/manufacturer/sony.png', 0),
+(118, 8, 3, 'Coca Cola', '', 'catalog/demo/manufacturer/cocacola.png', 0),
+(119, 8, 3, 'Burger King', '', 'catalog/demo/manufacturer/burgerking.png', 0),
+(120, 8, 3, 'Canon', '', 'catalog/demo/manufacturer/canon.png', 0),
+(121, 8, 3, 'Harley Davidson', '', 'catalog/demo/manufacturer/harley.png', 0),
+(122, 8, 3, 'Dell', '', 'catalog/demo/manufacturer/dell.png', 0),
+(123, 8, 3, 'Disney', '', 'catalog/demo/manufacturer/disney.png', 0),
+(124, 7, 3, 'MacBookAir', '', 'catalog/demo/banners/MacBookAir.jpg', 0),
+(125, 8, 3, 'Starbucks', '', 'catalog/demo/manufacturer/starbucks.png', 0),
+(126, 8, 3, 'Nintendo', '', 'catalog/demo/manufacturer/nintendo.png', 0);
 
 -- --------------------------------------------------------
 
@@ -451,7 +509,7 @@ CREATE TABLE `oc_bm_post` (
 
 INSERT INTO `oc_bm_post` (`post_id`, `user_id`, `image`, `image_title`, `image_alt`, `review_display`, `images_review`, `viewed`, `status`, `custom`, `setting`, `date_added`, `date_published`, `date_modified`) VALUES
 (13, 1, 'catalog/blog/52b.png', NULL, NULL, 0, 0, 46, 1, 0, '', '2018-10-02 21:41:28', '2018-10-02 18:40:32', '2018-10-02 23:16:49'),
-(14, 1, 'catalog/blog/53.png', NULL, NULL, 0, 0, 1, 1, 0, '', '2018-10-02 21:42:10', '2018-10-02 18:40:33', '2018-10-02 21:42:10'),
+(14, 1, 'catalog/blog/53.png', NULL, NULL, 0, 0, 4, 1, 0, '', '2018-10-02 21:42:10', '2018-10-02 18:40:33', '2018-10-02 21:42:10'),
 (15, 1, 'catalog/blog/54.png', NULL, NULL, 0, 0, 1, 1, 0, '', '2018-10-02 21:42:45', '2018-10-02 18:40:34', '2018-10-02 21:42:45'),
 (16, 1, 'catalog/blog/52.png', NULL, NULL, 0, 0, 1, 1, 0, '', '2018-10-02 21:44:34', '2018-10-02 18:44:04', '2018-10-02 21:44:34'),
 (17, 1, 'catalog/blog/52.png', NULL, NULL, 0, 0, 1, 1, 0, '', '2018-10-02 21:45:08', '2018-10-02 18:44:36', '2018-10-02 21:45:08'),
@@ -646,6 +704,13 @@ CREATE TABLE `oc_cart` (
   `date_added` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Дамп данных таблицы `oc_cart`
+--
+
+INSERT INTO `oc_cart` (`cart_id`, `api_id`, `customer_id`, `session_id`, `product_id`, `recurring_id`, `option`, `quantity`, `date_added`) VALUES
+(1, 0, 0, 'f3d21b30677d8c258148131daa', 51, 0, '{\"242\":\"35\",\"240\":\"30\",\"239\":\"28\"}', 1, '2018-10-24 22:04:29');
+
 -- --------------------------------------------------------
 
 --
@@ -669,10 +734,10 @@ CREATE TABLE `oc_category` (
 --
 
 INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`, `sort_order`, `status`, `date_added`, `date_modified`) VALUES
-(59, '', 0, 1, 1, 4, 1, '2018-09-17 15:21:51', '2018-09-22 22:08:34'),
-(60, '', 0, 1, 1, 2, 1, '2018-09-17 15:22:22', '2018-09-22 22:06:53'),
-(61, '', 0, 1, 1, 1, 1, '2018-09-17 15:22:34', '2018-09-22 22:07:33'),
-(62, '', 0, 1, 0, 3, 1, '2018-09-17 15:22:53', '2018-09-22 22:08:25'),
+(59, '', 0, 1, 1, 4, 1, '2018-09-17 15:21:51', '2018-10-20 10:40:48'),
+(60, '', 0, 1, 1, 2, 1, '2018-09-17 15:22:22', '2018-10-20 10:37:24'),
+(61, '', 0, 1, 1, 1, 1, '2018-09-17 15:22:34', '2018-10-20 10:38:04'),
+(62, '', 0, 1, 0, 3, 1, '2018-09-17 15:22:53', '2018-10-20 10:39:19'),
 (63, '', 60, 0, 1, 5, 1, '2018-09-17 16:55:37', '2018-09-22 22:08:42'),
 (64, '', 60, 0, 1, 7, 1, '2018-09-17 16:56:16', '2018-09-22 22:08:58'),
 (65, '', 63, 0, 1, 6, 1, '2018-09-17 16:56:51', '2018-09-22 22:08:50'),
@@ -705,10 +770,6 @@ CREATE TABLE `oc_category_description` (
 --
 
 INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(59, 1, 'Odziez sportowa', '', 'Odziez sportowa', '', ''),
-(60, 1, 'PRODUKTY ', '', 'PRODUKTY ', '', ''),
-(61, 1, 'Akcesoria fitness', '', 'Akcesoria fitness', '', ''),
-(62, 1, 'Marki', '', 'Marki', '', ''),
 (63, 1, 'bottle', '', 'bottle', '', ''),
 (64, 1, 'shaker', '', 'shaker', '', ''),
 (65, 1, 'awsome', '', 'awsome', '', ''),
@@ -718,7 +779,39 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (69, 1, 'DC comics', '', 'DC comics', '', ''),
 (70, 1, 'Just for Fun', '', 'Just for Fun', '', ''),
 (71, 1, 'Create shaker', '', 'Create shaker', '', ''),
-(72, 1, 'Create shaker', '', 'Create shaker', '', '');
+(72, 1, 'Create shaker', '', 'Create shaker', '', ''),
+(59, 1, 'Спортивная одежда', '', 'Odziez sportowa', '', ''),
+(60, 1, 'Товары', '', 'PRODUKTY ', '', ''),
+(62, 1, 'Бренды', '', 'Marki', '', ''),
+(63, 2, 'bottle', '', 'bottle', '', ''),
+(64, 2, 'shaker', '', 'shaker', '', ''),
+(65, 2, 'awsome', '', 'awsome', '', ''),
+(66, 2, 'GALLONY', '', 'GALLONY', '', ''),
+(67, 2, 'Collection', '', 'Collection', '', ''),
+(68, 2, 'Subscription', '', 'Subscription', '', ''),
+(69, 2, 'DC comics', '', 'DC comics', '', ''),
+(70, 2, 'Just for Fun', '', 'Just for Fun', '', ''),
+(71, 2, 'Create shaker', '', 'Create shaker', '', ''),
+(72, 2, 'Create shaker', '', 'Create shaker', '', ''),
+(59, 2, 'Odziez sportowa', '', 'Odziez sportowa', '', ''),
+(60, 2, 'Produkty', '', 'PRODUKTY ', '', ''),
+(61, 1, 'Для фитнеса', '', 'Akcesoria fitness', '', ''),
+(62, 2, 'Marki', '', 'Marki', '', ''),
+(63, 3, 'bottle', '', 'bottle', '', ''),
+(64, 3, 'shaker', '', 'shaker', '', ''),
+(65, 3, 'awsome', '', 'awsome', '', ''),
+(66, 3, 'GALLONY', '', 'GALLONY', '', ''),
+(67, 3, 'Collection', '', 'Collection', '', ''),
+(68, 3, 'Subscription', '', 'Subscription', '', ''),
+(69, 3, 'DC comics', '', 'DC comics', '', ''),
+(70, 3, 'Just for Fun', '', 'Just for Fun', '', ''),
+(71, 3, 'Create shaker', '', 'Create shaker', '', ''),
+(72, 3, 'Create shaker', '', 'Create shaker', '', ''),
+(61, 2, 'Akcesoria fitness', '', 'Akcesoria fitness', '', ''),
+(60, 3, 'Товари', '', 'PRODUKTY ', '', ''),
+(61, 3, 'Для фiтнесу', '', 'Akcesoria fitness', '', ''),
+(62, 3, 'Бренди', '', 'Marki', '', ''),
+(59, 3, 'Спортивний одяг', '', 'Odziez sportowa', '', '');
 
 -- --------------------------------------------------------
 
@@ -965,7 +1058,7 @@ CREATE TABLE `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Рубль', 'RUB', '', 'р.', '0', 1.00000000, 1, '2018-10-09 18:01:55');
+(1, 'Рубль', 'RUB', '', 'р.', '0', 1.00000000, 1, '2018-10-24 18:28:36');
 
 -- --------------------------------------------------------
 
@@ -1090,7 +1183,9 @@ CREATE TABLE `oc_customer_group_description` (
 --
 
 INSERT INTO `oc_customer_group_description` (`customer_group_id`, `language_id`, `name`, `description`) VALUES
-(1, 1, 'Default', 'test');
+(1, 1, 'Default', 'test'),
+(1, 2, 'Default', 'test'),
+(1, 3, 'Default', 'test');
 
 -- --------------------------------------------------------
 
@@ -1424,7 +1519,6 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 (39, 'report', 'customer_activity'),
 (40, 'report', 'customer_order'),
 (41, 'report', 'customer_reward'),
-(42, 'module', 'oc3x_storage_cleaner'),
 (43, 'module', 'html'),
 (44, 'module', 'latest'),
 (47, 'module', 'd_blog_module');
@@ -1447,7 +1541,11 @@ CREATE TABLE `oc_extension_install` (
 --
 
 INSERT INTO `oc_extension_install` (`extension_install_id`, `extension_download_id`, `filename`, `date_added`) VALUES
-(4, 0, 'dblogmodulecompiledoc3.0.2.0.v3.0.12.ocmod.zip', '2018-10-02 21:05:58');
+(4, 0, 'dblogmodulecompiledoc3.0.2.0.v3.0.12.ocmod.zip', '2018-10-02 21:05:58'),
+(5, 0, 'ukrainian-3 ver1.1.ocmod.zip', '2018-10-10 18:02:07'),
+(6, 0, 'sizecoloroptiondisplay.ocmod.zip', '2018-10-16 11:24:38'),
+(7, 0, 'D.ocmod.zip', '2018-10-16 11:29:04'),
+(8, 0, 'D.ocmod.zip', '2018-10-16 11:29:46');
 
 -- --------------------------------------------------------
 
@@ -1926,7 +2024,334 @@ INSERT INTO `oc_extension_path` (`extension_path_id`, `extension_install_id`, `p
 (504, 4, 'catalog/view/theme/default/template/partial/d_rating.twig', '2018-10-02 21:06:00'),
 (505, 4, 'catalog/view/theme/default/stylesheet/d_blog_module/theme/default.css', '2018-10-02 21:06:00'),
 (506, 4, 'catalog/view/theme/default/stylesheet/d_blog_module/theme/default.css.map', '2018-10-02 21:06:00'),
-(507, 4, 'catalog/view/theme/default/stylesheet/d_blog_module/theme/default.scss', '2018-10-02 21:06:00');
+(507, 4, 'catalog/view/theme/default/stylesheet/d_blog_module/theme/default.scss', '2018-10-02 21:06:00'),
+(508, 5, 'admin/language/uk-ua', '2018-10-10 18:02:09'),
+(509, 5, 'catalog/language/uk-ua', '2018-10-10 18:02:09'),
+(510, 5, 'admin/language/uk-ua/batch_editor', '2018-10-10 18:02:09'),
+(511, 5, 'admin/language/uk-ua/catalog', '2018-10-10 18:02:09'),
+(512, 5, 'admin/language/uk-ua/common', '2018-10-10 18:02:09'),
+(513, 5, 'admin/language/uk-ua/customer', '2018-10-10 18:02:09'),
+(514, 5, 'admin/language/uk-ua/design', '2018-10-10 18:02:09'),
+(515, 5, 'admin/language/uk-ua/error', '2018-10-10 18:02:09'),
+(516, 5, 'admin/language/uk-ua/extension', '2018-10-10 18:02:09'),
+(517, 5, 'admin/language/uk-ua/localisation', '2018-10-10 18:02:09'),
+(518, 5, 'admin/language/uk-ua/mail', '2018-10-10 18:02:09'),
+(519, 5, 'admin/language/uk-ua/marketing', '2018-10-10 18:02:09'),
+(520, 5, 'admin/language/uk-ua/report', '2018-10-10 18:02:09'),
+(521, 5, 'admin/language/uk-ua/sale', '2018-10-10 18:02:09'),
+(522, 5, 'admin/language/uk-ua/setting', '2018-10-10 18:02:09'),
+(523, 5, 'admin/language/uk-ua/tool', '2018-10-10 18:02:09'),
+(524, 5, 'admin/language/uk-ua/uk-ua.php', '2018-10-10 18:02:09'),
+(525, 5, 'admin/language/uk-ua/uk-ua.png', '2018-10-10 18:02:09'),
+(526, 5, 'admin/language/uk-ua/user', '2018-10-10 18:02:09'),
+(527, 5, 'catalog/language/uk-ua/account', '2018-10-10 18:02:09'),
+(528, 5, 'catalog/language/uk-ua/affiliate', '2018-10-10 18:02:09'),
+(529, 5, 'catalog/language/uk-ua/api', '2018-10-10 18:02:09'),
+(530, 5, 'catalog/language/uk-ua/checkout', '2018-10-10 18:02:09'),
+(531, 5, 'catalog/language/uk-ua/common', '2018-10-10 18:02:09'),
+(532, 5, 'catalog/language/uk-ua/error', '2018-10-10 18:02:09'),
+(533, 5, 'catalog/language/uk-ua/extension', '2018-10-10 18:02:09'),
+(534, 5, 'catalog/language/uk-ua/information', '2018-10-10 18:02:09'),
+(535, 5, 'catalog/language/uk-ua/mail', '2018-10-10 18:02:09'),
+(536, 5, 'catalog/language/uk-ua/product', '2018-10-10 18:02:09'),
+(537, 5, 'catalog/language/uk-ua/tool', '2018-10-10 18:02:09'),
+(538, 5, 'catalog/language/uk-ua/uk-ua.php', '2018-10-10 18:02:09'),
+(539, 5, 'catalog/language/uk-ua/uk-ua.png', '2018-10-10 18:02:09'),
+(540, 5, 'admin/language/uk-ua/batch_editor/attention.php', '2018-10-10 18:02:09'),
+(541, 5, 'admin/language/uk-ua/batch_editor/calculate.php', '2018-10-10 18:02:09'),
+(542, 5, 'admin/language/uk-ua/batch_editor/field.php', '2018-10-10 18:02:09'),
+(543, 5, 'admin/language/uk-ua/batch_editor/index.php', '2018-10-10 18:02:09'),
+(544, 5, 'admin/language/uk-ua/batch_editor/setting.php', '2018-10-10 18:02:09'),
+(545, 5, 'admin/language/uk-ua/batch_editor/tool.php', '2018-10-10 18:02:09'),
+(546, 5, 'admin/language/uk-ua/catalog/attribute.php', '2018-10-10 18:02:09'),
+(547, 5, 'admin/language/uk-ua/catalog/attribute_group.php', '2018-10-10 18:02:09'),
+(548, 5, 'admin/language/uk-ua/catalog/category.php', '2018-10-10 18:02:09'),
+(549, 5, 'admin/language/uk-ua/catalog/download.php', '2018-10-10 18:02:09'),
+(550, 5, 'admin/language/uk-ua/catalog/filter.php', '2018-10-10 18:02:09'),
+(551, 5, 'admin/language/uk-ua/catalog/information.php', '2018-10-10 18:02:09'),
+(552, 5, 'admin/language/uk-ua/catalog/manufacturer.php', '2018-10-10 18:02:09'),
+(553, 5, 'admin/language/uk-ua/catalog/option.php', '2018-10-10 18:02:09'),
+(554, 5, 'admin/language/uk-ua/catalog/product.php', '2018-10-10 18:02:09'),
+(555, 5, 'admin/language/uk-ua/catalog/recurring.php', '2018-10-10 18:02:09'),
+(556, 5, 'admin/language/uk-ua/catalog/review.php', '2018-10-10 18:02:09'),
+(557, 5, 'admin/language/uk-ua/common/column_left.php', '2018-10-10 18:02:09'),
+(558, 5, 'admin/language/uk-ua/common/dashboard.php', '2018-10-10 18:02:09'),
+(559, 5, 'admin/language/uk-ua/common/filemanager.php', '2018-10-10 18:02:09'),
+(560, 5, 'admin/language/uk-ua/common/footer.php', '2018-10-10 18:02:09'),
+(561, 5, 'admin/language/uk-ua/common/forgotten.php', '2018-10-10 18:02:09'),
+(562, 5, 'admin/language/uk-ua/common/header.php', '2018-10-10 18:02:09'),
+(563, 5, 'admin/language/uk-ua/common/login.php', '2018-10-10 18:02:09'),
+(564, 5, 'admin/language/uk-ua/common/reset.php', '2018-10-10 18:02:09'),
+(565, 5, 'admin/language/uk-ua/customer/custom_field.php', '2018-10-10 18:02:09'),
+(566, 5, 'admin/language/uk-ua/customer/customer.php', '2018-10-10 18:02:09'),
+(567, 5, 'admin/language/uk-ua/customer/customer_group.php', '2018-10-10 18:02:09'),
+(568, 5, 'admin/language/uk-ua/design/banner.php', '2018-10-10 18:02:09'),
+(569, 5, 'admin/language/uk-ua/design/language.php', '2018-10-10 18:02:09'),
+(570, 5, 'admin/language/uk-ua/design/layout.php', '2018-10-10 18:02:09'),
+(571, 5, 'admin/language/uk-ua/design/menu.php', '2018-10-10 18:02:09'),
+(572, 5, 'admin/language/uk-ua/design/theme.php', '2018-10-10 18:02:09'),
+(573, 5, 'admin/language/uk-ua/design/translation.php', '2018-10-10 18:02:09'),
+(574, 5, 'admin/language/uk-ua/error/not_found.php', '2018-10-10 18:02:09'),
+(575, 5, 'admin/language/uk-ua/error/permission.php', '2018-10-10 18:02:09'),
+(576, 5, 'admin/language/uk-ua/extension/analytics', '2018-10-10 18:02:09'),
+(577, 5, 'admin/language/uk-ua/extension/captcha', '2018-10-10 18:02:09'),
+(578, 5, 'admin/language/uk-ua/extension/dashboard', '2018-10-10 18:02:09'),
+(579, 5, 'admin/language/uk-ua/extension/event.php', '2018-10-10 18:02:09'),
+(580, 5, 'admin/language/uk-ua/extension/extension', '2018-10-10 18:02:09'),
+(581, 5, 'admin/language/uk-ua/extension/extension.php', '2018-10-10 18:02:09'),
+(582, 5, 'admin/language/uk-ua/extension/feed', '2018-10-10 18:02:09'),
+(583, 5, 'admin/language/uk-ua/extension/fraud', '2018-10-10 18:02:09'),
+(584, 5, 'admin/language/uk-ua/extension/installer.php', '2018-10-10 18:02:09'),
+(585, 5, 'admin/language/uk-ua/extension/modification.php', '2018-10-10 18:02:09'),
+(586, 5, 'admin/language/uk-ua/extension/module', '2018-10-10 18:02:09'),
+(587, 5, 'admin/language/uk-ua/extension/openbay', '2018-10-10 18:02:09'),
+(588, 5, 'admin/language/uk-ua/extension/payment', '2018-10-10 18:02:09'),
+(589, 5, 'admin/language/uk-ua/extension/shipping', '2018-10-10 18:02:09'),
+(590, 5, 'admin/language/uk-ua/extension/store.php', '2018-10-10 18:02:09'),
+(591, 5, 'admin/language/uk-ua/extension/theme', '2018-10-10 18:02:09'),
+(592, 5, 'admin/language/uk-ua/extension/total', '2018-10-10 18:02:09'),
+(593, 5, 'admin/language/uk-ua/localisation/country.php', '2018-10-10 18:02:09'),
+(594, 5, 'admin/language/uk-ua/localisation/currency.php', '2018-10-10 18:02:09'),
+(595, 5, 'admin/language/uk-ua/localisation/geo_zone.php', '2018-10-10 18:02:09'),
+(596, 5, 'admin/language/uk-ua/localisation/language.php', '2018-10-10 18:02:09'),
+(597, 5, 'admin/language/uk-ua/localisation/length_class.php', '2018-10-10 18:02:09'),
+(598, 5, 'admin/language/uk-ua/localisation/location.php', '2018-10-10 18:02:09'),
+(599, 5, 'admin/language/uk-ua/localisation/order_status.php', '2018-10-10 18:02:09'),
+(600, 5, 'admin/language/uk-ua/localisation/return_action.php', '2018-10-10 18:02:09'),
+(601, 5, 'admin/language/uk-ua/localisation/return_reason.php', '2018-10-10 18:02:09'),
+(602, 5, 'admin/language/uk-ua/localisation/return_status.php', '2018-10-10 18:02:09'),
+(603, 5, 'admin/language/uk-ua/localisation/stock_status.php', '2018-10-10 18:02:09'),
+(604, 5, 'admin/language/uk-ua/localisation/tax_class.php', '2018-10-10 18:02:09'),
+(605, 5, 'admin/language/uk-ua/localisation/tax_rate.php', '2018-10-10 18:02:09'),
+(606, 5, 'admin/language/uk-ua/localisation/weight_class.php', '2018-10-10 18:02:09'),
+(607, 5, 'admin/language/uk-ua/localisation/zone.php', '2018-10-10 18:02:09'),
+(608, 5, 'admin/language/uk-ua/mail/affiliate.php', '2018-10-10 18:02:09'),
+(609, 5, 'admin/language/uk-ua/mail/customer.php', '2018-10-10 18:02:09'),
+(610, 5, 'admin/language/uk-ua/mail/forgotten.php', '2018-10-10 18:02:09'),
+(611, 5, 'admin/language/uk-ua/mail/return.php', '2018-10-10 18:02:09'),
+(612, 5, 'admin/language/uk-ua/mail/voucher.php', '2018-10-10 18:02:09'),
+(613, 5, 'admin/language/uk-ua/marketing/affiliate.php', '2018-10-10 18:02:09'),
+(614, 5, 'admin/language/uk-ua/marketing/contact.php', '2018-10-10 18:02:09'),
+(615, 5, 'admin/language/uk-ua/marketing/coupon.php', '2018-10-10 18:02:09'),
+(616, 5, 'admin/language/uk-ua/marketing/marketing.php', '2018-10-10 18:02:09'),
+(617, 5, 'admin/language/uk-ua/report/affiliate.php', '2018-10-10 18:02:09'),
+(618, 5, 'admin/language/uk-ua/report/affiliate_activity.php', '2018-10-10 18:02:09'),
+(619, 5, 'admin/language/uk-ua/report/customer_activity.php', '2018-10-10 18:02:09'),
+(620, 5, 'admin/language/uk-ua/report/customer_credit.php', '2018-10-10 18:02:09'),
+(621, 5, 'admin/language/uk-ua/report/customer_online.php', '2018-10-10 18:02:09'),
+(622, 5, 'admin/language/uk-ua/report/customer_order.php', '2018-10-10 18:02:09'),
+(623, 5, 'admin/language/uk-ua/report/customer_reward.php', '2018-10-10 18:02:09'),
+(624, 5, 'admin/language/uk-ua/report/customer_search.php', '2018-10-10 18:02:09'),
+(625, 5, 'admin/language/uk-ua/report/marketing.php', '2018-10-10 18:02:09'),
+(626, 5, 'admin/language/uk-ua/report/product_purchased.php', '2018-10-10 18:02:09'),
+(627, 5, 'admin/language/uk-ua/report/product_viewed.php', '2018-10-10 18:02:09'),
+(628, 5, 'admin/language/uk-ua/report/sale_coupon.php', '2018-10-10 18:02:09'),
+(629, 5, 'admin/language/uk-ua/report/sale_order.php', '2018-10-10 18:02:09'),
+(630, 5, 'admin/language/uk-ua/report/sale_return.php', '2018-10-10 18:02:09'),
+(631, 5, 'admin/language/uk-ua/report/sale_shipping.php', '2018-10-10 18:02:09');
+INSERT INTO `oc_extension_path` (`extension_path_id`, `extension_install_id`, `path`, `date_added`) VALUES
+(632, 5, 'admin/language/uk-ua/report/sale_tax.php', '2018-10-10 18:02:09'),
+(633, 5, 'admin/language/uk-ua/sale/order.php', '2018-10-10 18:02:09'),
+(634, 5, 'admin/language/uk-ua/sale/recurring.php', '2018-10-10 18:02:09'),
+(635, 5, 'admin/language/uk-ua/sale/return.php', '2018-10-10 18:02:09'),
+(636, 5, 'admin/language/uk-ua/sale/voucher.php', '2018-10-10 18:02:09'),
+(637, 5, 'admin/language/uk-ua/sale/voucher_theme.php', '2018-10-10 18:02:09'),
+(638, 5, 'admin/language/uk-ua/setting/setting.php', '2018-10-10 18:02:09'),
+(639, 5, 'admin/language/uk-ua/setting/store.php', '2018-10-10 18:02:09'),
+(640, 5, 'admin/language/uk-ua/tool/backup.php', '2018-10-10 18:02:09'),
+(641, 5, 'admin/language/uk-ua/tool/log.php', '2018-10-10 18:02:09'),
+(642, 5, 'admin/language/uk-ua/tool/upload.php', '2018-10-10 18:02:09'),
+(643, 5, 'admin/language/uk-ua/user/api.php', '2018-10-10 18:02:09'),
+(644, 5, 'admin/language/uk-ua/user/user.php', '2018-10-10 18:02:09'),
+(645, 5, 'admin/language/uk-ua/user/user_group.php', '2018-10-10 18:02:09'),
+(646, 5, 'catalog/language/uk-ua/account/account.php', '2018-10-10 18:02:09'),
+(647, 5, 'catalog/language/uk-ua/account/address.php', '2018-10-10 18:02:09'),
+(648, 5, 'catalog/language/uk-ua/account/download.php', '2018-10-10 18:02:09'),
+(649, 5, 'catalog/language/uk-ua/account/edit.php', '2018-10-10 18:02:09'),
+(650, 5, 'catalog/language/uk-ua/account/forgotten.php', '2018-10-10 18:02:09'),
+(651, 5, 'catalog/language/uk-ua/account/login.php', '2018-10-10 18:02:09'),
+(652, 5, 'catalog/language/uk-ua/account/logout.php', '2018-10-10 18:02:09'),
+(653, 5, 'catalog/language/uk-ua/account/newsletter.php', '2018-10-10 18:02:09'),
+(654, 5, 'catalog/language/uk-ua/account/order.php', '2018-10-10 18:02:09'),
+(655, 5, 'catalog/language/uk-ua/account/password.php', '2018-10-10 18:02:09'),
+(656, 5, 'catalog/language/uk-ua/account/recurring.php', '2018-10-10 18:02:09'),
+(657, 5, 'catalog/language/uk-ua/account/register.php', '2018-10-10 18:02:09'),
+(658, 5, 'catalog/language/uk-ua/account/reset.php', '2018-10-10 18:02:09'),
+(659, 5, 'catalog/language/uk-ua/account/return.php', '2018-10-10 18:02:09'),
+(660, 5, 'catalog/language/uk-ua/account/reward.php', '2018-10-10 18:02:09'),
+(661, 5, 'catalog/language/uk-ua/account/success.php', '2018-10-10 18:02:09'),
+(662, 5, 'catalog/language/uk-ua/account/transaction.php', '2018-10-10 18:02:09'),
+(663, 5, 'catalog/language/uk-ua/account/voucher.php', '2018-10-10 18:02:09'),
+(664, 5, 'catalog/language/uk-ua/account/wishlist.php', '2018-10-10 18:02:09'),
+(665, 5, 'catalog/language/uk-ua/affiliate/account.php', '2018-10-10 18:02:09'),
+(666, 5, 'catalog/language/uk-ua/affiliate/edit.php', '2018-10-10 18:02:09'),
+(667, 5, 'catalog/language/uk-ua/affiliate/forgotten.php', '2018-10-10 18:02:09'),
+(668, 5, 'catalog/language/uk-ua/affiliate/login.php', '2018-10-10 18:02:09'),
+(669, 5, 'catalog/language/uk-ua/affiliate/logout.php', '2018-10-10 18:02:09'),
+(670, 5, 'catalog/language/uk-ua/affiliate/password.php', '2018-10-10 18:02:09'),
+(671, 5, 'catalog/language/uk-ua/affiliate/payment.php', '2018-10-10 18:02:09'),
+(672, 5, 'catalog/language/uk-ua/affiliate/register.php', '2018-10-10 18:02:09'),
+(673, 5, 'catalog/language/uk-ua/affiliate/success.php', '2018-10-10 18:02:09'),
+(674, 5, 'catalog/language/uk-ua/affiliate/tracking.php', '2018-10-10 18:02:09'),
+(675, 5, 'catalog/language/uk-ua/affiliate/transaction.php', '2018-10-10 18:02:09'),
+(676, 5, 'catalog/language/uk-ua/api/cart.php', '2018-10-10 18:02:09'),
+(677, 5, 'catalog/language/uk-ua/api/coupon.php', '2018-10-10 18:02:09'),
+(678, 5, 'catalog/language/uk-ua/api/customer.php', '2018-10-10 18:02:09'),
+(679, 5, 'catalog/language/uk-ua/api/login.php', '2018-10-10 18:02:09'),
+(680, 5, 'catalog/language/uk-ua/api/order.php', '2018-10-10 18:02:09'),
+(681, 5, 'catalog/language/uk-ua/api/payment.php', '2018-10-10 18:02:09'),
+(682, 5, 'catalog/language/uk-ua/api/reward.php', '2018-10-10 18:02:09'),
+(683, 5, 'catalog/language/uk-ua/api/shipping.php', '2018-10-10 18:02:09'),
+(684, 5, 'catalog/language/uk-ua/api/voucher.php', '2018-10-10 18:02:09'),
+(685, 5, 'catalog/language/uk-ua/checkout/cart.php', '2018-10-10 18:02:09'),
+(686, 5, 'catalog/language/uk-ua/checkout/checkout.php', '2018-10-10 18:02:09'),
+(687, 5, 'catalog/language/uk-ua/checkout/failure.php', '2018-10-10 18:02:09'),
+(688, 5, 'catalog/language/uk-ua/checkout/success.php', '2018-10-10 18:02:09'),
+(689, 5, 'catalog/language/uk-ua/common/cart.php', '2018-10-10 18:02:09'),
+(690, 5, 'catalog/language/uk-ua/common/currency.php', '2018-10-10 18:02:09'),
+(691, 5, 'catalog/language/uk-ua/common/footer.php', '2018-10-10 18:02:09'),
+(692, 5, 'catalog/language/uk-ua/common/header.php', '2018-10-10 18:02:09'),
+(693, 5, 'catalog/language/uk-ua/common/language.php', '2018-10-10 18:02:09'),
+(694, 5, 'catalog/language/uk-ua/common/maintenance.php', '2018-10-10 18:02:09'),
+(695, 5, 'catalog/language/uk-ua/common/menu.php', '2018-10-10 18:02:09'),
+(696, 5, 'catalog/language/uk-ua/common/search.php', '2018-10-10 18:02:09'),
+(697, 5, 'catalog/language/uk-ua/error/not_found.php', '2018-10-10 18:02:09'),
+(698, 5, 'catalog/language/uk-ua/extension/captcha', '2018-10-10 18:02:09'),
+(699, 5, 'catalog/language/uk-ua/extension/module', '2018-10-10 18:02:09'),
+(700, 5, 'catalog/language/uk-ua/extension/openbay', '2018-10-10 18:02:09'),
+(701, 5, 'catalog/language/uk-ua/extension/payment', '2018-10-10 18:02:09'),
+(702, 5, 'catalog/language/uk-ua/extension/recurring', '2018-10-10 18:02:09'),
+(703, 5, 'catalog/language/uk-ua/extension/shipping', '2018-10-10 18:02:09'),
+(704, 5, 'catalog/language/uk-ua/extension/total', '2018-10-10 18:02:09'),
+(705, 5, 'catalog/language/uk-ua/information/contact.php', '2018-10-10 18:02:09'),
+(706, 5, 'catalog/language/uk-ua/information/information.php', '2018-10-10 18:02:09'),
+(707, 5, 'catalog/language/uk-ua/information/sitemap.php', '2018-10-10 18:02:09'),
+(708, 5, 'catalog/language/uk-ua/mail/affiliate.php', '2018-10-10 18:02:09'),
+(709, 5, 'catalog/language/uk-ua/mail/customer.php', '2018-10-10 18:02:09'),
+(710, 5, 'catalog/language/uk-ua/mail/forgotten.php', '2018-10-10 18:02:09'),
+(711, 5, 'catalog/language/uk-ua/mail/order.php', '2018-10-10 18:02:09'),
+(712, 5, 'catalog/language/uk-ua/mail/order_add.php', '2018-10-10 18:02:09'),
+(713, 5, 'catalog/language/uk-ua/mail/order_alert.php', '2018-10-10 18:02:09'),
+(714, 5, 'catalog/language/uk-ua/mail/order_edit.php', '2018-10-10 18:02:09'),
+(715, 5, 'catalog/language/uk-ua/mail/review.php', '2018-10-10 18:02:09'),
+(716, 5, 'catalog/language/uk-ua/mail/voucher.php', '2018-10-10 18:02:09'),
+(717, 5, 'catalog/language/uk-ua/product/category.php', '2018-10-10 18:02:09'),
+(718, 5, 'catalog/language/uk-ua/product/compare.php', '2018-10-10 18:02:09'),
+(719, 5, 'catalog/language/uk-ua/product/manufacturer.php', '2018-10-10 18:02:09'),
+(720, 5, 'catalog/language/uk-ua/product/product.php', '2018-10-10 18:02:09'),
+(721, 5, 'catalog/language/uk-ua/product/search.php', '2018-10-10 18:02:09'),
+(722, 5, 'catalog/language/uk-ua/product/special.php', '2018-10-10 18:02:09'),
+(723, 5, 'catalog/language/uk-ua/tool/upload.php', '2018-10-10 18:02:09'),
+(724, 5, 'admin/language/uk-ua/extension/analytics/google_analytics.php', '2018-10-10 18:02:09'),
+(725, 5, 'admin/language/uk-ua/extension/captcha/basic_captcha.php', '2018-10-10 18:02:09'),
+(726, 5, 'admin/language/uk-ua/extension/captcha/google_captcha.php', '2018-10-10 18:02:09'),
+(727, 5, 'admin/language/uk-ua/extension/dashboard/activity.php', '2018-10-10 18:02:09'),
+(728, 5, 'admin/language/uk-ua/extension/dashboard/chart.php', '2018-10-10 18:02:09'),
+(729, 5, 'admin/language/uk-ua/extension/dashboard/customer.php', '2018-10-10 18:02:09'),
+(730, 5, 'admin/language/uk-ua/extension/dashboard/map.php', '2018-10-10 18:02:09'),
+(731, 5, 'admin/language/uk-ua/extension/dashboard/online.php', '2018-10-10 18:02:09'),
+(732, 5, 'admin/language/uk-ua/extension/dashboard/order.php', '2018-10-10 18:02:09'),
+(733, 5, 'admin/language/uk-ua/extension/dashboard/recent.php', '2018-10-10 18:02:09'),
+(734, 5, 'admin/language/uk-ua/extension/dashboard/sale.php', '2018-10-10 18:02:09'),
+(735, 5, 'admin/language/uk-ua/extension/extension/analytics.php', '2018-10-10 18:02:09'),
+(736, 5, 'admin/language/uk-ua/extension/extension/captcha.php', '2018-10-10 18:02:09'),
+(737, 5, 'admin/language/uk-ua/extension/extension/dashboard.php', '2018-10-10 18:02:09'),
+(738, 5, 'admin/language/uk-ua/extension/extension/feed.php', '2018-10-10 18:02:09'),
+(739, 5, 'admin/language/uk-ua/extension/extension/fraud.php', '2018-10-10 18:02:09'),
+(740, 5, 'admin/language/uk-ua/extension/extension/module.php', '2018-10-10 18:02:09'),
+(741, 5, 'admin/language/uk-ua/extension/extension/payment.php', '2018-10-10 18:02:09'),
+(742, 5, 'admin/language/uk-ua/extension/extension/shipping.php', '2018-10-10 18:02:09'),
+(743, 5, 'admin/language/uk-ua/extension/extension/theme.php', '2018-10-10 18:02:09'),
+(744, 5, 'admin/language/uk-ua/extension/extension/total.php', '2018-10-10 18:02:09'),
+(745, 5, 'admin/language/uk-ua/extension/feed/google_base.php', '2018-10-10 18:02:09'),
+(746, 5, 'admin/language/uk-ua/extension/feed/google_sitemap.php', '2018-10-10 18:02:09'),
+(747, 5, 'admin/language/uk-ua/extension/fraud/ip.php', '2018-10-10 18:02:09'),
+(748, 5, 'admin/language/uk-ua/extension/module/account.php', '2018-10-10 18:02:09'),
+(749, 5, 'admin/language/uk-ua/extension/module/affiliate.php', '2018-10-10 18:02:09'),
+(750, 5, 'admin/language/uk-ua/extension/module/banner.php', '2018-10-10 18:02:09'),
+(751, 5, 'admin/language/uk-ua/extension/module/bestseller.php', '2018-10-10 18:02:09'),
+(752, 5, 'admin/language/uk-ua/extension/module/carousel.php', '2018-10-10 18:02:09'),
+(753, 5, 'admin/language/uk-ua/extension/module/category.php', '2018-10-10 18:02:09'),
+(754, 5, 'admin/language/uk-ua/extension/module/featured.php', '2018-10-10 18:02:09'),
+(755, 5, 'admin/language/uk-ua/extension/module/filter.php', '2018-10-10 18:02:09'),
+(756, 5, 'admin/language/uk-ua/extension/module/google_hangouts.php', '2018-10-10 18:02:09'),
+(757, 5, 'admin/language/uk-ua/extension/module/html.php', '2018-10-10 18:02:09'),
+(758, 5, 'admin/language/uk-ua/extension/module/information.php', '2018-10-10 18:02:09'),
+(759, 5, 'admin/language/uk-ua/extension/module/latest.php', '2018-10-10 18:02:09'),
+(760, 5, 'admin/language/uk-ua/extension/module/pp_button.php', '2018-10-10 18:02:09'),
+(761, 5, 'admin/language/uk-ua/extension/module/slideshow.php', '2018-10-10 18:02:09'),
+(762, 5, 'admin/language/uk-ua/extension/module/special.php', '2018-10-10 18:02:09'),
+(763, 5, 'admin/language/uk-ua/extension/module/store.php', '2018-10-10 18:02:09'),
+(764, 5, 'admin/language/uk-ua/extension/payment/bank_transfer.php', '2018-10-10 18:02:09'),
+(765, 5, 'admin/language/uk-ua/extension/payment/cheque.php', '2018-10-10 18:02:09'),
+(766, 5, 'admin/language/uk-ua/extension/payment/cod.php', '2018-10-10 18:02:09'),
+(767, 5, 'admin/language/uk-ua/extension/payment/free_checkout.php', '2018-10-10 18:02:09'),
+(768, 5, 'admin/language/uk-ua/extension/payment/liqpay.php', '2018-10-10 18:02:09'),
+(769, 5, 'admin/language/uk-ua/extension/payment/pp_express.php', '2018-10-10 18:02:09'),
+(770, 5, 'admin/language/uk-ua/extension/payment/pp_express_order.php', '2018-10-10 18:02:09'),
+(771, 5, 'admin/language/uk-ua/extension/payment/pp_express_refund.php', '2018-10-10 18:02:09'),
+(772, 5, 'admin/language/uk-ua/extension/payment/pp_express_search.php', '2018-10-10 18:02:09'),
+(773, 5, 'admin/language/uk-ua/extension/payment/pp_express_view.php', '2018-10-10 18:02:09'),
+(774, 5, 'admin/language/uk-ua/extension/payment/pp_pro.php', '2018-10-10 18:02:09'),
+(775, 5, 'admin/language/uk-ua/extension/payment/pp_standard.php', '2018-10-10 18:02:09'),
+(776, 5, 'admin/language/uk-ua/extension/shipping/citylink.php', '2018-10-10 18:02:09'),
+(777, 5, 'admin/language/uk-ua/extension/shipping/flat.php', '2018-10-10 18:02:09'),
+(778, 5, 'admin/language/uk-ua/extension/shipping/free.php', '2018-10-10 18:02:09'),
+(779, 5, 'admin/language/uk-ua/extension/shipping/item.php', '2018-10-10 18:02:09'),
+(780, 5, 'admin/language/uk-ua/extension/shipping/pickup.php', '2018-10-10 18:02:09'),
+(781, 5, 'admin/language/uk-ua/extension/shipping/weight.php', '2018-10-10 18:02:09'),
+(782, 5, 'admin/language/uk-ua/extension/theme/theme_default.php', '2018-10-10 18:02:09'),
+(783, 5, 'admin/language/uk-ua/extension/total/coupon.php', '2018-10-10 18:02:09'),
+(784, 5, 'admin/language/uk-ua/extension/total/credit.php', '2018-10-10 18:02:09'),
+(785, 5, 'admin/language/uk-ua/extension/total/handling.php', '2018-10-10 18:02:09'),
+(786, 5, 'admin/language/uk-ua/extension/total/low_order_fee.php', '2018-10-10 18:02:09'),
+(787, 5, 'admin/language/uk-ua/extension/total/reward.php', '2018-10-10 18:02:09'),
+(788, 5, 'admin/language/uk-ua/extension/total/shipping.php', '2018-10-10 18:02:09'),
+(789, 5, 'admin/language/uk-ua/extension/total/sub_total.php', '2018-10-10 18:02:09'),
+(790, 5, 'admin/language/uk-ua/extension/total/tax.php', '2018-10-10 18:02:09'),
+(791, 5, 'admin/language/uk-ua/extension/total/total.php', '2018-10-10 18:02:09'),
+(792, 5, 'admin/language/uk-ua/extension/total/voucher.php', '2018-10-10 18:02:09'),
+(793, 5, 'catalog/language/uk-ua/extension/captcha/basic_captcha.php', '2018-10-10 18:02:09'),
+(794, 5, 'catalog/language/uk-ua/extension/captcha/google_captcha.php', '2018-10-10 18:02:09'),
+(795, 5, 'catalog/language/uk-ua/extension/module/account.php', '2018-10-10 18:02:09'),
+(796, 5, 'catalog/language/uk-ua/extension/module/affiliate.php', '2018-10-10 18:02:09'),
+(797, 5, 'catalog/language/uk-ua/extension/module/bestseller.php', '2018-10-10 18:02:09'),
+(798, 5, 'catalog/language/uk-ua/extension/module/category.php', '2018-10-10 18:02:09'),
+(799, 5, 'catalog/language/uk-ua/extension/module/featured.php', '2018-10-10 18:02:09'),
+(800, 5, 'catalog/language/uk-ua/extension/module/filter.php', '2018-10-10 18:02:09'),
+(801, 5, 'catalog/language/uk-ua/extension/module/google_hangouts.php', '2018-10-10 18:02:09'),
+(802, 5, 'catalog/language/uk-ua/extension/module/information.php', '2018-10-10 18:02:09'),
+(803, 5, 'catalog/language/uk-ua/extension/module/latest.php', '2018-10-10 18:02:09'),
+(804, 5, 'catalog/language/uk-ua/extension/module/sms_alert.php', '2018-10-10 18:02:09'),
+(805, 5, 'catalog/language/uk-ua/extension/module/special.php', '2018-10-10 18:02:09'),
+(806, 5, 'catalog/language/uk-ua/extension/module/store.php', '2018-10-10 18:02:09'),
+(807, 5, 'catalog/language/uk-ua/extension/payment/bank_transfer.php', '2018-10-10 18:02:09'),
+(808, 5, 'catalog/language/uk-ua/extension/payment/cheque.php', '2018-10-10 18:02:09'),
+(809, 5, 'catalog/language/uk-ua/extension/payment/cod.php', '2018-10-10 18:02:09'),
+(810, 5, 'catalog/language/uk-ua/extension/payment/free_checkout.php', '2018-10-10 18:02:09'),
+(811, 5, 'catalog/language/uk-ua/extension/payment/liqpay.php', '2018-10-10 18:02:09'),
+(812, 5, 'catalog/language/uk-ua/extension/payment/moneybookers.php', '2018-10-10 18:02:09'),
+(813, 5, 'catalog/language/uk-ua/extension/payment/pp_express.php', '2018-10-10 18:02:09'),
+(814, 5, 'catalog/language/uk-ua/extension/payment/pp_pro.php', '2018-10-10 18:02:09'),
+(815, 5, 'catalog/language/uk-ua/extension/payment/pp_standard.php', '2018-10-10 18:02:09'),
+(816, 5, 'catalog/language/uk-ua/extension/recurring/pp_express.php', '2018-10-10 18:02:09'),
+(817, 5, 'catalog/language/uk-ua/extension/shipping/citylink.php', '2018-10-10 18:02:09'),
+(818, 5, 'catalog/language/uk-ua/extension/shipping/flat.php', '2018-10-10 18:02:09'),
+(819, 5, 'catalog/language/uk-ua/extension/shipping/free.php', '2018-10-10 18:02:09'),
+(820, 5, 'catalog/language/uk-ua/extension/shipping/item.php', '2018-10-10 18:02:09'),
+(821, 5, 'catalog/language/uk-ua/extension/shipping/pickup.php', '2018-10-10 18:02:09'),
+(822, 5, 'catalog/language/uk-ua/extension/shipping/weight.php', '2018-10-10 18:02:09'),
+(823, 5, 'catalog/language/uk-ua/extension/total/coupon.php', '2018-10-10 18:02:09'),
+(824, 5, 'catalog/language/uk-ua/extension/total/credit.php', '2018-10-10 18:02:09'),
+(825, 5, 'catalog/language/uk-ua/extension/total/handling.php', '2018-10-10 18:02:09'),
+(826, 5, 'catalog/language/uk-ua/extension/total/low_order_fee.php', '2018-10-10 18:02:09'),
+(827, 5, 'catalog/language/uk-ua/extension/total/reward.php', '2018-10-10 18:02:09'),
+(828, 5, 'catalog/language/uk-ua/extension/total/shipping.php', '2018-10-10 18:02:09'),
+(829, 5, 'catalog/language/uk-ua/extension/total/sub_total.php', '2018-10-10 18:02:09'),
+(830, 5, 'catalog/language/uk-ua/extension/total/total.php', '2018-10-10 18:02:09'),
+(831, 5, 'catalog/language/uk-ua/extension/total/voucher.php', '2018-10-10 18:02:09'),
+(832, 8, 'catalog/view/theme/my-bottle/stylesheet/size-color.min.css', '2018-10-16 11:29:49'),
+(833, 8, 'catalog/view/theme/my-bottle/stylesheet/size-color.min.js', '2018-10-16 11:29:49');
 
 -- --------------------------------------------------------
 
@@ -2044,7 +2469,15 @@ INSERT INTO `oc_information_description` (`information_id`, `language_id`, `titl
 (4, 1, 'О нас', '&lt;p&gt;\r\n	About Us&lt;/p&gt;', 'О нас', '', ''),
 (5, 1, 'Условия соглашения', '&lt;p&gt;\r\n	Terms &amp;amp; Conditions&lt;/p&gt;', 'Условия соглашения', '', ''),
 (3, 1, 'Политика Безопасности', '&lt;p&gt;\r\n	Privacy Policy&lt;/p&gt;', 'Политика Безопасности', '', ''),
-(6, 1, 'Доставка', '&lt;p&gt;\r\n	Delivery Information&lt;/p&gt;', 'Доставка', '', '');
+(6, 1, 'Доставка', '&lt;p&gt;\r\n	Delivery Information&lt;/p&gt;', 'Доставка', '', ''),
+(4, 2, 'О нас', '&lt;p&gt;\r\n	About Us&lt;/p&gt;', 'О нас', '', ''),
+(5, 2, 'Условия соглашения', '&lt;p&gt;\r\n	Terms &amp;amp; Conditions&lt;/p&gt;', 'Условия соглашения', '', ''),
+(3, 2, 'Политика Безопасности', '&lt;p&gt;\r\n	Privacy Policy&lt;/p&gt;', 'Политика Безопасности', '', ''),
+(6, 2, 'Доставка', '&lt;p&gt;\r\n	Delivery Information&lt;/p&gt;', 'Доставка', '', ''),
+(4, 3, 'О нас', '&lt;p&gt;\r\n	About Us&lt;/p&gt;', 'О нас', '', ''),
+(5, 3, 'Условия соглашения', '&lt;p&gt;\r\n	Terms &amp;amp; Conditions&lt;/p&gt;', 'Условия соглашения', '', ''),
+(3, 3, 'Политика Безопасности', '&lt;p&gt;\r\n	Privacy Policy&lt;/p&gt;', 'Политика Безопасности', '', ''),
+(6, 3, 'Доставка', '&lt;p&gt;\r\n	Delivery Information&lt;/p&gt;', 'Доставка', '', '');
 
 -- --------------------------------------------------------
 
@@ -2101,7 +2534,9 @@ CREATE TABLE `oc_language` (
 --
 
 INSERT INTO `oc_language` (`language_id`, `name`, `code`, `locale`, `image`, `directory`, `sort_order`, `status`) VALUES
-(1, 'Russian', 'ru-ru', 'ru_RU.UTF-8,ru_RU,russian', 'ru-ru.png', 'russian', 1, 1);
+(1, 'Russian', 'ru-ru', 'ru_RU.UTF-8,ru_RU,russian', 'ru-ru.png', 'russian', 1, 1),
+(2, 'english', 'en-gb', 'en', '', '', 1, 1),
+(3, 'Українська', 'uk-ua', 'ua_UA.UTF-8,ua_UA,ua_UA,ua', '', '', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -2250,7 +2685,11 @@ CREATE TABLE `oc_length_class_description` (
 
 INSERT INTO `oc_length_class_description` (`length_class_id`, `language_id`, `title`, `unit`) VALUES
 (1, 1, 'Сантиметр', 'см'),
-(2, 1, 'Миллиметр', 'мм');
+(2, 1, 'Миллиметр', 'мм'),
+(1, 2, 'Сантиметр', 'см'),
+(2, 2, 'Миллиметр', 'мм'),
+(1, 3, 'Сантиметр', 'см'),
+(2, 3, 'Миллиметр', 'мм');
 
 -- --------------------------------------------------------
 
@@ -2415,7 +2854,8 @@ CREATE TABLE `oc_modification` (
 
 INSERT INTO `oc_modification` (`modification_id`, `extension_install_id`, `name`, `code`, `author`, `version`, `link`, `xml`, `status`, `date_added`) VALUES
 (4, 4, 'd_opencart_patch', 'd_opencart_patch', 'Dreamvention', '3.x', 'http://dreamvention.com', '<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<modification>\n    <name>d_opencart_patch</name>\n    <code>d_opencart_patch</code>\n    <description>Permission fixes in Opencart 3.x</description>\n    <version>3.x</version>\n    <author>Dreamvention</author>\n    <link>http://dreamvention.com</link>\n    <file path=\"admin/controller/user/user_permission.php\">\n        <operation error=\"skip\">\n            <search><![CDATA[$path[] = $file . \'/*\';]]></search>\n            <add position=\"after\"><![CDATA[\n            //d_opencart_patch.xml 1\n            $files[] = $file;\n            ]]></add>\n        </operation>\n        <operation error=\"skip\">\n            <search><![CDATA[$permission = substr($controller, 0, strrpos($controller, \'.\'));]]></search>\n            <add position=\"replace\"><![CDATA[\n            //d_opencart_patch.xml 2\n            $permission = (strrpos($controller, \'.\') !== false) ? substr($controller, 0, strrpos($controller, \'.\')) : $controller;\n            ]]></add>\n        </operation>\n    </file>\n    <file path=\"admin/controller/extension/installer.php\">\n        <operation error=\"skip\">\n            <search><![CDATA[$modification_info = $this->model_setting_modification->getModificationByCode($code);]]></search>\n            <add position=\"after\"><![CDATA[\n            //d_opencart_patch.xml 1\n            if (strpos($code, \'d_\') === 0 && $modification_info) {\n                $this->model_setting_modification->deleteModification($modification_info[\'modification_id\']);\n                $modification_info = false; \n            }\n            ]]></add>\n        </operation>\n    </file>\n</modification>', 1, '2018-10-02 21:06:00'),
-(5, 0, 'd_twig_manager', 'd_twig_manager', 'Dreamvention', '2.0.0', 'http://dreamvention.com', '<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<modification>\n    <name>d_twig_manager</name>\n    <code>d_twig_manager</code>\n    <description>Adds support for twig templating engine</description>\n    <version>2.0.0</version>\n    <author>Dreamvention</author>\n    <link>http://dreamvention.com</link>\n    <file path=\"system/engine/loader.php\">\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[$template = new Template($this->registry->get(\'config\')->get(\'template_engine\'));]]></search>\n            <add position=\"replace\"><![CDATA[\n            //d_twig_manager.xml\n            $template = new Template($this->registry->get(\'config\')->get(\'template_engine\'), $this->registry);\n            ]]></add>\n        </operation>\n    </file>\n    <file path=\"system/library/template.php\">\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[public function __construct($adaptor) {]]></search>\n            <add position=\"replace\"><![CDATA[\n            //d_twig_manager.xml\n            public function __construct($adaptor, $registry) {\n            ]]></add>\n        </operation>\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[$this->adaptor = new $class();]]></search>\n            <add position=\"replace\"><![CDATA[\n            //d_twig_manager.xml\n            $this->adaptor = new $class($registry);\n            ]]></add>\n        </operation>\n    </file>\n    <file path=\"system/library/template/twig.php\">\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[private $data = array();]]></search>\n            <add position=\"after\"><![CDATA[\n            //d_twig_manager.xml\n            private $registry = array();\n            ]]></add>\n        </operation>\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[public function __construct() {]]></search>\n            <add position=\"replace\"><![CDATA[\n            //d_twig_manager.xml\n            public function __construct($registry) {\n            ]]></add>\n        </operation>\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[\\Twig_Autoloader::register();]]></search>\n            <add position=\"after\"><![CDATA[\n            //d_twig_manager.xml\n            $this->registry = $registry;\n            ]]></add>\n        </operation>\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[$this->twig = new \\Twig_Environment($loader, $config);]]></search>\n            <add position=\"after\"><![CDATA[\n            //d_twig_manager.xml\n            $this->twig->addExtension(new \\Twig_Extension_DTwigManager($this->registry));\n            ]]></add>\n        </operation>\n    </file>\n    <file path=\"catalog/controller/event/theme.php\">\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[$twig = new \\Twig_Environment($loader, $config);]]></search>\n            <add position=\"after\"><![CDATA[\n            //d_twig_manager.xml\n            $twig->addExtension(new Twig_Extension_DTwigManager($this->registry));\n            ]]></add>\n        </operation>\n    </file>\n</modification>', 1, '2018-10-02 21:06:20');
+(5, 0, 'd_twig_manager', 'd_twig_manager', 'Dreamvention', '2.0.0', 'http://dreamvention.com', '<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<modification>\n    <name>d_twig_manager</name>\n    <code>d_twig_manager</code>\n    <description>Adds support for twig templating engine</description>\n    <version>2.0.0</version>\n    <author>Dreamvention</author>\n    <link>http://dreamvention.com</link>\n    <file path=\"system/engine/loader.php\">\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[$template = new Template($this->registry->get(\'config\')->get(\'template_engine\'));]]></search>\n            <add position=\"replace\"><![CDATA[\n            //d_twig_manager.xml\n            $template = new Template($this->registry->get(\'config\')->get(\'template_engine\'), $this->registry);\n            ]]></add>\n        </operation>\n    </file>\n    <file path=\"system/library/template.php\">\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[public function __construct($adaptor) {]]></search>\n            <add position=\"replace\"><![CDATA[\n            //d_twig_manager.xml\n            public function __construct($adaptor, $registry) {\n            ]]></add>\n        </operation>\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[$this->adaptor = new $class();]]></search>\n            <add position=\"replace\"><![CDATA[\n            //d_twig_manager.xml\n            $this->adaptor = new $class($registry);\n            ]]></add>\n        </operation>\n    </file>\n    <file path=\"system/library/template/twig.php\">\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[private $data = array();]]></search>\n            <add position=\"after\"><![CDATA[\n            //d_twig_manager.xml\n            private $registry = array();\n            ]]></add>\n        </operation>\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[public function __construct() {]]></search>\n            <add position=\"replace\"><![CDATA[\n            //d_twig_manager.xml\n            public function __construct($registry) {\n            ]]></add>\n        </operation>\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[\\Twig_Autoloader::register();]]></search>\n            <add position=\"after\"><![CDATA[\n            //d_twig_manager.xml\n            $this->registry = $registry;\n            ]]></add>\n        </operation>\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[$this->twig = new \\Twig_Environment($loader, $config);]]></search>\n            <add position=\"after\"><![CDATA[\n            //d_twig_manager.xml\n            $this->twig->addExtension(new \\Twig_Extension_DTwigManager($this->registry));\n            ]]></add>\n        </operation>\n    </file>\n    <file path=\"catalog/controller/event/theme.php\">\n        <operation error=\"skip\" info=\"\">\n            <search><![CDATA[$twig = new \\Twig_Environment($loader, $config);]]></search>\n            <add position=\"after\"><![CDATA[\n            //d_twig_manager.xml\n            $twig->addExtension(new Twig_Extension_DTwigManager($this->registry));\n            ]]></add>\n        </operation>\n    </file>\n</modification>', 1, '2018-10-02 21:06:20'),
+(6, 8, 'Size and Color option display', 'size_color_option_display', 'Rishabh Thakur', '1.0', '', '﻿<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<modification>\r\n    <name>Size and Color option display</name>\r\n    <version>1.0</version>\r\n    <code>size_color_option_display</code>\r\n    <author>Rishabh Thakur</author>\r\n    <link></link>\r\n    <file path=\"admin/language/*/catalog/option.php\">\r\n        <operation>\r\n            <search><![CDATA[$_[\'entry_type\']]]></search>\r\n            <add position=\"before\"><![CDATA[$_[\'entry_display_type\']  = \'Option Display Type\';]]></add>\r\n        </operation>\r\n    </file> \r\n\r\n    <file path=\"admin/controller/catalog/option.php\">\r\n        <operation>\r\n            <search><![CDATA[public function index() {]]></search>\r\n            <add position=\"after\"><![CDATA[     if ($this->db->query(\'SHOW COLUMNS FROM `\' . DB_PREFIX . \'option` LIKE \"display_type\"\')->num_rows == 0) {\r\n            $this->db->query(\"ALTER TABLE `\" . DB_PREFIX . \"option` ADD `display_type` INT(3) NOT NULL DEFAULT \'0\' COMMENT \'0 = Default, 1 = Box\' AFTER `type`\");\r\n        }]]></add>\r\n        </operation>\r\n        <operation>\r\n            <search><![CDATA[$data[\'entry_type\'] = $this->language->get(\'entry_type\');]]></search>\r\n            <add position=\"after\"><![CDATA[     $data[\'entry_display_type\'] = $this->language->get(\'entry_display_type\');]]></add>\r\n        </operation>\r\n        <operation>\r\n            <search><![CDATA[if (isset($this->request->post[\'sort_order\'])) {]]></search>\r\n            <add position=\"before\"><![CDATA[\r\n                if (isset($this->request->post[\'display_type\'])) {\r\n                    $data[\'display_type\'] = $this->request->post[\'display_type\'];\r\n                } elseif (!empty($option_info)) {\r\n                    $data[\'display_type\'] = $option_info[\'display_type\'];\r\n                } else {\r\n                    $data[\'display_type\'] = \'0\';\r\n                }\r\n                ]]></add>\r\n        </operation>\r\n    </file>\r\n    <file path=\"admin/model/catalog/option.php\">\r\n        <operation>\r\n            <search><![CDATA[type = \'\" . $this->db->escape($data[\'type\']) . \"\']]></search>\r\n            <add position=\"replace\"><![CDATA[type = \'\" . $this->db->escape($data[\'type\']) . \"\', display_type = \'\" . $this->db->escape($data[\'display_type\']) . \"\']]></add>\r\n        </operation>        \r\n    </file>     \r\n    \r\n    <file path=\"admin/view/template/catalog/option_form.twig\">\r\n        <operation>\r\n            <search><![CDATA[<label class=\"col-sm-2 control-label\" for=\"input-sort-order\"><?php echo $entry_sort_order; ?></label>]]></search>\r\n            <add position=\"before\"><![CDATA[            <label class=\"col-sm-2 control-label\" for=\"input-display-type\"><?php echo $entry_display_type; ?></label>\r\n            <div class=\"col-sm-10\">\r\n              <select name=\"display_type\" id=\"input-display-type\" class=\"form-control\">                \r\n                <?php if ($display_type == \'1\') { ?>\r\n                <option value=\"0\" >Default</option>\r\n                <option value=\"1\" selected=\"selected\">Size & Color View</option>\r\n                <?php } else { ?>\r\n                <option value=\"0\" selected=\"selected\">Default</option>\r\n                <option value=\"1\">Size & Color View</option>\r\n                <?php } ?>                \r\n              </select>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group\">]]></add>\r\n        </operation>\r\n        <operation>\r\n            <search><![CDATA[$(\'#option-value\').show();]]></search>\r\n            <add position=\"after\"><![CDATA[$(\'#input-display-type\').closest(\".form-group\").show();]]></add>\r\n        </operation>\r\n        <operation>\r\n            <search><![CDATA[$(\'#option-value\').hide();]]></search>\r\n            <add position=\"after\"><![CDATA[$(\'#input-display-type\').closest(\".form-group\").hide();]]></add>\r\n        </operation>\r\n    </file>\r\n\r\n    <file path=\"catalog/model/catalog/product.php\">\r\n        <operation>\r\n            <search><![CDATA[$product_option[\'type\']]]></search>\r\n            <add position=\"replace\"><![CDATA[$product_option[\'type\'], \'display_type\' => $product_option[\'display_type\']]]></add>\r\n        </operation>\r\n    </file>    \r\n    <file path=\"catalog/controller/product/product.php\">\r\n        <operation>\r\n            <search><![CDATA[$data[\'heading_title\'] = $product_info[\'name\'];]]></search>\r\n            <add position=\"before\"><![CDATA[            $this->document->addScript(\'catalog/view/sizecoloroption/size-color.min.js\');\r\n            $this->document->addStyle(\'catalog/view/sizecoloroption/size-color.min.css\');]]></add>\r\n        </operation>\r\n        <operation>\r\n            <search><![CDATA[$option[\'type\']]]></search>\r\n            <add position=\"replace\"><![CDATA[$option[\'type\'], \'display_type\' => $option[\'display_type\']]]></add>\r\n        </operation>\r\n    </file>\r\n    <file path=\"catalog/view/theme/default/template/product/product.twig\">\r\n        <operation>\r\n            <search><![CDATA[<?php if ($option[\'type\'] == \'select\') { ?>]]></search>\r\n            <add position=\"after\"><![CDATA[            <?php if ($option[\'display_type\'] == \'1\') { ?>\r\n            <div class=\"form-group<?php echo ($option[\'required\'] ? \' required\' : \'\'); ?>\">\r\n              <label class=\"control-label\" for=\"input-option<?php echo $option[\'product_option_id\']; ?>\"><?php echo $option[\'name\']; ?></label>\r\n              <ul class=\"size-color-select\">\r\n                <?php foreach ($option[\'product_option_value\'] as $option_value) { ?>\r\n                  <li class=\"boxselect\" id=\"option-value-<?php echo $option_value[\'product_option_value_id\']; ?>\" onclick=\"addSelected(this,\'<?php echo $option[\'product_option_id\']; ?>\',\'<?php echo $option_value[\'product_option_value_id\']; ?>\');\"><?php echo $option_value[\'name\']; ?></li>\r\n                <?php } ?>\r\n              </ul>\r\n              <select name=\"option[<?php echo $option[\'product_option_id\']; ?>]\" id=\"input-option<?php echo $option[\'product_option_id\']; ?>\" class=\"form-control hide-field\">\r\n                <option value=\"\"><?php echo $text_select; ?></option>\r\n                <?php foreach ($option[\'product_option_value\'] as $option_value) { ?>\r\n                <option value=\"<?php echo $option_value[\'product_option_value_id\']; ?>\"><?php echo $option_value[\'name\']; ?>\r\n                <?php if ($option_value[\'price\']) { ?>\r\n                (<?php echo $option_value[\'price_prefix\']; ?><?php echo $option_value[\'price\']; ?>)\r\n                <?php } ?>\r\n                </option>\r\n                <?php } ?>\r\n              </select>\r\n            </div>            \r\n            <?php }else{ ?>]]></add>\r\n        </operation>\r\n        <operation>\r\n            <search><![CDATA[<?php if ($option[\'type\'] == \'radio\') { ?>]]></search>\r\n            <add position=\"before\"><![CDATA[            <?php } ?>]]></add>\r\n        </operation>          \r\n        <operation>\r\n            <search><![CDATA[<?php if ($option[\'type\'] == \'radio\') { ?>]]></search>\r\n            <add position=\"after\"><![CDATA[            <?php if ($option[\'display_type\'] == \'1\') { ?>\r\n            <div class=\"form-group<?php echo ($option[\'required\'] ? \' required\' : \'\'); ?>\">\r\n              <label class=\"control-label\"><?php echo $option[\'name\']; ?></label>\r\n              <div class=\"size-color\" id=\"input-option<?php echo $option[\'product_option_id\']; ?>\">\r\n                <?php foreach ($option[\'product_option_value\'] as $option_value) { ?>\r\n                <input type=\"radio\" name=\"option[<?php echo $option[\'product_option_id\']; ?>]\" value=\"<?php echo $option_value[\'product_option_value_id\']; ?>\" id=\"option-value-<?php echo $option_value[\'product_option_value_id\']; ?>\" class=\"hide-field\" />                \r\n                  <label for=\"option-value-<?php echo $option_value[\'product_option_value_id\']; ?>\"><?php echo $option_value[\'name\']; ?></label>\r\n                <?php } ?>\r\n              </div>\r\n            </div>          \r\n            <?php }else{ ?>]]></add>\r\n        </operation>\r\n        <operation>\r\n            <search><![CDATA[<?php if ($option[\'type\'] == \'checkbox\') { ?>]]></search>\r\n            <add position=\"before\"><![CDATA[            <?php } ?>]]></add>\r\n        </operation>        \r\n        <operation>\r\n            <search><![CDATA[<?php if ($option[\'type\'] == \'checkbox\') { ?>]]></search>\r\n            <add position=\"after\"><![CDATA[            <?php if ($option[\'display_type\'] == \'1\') { ?>\r\n            <div class=\"form-group<?php echo ($option[\'required\'] ? \' required\' : \'\'); ?>\">\r\n              <label class=\"control-label\"><?php echo $option[\'name\']; ?></label>\r\n              <div class=\"size-color\" id=\"input-option<?php echo $option[\'product_option_id\']; ?>\">\r\n                <?php foreach ($option[\'product_option_value\'] as $option_value) { ?>\r\n                <input type=\"checkbox\" name=\"option[<?php echo $option[\'product_option_id\']; ?>][]\" value=\"<?php echo $option_value[\'product_option_value_id\']; ?>\" id=\"option-value-<?php echo $option_value[\'product_option_value_id\']; ?>\" class=\"hide-field\" />                \r\n                  <label for=\"option-value-<?php echo $option_value[\'product_option_value_id\']; ?>\"><?php echo $option_value[\'name\']; ?></label>\r\n                <?php } ?>\r\n              </div>\r\n            </div>            \r\n            <?php }else{ ?>]]></add>\r\n        </operation>\r\n        <operation>\r\n            <search><![CDATA[<?php if ($option[\'type\'] == \'image\') { ?>]]></search>\r\n            <add position=\"before\"><![CDATA[            <?php } ?>]]></add>\r\n        </operation>\r\n        <operation>\r\n            <search><![CDATA[<?php if ($option[\'type\'] == \'image\') { ?>]]></search>\r\n            <add position=\"after\"><![CDATA[            <?php if ($option[\'display_type\'] == \'1\') { ?>\r\n            <div class=\"form-group<?php echo ($option[\'required\'] ? \' required\' : \'\'); ?>\">\r\n              <label class=\"control-label\"><?php echo $option[\'name\']; ?></label>\r\n              <div class=\"size-color\" id=\"input-option<?php echo $option[\'product_option_id\']; ?>\">\r\n                <?php foreach ($option[\'product_option_value\'] as $option_value) { ?>\r\n                <label for=\"option-value-<?php echo $option_value[\'product_option_value_id\']; ?>\"><input type=\"radio\" name=\"option[<?php echo $option[\'product_option_id\']; ?>]\" value=\"<?php echo $option_value[\'product_option_value_id\']; ?>\" id=\"option-value-<?php echo $option_value[\'product_option_value_id\']; ?>\" class=\"hide-field\" />\r\n                <img src=\"<?php echo $option_value[\'image\']; ?>\" alt=\"<?php echo $option_value[\'name\'] . ($option_value[\'price\'] ? \' \' . $option_value[\'price_prefix\'] . $option_value[\'price\'] : \'\'); ?>\" id=\"image-option-<?php echo $option_value[\'product_option_value_id\']; ?>\" onclick=\"imageSelected(this,\'<?php echo $option[\'product_option_id\']; ?>\',\'<?php echo $option_value[\'product_option_value_id\']; ?>\');\" class=\"img-thumbnail boximage\"  /></label>\r\n                <?php } ?>\r\n              </div>\r\n            </div>            \r\n            <?php }else{ ?>]]></add>\r\n        </operation>\r\n        <operation>\r\n            <search><![CDATA[<?php if ($option[\'type\'] == \'text\') { ?>]]></search>\r\n            <add position=\"before\"><![CDATA[            <?php } ?>]]></add>\r\n        </operation>         \r\n    </file>  \r\n    \r\n</modification>', 1, '2018-10-16 11:29:50');
 
 -- --------------------------------------------------------
 
@@ -2441,7 +2881,7 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (27, 'Home Page', 'slideshow', '{\"name\":\"Home Page\",\"banner_id\":\"7\",\"width\":\"1140\",\"height\":\"380\",\"status\":\"1\"}'),
 (31, 'Banner 1', 'banner', '{\"name\":\"Banner 1\",\"banner_id\":\"6\",\"width\":\"182\",\"height\":\"182\",\"status\":\"1\"}'),
 (35, 'new product', 'featured', '{\"name\":\"new product\",\"product_name\":\"\",\"product\":[\"51\",\"52\",\"53\",\"54\"],\"limit\":\"5\",\"width\":\"400\",\"height\":\"400\",\"status\":\"1\"}'),
-(32, 'Slider home', 'html', '{\"name\":\"Slider home\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\" &lt;section class=&quot;container specialProductHome&quot;&gt;\\r\\n        &lt;div class=&quot;row&quot;&gt;\\r\\n            &lt;div class=&quot;col col-12 col-lg-9&quot;&gt;\\r\\n                &lt;div class=&quot;homeSlider&quot;&gt;\\r\\n                    &lt;div class=&quot;homeSliderIteam&quot;&gt;\\r\\n                       &lt;img src=&quot;http:\\/\\/my-bottle.lan\\/image\\/catalog\\/sliderHome\\/10-layers.png&quot; alt=&quot;shaker&quot;&gt;\\r\\n                        &lt;button class=&quot;BTNdark&quot;&gt;\\r\\n                            BUY NOW  &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                        &lt;\\/button&gt;\\r\\n                    &lt;\\/div&gt;\\r\\n                    &lt;div class=&quot;homeSliderIteam&quot;&gt;\\r\\n                        &lt;img src=&quot;http:\\/\\/my-bottle.lan\\/image\\/catalog\\/sliderHome\\/10-layers.png&quot; alt=&quot;shaker&quot;&gt;\\r\\n                        &lt;button class=&quot;BTNdark&quot;&gt;\\r\\n                            BUY NOW  &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                        &lt;\\/button&gt;\\r\\n                    &lt;\\/div&gt;\\r\\n                    &lt;div class=&quot;homeSliderIteam&quot;&gt;\\r\\n                        &lt;img src=&quot;http:\\/\\/my-bottle.lan\\/image\\/catalog\\/sliderHome\\/10-layers.png&quot; alt=&quot;shaker&quot;&gt;\\r\\n                        &lt;button class=&quot;BTNdark&quot;&gt;\\r\\n                            BUY NOW  &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                        &lt;\\/button&gt;\\r\\n                    &lt;\\/div&gt;\\r\\n                    &lt;div class=&quot;homeSliderIteam&quot;&gt;\\r\\n                        &lt;img src=&quot;http:\\/\\/my-bottle.lan\\/image\\/catalog\\/sliderHome\\/10-layers.png&quot; alt=&quot;shaker&quot;&gt;\\r\\n                        &lt;button class=&quot;BTNdark&quot;&gt;\\r\\n                            BUY NOW  &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                        &lt;\\/button&gt;\\r\\n                    &lt;\\/div&gt;\\r\\n                &lt;\\/div&gt;\\r\\n            &lt;\\/div&gt;\\r\\n            &lt;div class=&quot;col col-lg-3 col-12 homeSpecialProductRightSide&quot;&gt;\\r\\n                &lt;a href=&quot;\\/&quot;&gt;\\r\\n                   &lt;img src=&quot;\\/image\\/catalog\\/sliderHome\\/specialProduct2.png&quot; alt=&quot;\\u041a\\u0440\\u0443\\u0442\\u0430\\u044f \\u0444\\u043b\\u044f\\u0433\\u0430&quot;&gt;\\r\\n                &lt;\\/a&gt;\\r\\n                &lt;a href=&quot;\\/&quot;&gt;\\r\\n                  &lt;img src=&quot;\\/image\\/catalog\\/sliderHome\\/specialProduct1.png&quot; alt=&quot;\\u041a\\u0440\\u0443\\u0442\\u043e\\u0439 \\u0448\\u0435\\u0439\\u043a\\u0435\\u0440&quot;&gt;\\r\\n                &lt;\\/a&gt;\\r\\n            &lt;\\/div&gt;\\r\\n        &lt;\\/div&gt;\\r\\n    &lt;\\/section&gt;\"}},\"status\":\"1\"}'),
+(32, 'Slider home', 'html', '{\"name\":\"Slider home\",\"module_description\":{\"2\":{\"title\":\"\",\"description\":\"\"},\"1\":{\"title\":\"\",\"description\":\" &lt;section class=&quot;container specialProductHome&quot;&gt;\\r\\n        &lt;div class=&quot;row&quot;&gt;\\r\\n            &lt;div class=&quot;col col-12 col-lg-9&quot;&gt;\\r\\n                &lt;div class=&quot;homeSlider&quot;&gt;\\r\\n                    &lt;div class=&quot;homeSliderIteam&quot;&gt;\\r\\n                       &lt;img src=&quot;image\\/catalog\\/sliderHome\\/10-layers.png&quot; alt=&quot;shaker&quot;&gt;\\r\\n                        &lt;button class=&quot;BTNdark&quot;&gt;\\r\\n                            BUY NOW  &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                        &lt;\\/button&gt;\\r\\n                    &lt;\\/div&gt;\\r\\n                    &lt;div class=&quot;homeSliderIteam&quot;&gt;\\r\\n                        &lt;img src=&quot;image\\/catalog\\/sliderHome\\/10-layers.png&quot; alt=&quot;shaker&quot;&gt;\\r\\n                        &lt;button class=&quot;BTNdark&quot;&gt;\\r\\n                            BUY NOW  &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                        &lt;\\/button&gt;\\r\\n                    &lt;\\/div&gt;\\r\\n                    &lt;div class=&quot;homeSliderIteam&quot;&gt;\\r\\n                        &lt;img src=&quot;image\\/catalog\\/sliderHome\\/10-layers.png&quot; alt=&quot;shaker&quot;&gt;\\r\\n                        &lt;button class=&quot;BTNdark&quot;&gt;\\r\\n                            BUY NOW  &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                        &lt;\\/button&gt;\\r\\n                    &lt;\\/div&gt;\\r\\n                    &lt;div class=&quot;homeSliderIteam&quot;&gt;\\r\\n                        &lt;img src=&quot;image\\/catalog\\/sliderHome\\/10-layers.png&quot; alt=&quot;shaker&quot;&gt;\\r\\n                        &lt;button class=&quot;BTNdark&quot;&gt;\\r\\n                            BUY NOW  &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                        &lt;\\/button&gt;\\r\\n                    &lt;\\/div&gt;\\r\\n                &lt;\\/div&gt;\\r\\n            &lt;\\/div&gt;\\r\\n            &lt;div class=&quot;col col-lg-3 col-12 homeSpecialProductRightSide&quot;&gt;\\r\\n                &lt;a href=&quot;\\/&quot;&gt;\\r\\n                   &lt;img src=&quot;\\/image\\/catalog\\/sliderHome\\/specialProduct2.png&quot; alt=&quot;\\u041a\\u0440\\u0443\\u0442\\u0430\\u044f \\u0444\\u043b\\u044f\\u0433\\u0430&quot;&gt;\\r\\n                &lt;\\/a&gt;\\r\\n                &lt;a href=&quot;\\/&quot;&gt;\\r\\n                  &lt;img src=&quot;\\/image\\/catalog\\/sliderHome\\/specialProduct1.png&quot; alt=&quot;\\u041a\\u0440\\u0443\\u0442\\u043e\\u0439 \\u0448\\u0435\\u0439\\u043a\\u0435\\u0440&quot;&gt;\\r\\n                &lt;\\/a&gt;\\r\\n            &lt;\\/div&gt;\\r\\n        &lt;\\/div&gt;\\r\\n    &lt;\\/section&gt;\"},\"3\":{\"title\":\"\",\"description\":\"\"}},\"status\":\"1\"}'),
 (33, 'Feedback', 'html', '{\"name\":\"Feedback\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"   &lt;section class=&quot;subscription container&quot;&gt;\\r\\n        &lt;div class=&quot;row&quot;&gt;\\r\\n            &lt;div class=&quot;col col-12&quot;&gt;\\r\\n                &lt;div class=&quot;row&quot;&gt;\\r\\n                    &lt;div class=&quot;col col-lg-8 col-12 subscription_Text&quot;&gt;\\r\\n                        &lt;p&gt;\\r\\n                            &lt;img src=&quot;data:image\\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAMAAADwFEhBAAAAAXNSR0IB2cksfwAAAeZQTFRFAAAA\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/GSMnDwAAAKJ0Uk5TAAMCBAEGCAkHBQo0dX18d3t5eHR2enI2MjozNTk3LVr\\/YraKHhudglnKwsTGwcPHxcj+RholIR0mJBwgH1QU80JM8khVGPY+TSht4C\\/UZEU7T9tgaPAP9aeJI1KVjBlKP+OxDugTPUE8Uwu15EmsEEBQmvRelKhYR+YWDEsnErzQqu\\/8+pFmQ1HrXOW3FRFOF1dsX1tdVvjO1p\\/Y3N3e3+Gh5QOBxwAABtlJREFUeJyNWAl3FEUQrj5memaISTBEQhJklIAhiVlEkqCGQzReUUERUNEQRREieIGuguItimcMwQNz+E+tqu6e6dldH9n3YLZ7a6rr+Oqr6gAICQq0AKHxKcMFPaFx0y6UfU0KUBpARDpW0ugo0kaoWCcpLRJtlDI6iaSRaYwLgYvESsRpuBmhPgkmlZmOYsiEyAD3MpkaMAo3E9pUBmInYbyEVjFLQJTgJqAA7qX0XRoUAEMCscJNFhC4yRL8Fh9sZKEXJRS6i69aFSQdWoECzgpWoflgdCiTVdNSAGnPsGYCmmkKMzMprApgCVlKkJ28KXET0IHSCtxjR1xYhVPhvdJsJ8ba2akz2pSYsCh0xAXLCtCB6L6NRaHCHgJltADYKRvOzIczcASqjkhVNQ0PwZhGXoU2zVawtLeiOZyc6RR0gAsVZkQUGamG0zg7jaTX0E4JugkXhafoSBELaMAFB1zHdDJWgCxwUXWEBZyKLHTEOEd8FjCmypmZmuZwNjlSSLDxqd0EEQeOWFz4WFQcCaPlJNhOg+Ur+HujI7gps5a40DacvooS3ARKcGtc6Ja4SAtcuJMpHGmAi4QEXPClg4AuHCkygiGMy+rkmgscAVM90EbOpx0BHnlHEL\\/KIlxjzVVw4R1BllvLB3HGNYcWNX4yZM11bbe1tXd0tLd1rm9rb7u9s6uzY0N7V3d3V+eGjs6u7o62zg13rINYR+gLqkg29mzq7dvU07+xd1PP5v47NarYkq\\/lcxeoBPGB\\/+5u+GUr6IE1qcjzbZI5OYHtDT\\/cAzCIjx1DQ8Mj946MjtaGdu4cqo0O14ZqO0droyMjQ7Xh4ftGd+zK8\\/stJysBu8fGJ\\/ZMjD\\/w4NhDk2MDkxiRvahj3y0CmuzP8wPcgghFjR8DD5OdwMmRQE9tn5oX0kb+YJ4\\/AsTJwiVVhXwBj6KOSRS\\/MwbfR0r8JpBO4Tn7Hsvzx\\/HpOZkEyo+AJ1DHkwBP5dNPY1ssSInRqaDnmf3PAkyhL4dIWIADuNZ9PYf7+g739Peg7udQxwDA83m+6wjGTAftB+AF\\/PEowLHjpIM4OXFlBi8WeXnJxvRlgBO0fAVC1gZ4lTZR88xx8oVrzjoSBTq2ajiJjzG0Z\\/Y1\\/PL6KepkjvhmRnHnjQMY3Tc5psTJnsGF6J093f9W\\/5nZXiHgLApOQKph7m38du6A7cuYj\\/NHcf0Opj2DdzGm76EFyMlSuj5SfjS8zzHltz4g005QgWNWO5yvWO2w+wLhQxMnh0llEkGbGR\\/jwH0ELtJ7HxIqjn1E0axTNqWCY5iXjyG1NVe2IgueyOJjHJjXAHrP4aoWw+lPqAKmyH86+RLjI+aaSzzx4Vx0eXJ82wT68ilKf2Y7DdLLlc9x+cV6sudLVGxVwKWDZAeNVFD2EanPfJV\\/nX\\/TbeMxALaPaDzqW5ey7xAMrlkxPq4yJ3Pv88R3lgW3W2DsAU\\/Q6OL39MMPm0En4NoEzFygvFDNKddHmMHh6rW9W87i8iRjjNuyw0X\\/j\\/lPP0PkrcC0\\/4K+nAdZmYOI1u0nZZxizYmSoOHyOqj2uysY01lgTnb8nBFp+z4CvzI+7EzhooW648S3CdyEGVtzPAdVupntI6xjErKwCbr5qoATnGJ8ECdHxVipy37na665cQtTDJ6\\/HSdfaA7CjumLspwvOKb6Vt3lKMUUgye1H10rg9I86vh9fqG+cH3wSH1xsb4wuGVhfvF6faF+ffHGxcH6xRvX5hf+oLpF0rM11zgowaE19obNxK3lHESxsFZgY1V\\/rknFXwnwHFSdtVyNQPL3zenpf6aXlvG\\/laXVpZXppenlZX6uLq+sLq2uLK\\/e\\/HeKRlMQJsQFJ4GnX+4QeEasZQyRwvLAKTQWWDspMx+OT4SYyDAnx03zBQP8VkmxgI4rc5BpHB\\/+FxemnMYsfpmTw\\/tIeRMqh6NgxLazJgSbqeekYIB2o2vqZ3sfcNX6roScTHOQaZ6DPLvygR45xY0ND5mj2SdTco44maS9I1lohZ81gzKLi2tMedFhTo7dAF3e3piUYkcHhZ2BI07CjavEyeWgL7OQXcvIEV9AoyMoMQd49SzvppXOHjhShDO4bvnJ3NopoIqLJMQF41eY6oUkabTTzUGtrajgorx6VrGAr0U0BxW44Hin3kziTm9FgIusdMQar90clDU54scSG86kCGfmcOEDnnHNRY03AeuIzsLO0GinCUNoR6kAF9Vw0marjJQ5C+6msbuPlfG2uJhrAjhiYS4EC3KydJdXyYMdzkNGEhsqZSRdskX1zx9Gx2l5k2fvOLnE7ilgY04BSTDVqFnRAseUVNKipQQGkuZb3PwPoDLkbIduf\\/EAAAAASUVORK5CYII=&quot; alt=&quot;mail&quot;&gt;\\r\\n                            ZAPISZ SI\\u0118 DO NEWSLETTERA\\r\\n\\r\\n                            &lt;mark&gt;\\r\\n                                Zapisz si\\u0119 do newslettera! Otrzymasz 40 z\\u0142 rabatu\\r\\n                            &lt;\\/mark&gt;\\r\\n                        &lt;\\/p&gt;\\r\\n                    &lt;\\/div&gt;\\r\\n                    &lt;div class=&quot;col col-lg-4 col-12&quot;&gt;\\r\\n                            &lt;div class=&quot;formSubscription&quot;&gt;\\r\\n                              &lt;input type=&quot;mail&quot; name=&quot;formSubscription&quot; placeholder=&quot;Twoj adress e-mail&quot;&gt;\\r\\n                              &lt;button type=&quot;submit&quot;&gt;\\r\\n                                Zapisz sie\\r\\n                            \\t&lt;\\/button&gt;\\r\\n                            &lt;\\/div&gt;\\r\\n                            \\r\\n                        \\r\\n                    &lt;\\/div&gt;\\r\\n                &lt;\\/div&gt;\\r\\n            &lt;\\/div&gt;\\r\\n        &lt;\\/div&gt;\\r\\n    &lt;\\/section&gt;\\r\\n\\r\\n\\r\\n&lt;div class=&quot;modal fade&quot; id=&quot;formSubscription&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;exampleModalLabel&quot; aria-hidden=&quot;true&quot;&gt;\\r\\n  &lt;div class=&quot;modal-dialog&quot; role=&quot;document&quot;&gt;\\r\\n    &lt;div class=&quot;modal-content&quot;&gt;\\r\\n      &lt;div class=&quot;modal-header&quot;&gt;\\r\\n        &lt;h5 class=&quot;modal-title&quot; id=&quot;exampleModalLabel&quot;&gt;\\u041f\\u0438\\u0441\\u044c\\u043c\\u043e \\u043e\\u0442\\u043f\\u0440\\u0430\\u0432\\u043b\\u0435\\u043d\\u043d\\u043e!&lt;\\/h5&gt;\\r\\n        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;\\r\\n          &lt;span aria-hidden=&quot;true&quot;&gt;\\u00d7&lt;\\/span&gt;\\r\\n        &lt;\\/button&gt;\\r\\n      &lt;\\/div&gt;\\r\\n      &lt;div class=&quot;modal-body&quot;&gt;\\r\\n       \\u0421\\u043f\\u0430\\u0441\\u0438\\u0431\\u043e! \\r\\n\\t\\t&lt;br&gt;\\r\\n        \\u041c\\u044b \\u0441\\u043a\\u043e\\u0440\\u043e \\u0441\\u0432\\u044f\\u0436\\u0435\\u043c\\u0441\\u044f \\u0432 \\u0412\\u0430\\u043c\\u0438. \\r\\n\\t\\t&lt;br&gt;\\r\\n        \\u0412\\u0430\\u0448\\u0435 \\u043e\\u0431\\u0440\\u0430\\u0449\\u0435\\u043d\\u0438\\u0435 \\u043e\\u0447\\u0435\\u043d\\u044c \\u0432\\u0430\\u0436\\u043d\\u043e \\u0434\\u043b\\u044f \\u043d\\u0430\\u0441!\\r\\n      &lt;\\/div&gt;\\r\\n      &lt;div class=&quot;modal-footer&quot;&gt;\\r\\n        &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;\\/button&gt;\\r\\n       \\r\\n      &lt;\\/div&gt;\\r\\n    &lt;\\/div&gt;\\r\\n  &lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\"}},\"formSubscription\":\"\",\"status\":\"1\"}'),
 (34, 'category img', 'html', '{\"name\":\"category img\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\"\\r\\n&lt;section class=&quot;imgCategory container&quot;&gt;\\r\\n        &lt;div class=&quot;row&quot;&gt;\\r\\n            &lt;div class=&quot;col col-12 col-lg-4 col-md-6&quot;&gt;\\r\\n                &lt;a href=&quot;\\/&quot; class=&quot;imgCategoryIteam&quot;&gt;\\r\\n                    &lt;img src=&quot;\\/image\\/catalog\\/body\\/categoryIMG\\/40.png&quot; alt=&quot;\\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f&quot;&gt;\\r\\n                    &lt;span&gt;\\r\\n                        CLASSIC &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                    &lt;\\/span&gt;\\r\\n                &lt;\\/a&gt;\\r\\n            &lt;\\/div&gt;\\r\\n            &lt;div class=&quot;col col-12 col-lg-4 col-md-6&quot;&gt;\\r\\n                &lt;a href=&quot;\\/&quot; class=&quot;imgCategoryIteam&quot;&gt;\\r\\n                    &lt;img src=&quot;\\/image\\/catalog\\/body\\/categoryIMG\\/43.png&quot; alt=&quot;\\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f&quot;&gt;\\r\\n                    &lt;span&gt;\\r\\n                        GoStak\\u00ae Snack Pack &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                    &lt;\\/span&gt;\\r\\n                &lt;\\/a&gt;\\r\\n            &lt;\\/div&gt;\\r\\n            &lt;div class=&quot;col col-12 col-lg-4 col-md-6&quot;&gt;\\r\\n                &lt;a href=&quot;\\/&quot; class=&quot;imgCategoryIteam&quot;&gt;\\r\\n                    &lt;img src=&quot;\\/image\\/catalog\\/body\\/categoryIMG\\/45.png&quot; alt=&quot;\\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f&quot;&gt;\\r\\n                    &lt;span&gt;\\r\\n                        CLASSIC &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                    &lt;\\/span&gt;\\r\\n                &lt;\\/a&gt;\\r\\n            &lt;\\/div&gt;\\r\\n            &lt;div class=&quot;col col-12 col-lg-4 col-md-6&quot;&gt;\\r\\n                &lt;a href=&quot;\\/&quot; class=&quot;imgCategoryIteam&quot;&gt;\\r\\n                    &lt;img src=&quot;\\/image\\/catalog\\/body\\/categoryIMG\\/46.png&quot; alt=&quot;\\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f&quot;&gt;\\r\\n                    &lt;span&gt;\\r\\n                        CLASSIC &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                    &lt;\\/span&gt;\\r\\n                &lt;\\/a&gt;\\r\\n            &lt;\\/div&gt;\\r\\n            &lt;div class=&quot;col col-12 col-lg-4 col-md-6&quot;&gt;\\r\\n                &lt;a href=&quot;\\/&quot; class=&quot;imgCategoryIteam&quot;&gt;\\r\\n                    &lt;img src=&quot;\\/image\\/catalog\\/body\\/categoryIMG\\/47.png&quot; alt=&quot;\\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f&quot;&gt;\\r\\n                    &lt;span&gt;\\r\\n                        GoStak\\u00ae Snack Pack &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                    &lt;\\/span&gt;\\r\\n                &lt;\\/a&gt;\\r\\n            &lt;\\/div&gt;\\r\\n            &lt;div class=&quot;col col-12 col-lg-4 col-md-6&quot;&gt;\\r\\n                &lt;a href=&quot;\\/&quot; class=&quot;imgCategoryIteam&quot;&gt;\\r\\n                    &lt;img src=&quot;\\/image\\/catalog\\/body\\/categoryIMG\\/48.png&quot; alt=&quot;\\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f&quot;&gt;\\r\\n                    &lt;span&gt;\\r\\n                        CLASSIC &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;\\/i&gt;\\r\\n                    &lt;\\/span&gt;\\r\\n                &lt;\\/a&gt;\\r\\n            &lt;\\/div&gt;\\r\\n        &lt;\\/div&gt;\\r\\n    &lt;\\/section&gt;\"}},\"status\":\"1\"}'),
 (36, 'home text', 'html', '{\"name\":\"home text\",\"module_description\":{\"1\":{\"title\":\"\",\"description\":\" &lt;section class=&quot;aboutUs container&quot;&gt;\\r\\n        &lt;div class=&quot;row&quot;&gt;\\r\\n            &lt;div class=&quot;col-12 col&quot;&gt;\\r\\n                &lt;p&gt;\\r\\n                    &lt;br&gt;\\r\\n                    Oferujemy wysokiej jako\\u015bci szejki i dzbanki na wod\\u0119 w atrakcyjnych cenach, kt\\u00f3re pomog\\u0105 Ci w profesjonalny spos\\u00f3b promowa\\u0107 sw\\u00f3j biznes. Nasze produkty wykonane s\\u0105 z najwy\\u017cszej jako\\u015bci materia\\u0142\\u00f3w i zaprojektowane, aby zapobiega\\u0107 wyciekom i zapewni\\u0107 doskona\\u0142e i bezpieczne zamkni\\u0119cie.\\r\\n                    &lt;br&gt;\\r\\n                    &lt;br&gt;\\r\\n                    Nasza szeroka gama kolor\\u00f3w pozwala Ci znale\\u017a\\u0107 ulubione produkty, a tak\\u017ce kolory Twojej firmy, aby przyci\\u0105gn\\u0105\\u0107 uwag\\u0119 tw\\u00f3rc\\u00f3w, a reklama by\\u0142a jeszcze bardziej skuteczna. Nasza szeroka gama kolor\\u00f3w gwarantuje, \\u017ce znajdziesz ulubione, a tak\\u017ce kolory w\\u0142asne firmy, aby przyci\\u0105gn\\u0105\\u0107 uwag\\u0119 tw\\u00f3rc\\u00f3w, a reklama by\\u0142a jeszcze bardziej skuteczna.\\r\\n                &lt;\\/p&gt;\\r\\n                &lt;p class=&quot;alarmBlueTex&quot;&gt;\\r\\n                    SPERSONALIZOWANE SHAKERS I KUBKI WODNE W WIELKICH CENACH! \\r\\n                    &lt;br&gt;\\r\\n                    POPRAW SWOJ\\u0104 SPRZEDA\\u017b Z W\\u0141ASNYMI, OSOBISTYMI WY\\u0141\\u0104CZNIKAMI!\\r\\n                &lt;\\/p&gt;\\r\\n            &lt;\\/div&gt;\\r\\n        &lt;\\/div&gt;\\r\\n    &lt;\\/section&gt;\"}},\"status\":\"1\"}'),
@@ -2460,6 +2900,7 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 CREATE TABLE `oc_option` (
   `option_id` int(11) NOT NULL,
   `type` varchar(32) NOT NULL,
+  `display_type` int(3) NOT NULL DEFAULT '0' COMMENT '0 = Default, 1 = Box',
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -2467,21 +2908,21 @@ CREATE TABLE `oc_option` (
 -- Дамп данных таблицы `oc_option`
 --
 
-INSERT INTO `oc_option` (`option_id`, `type`, `sort_order`) VALUES
-(1, 'radio', 2),
-(2, 'checkbox', 2),
-(4, 'text', 3),
-(5, 'select', 4),
-(6, 'textarea', 5),
-(7, 'file', 999),
-(8, 'date', 7),
-(9, 'time', 8),
-(10, 'datetime', 9),
-(11, 'select', 2),
-(12, 'date', 11),
-(13, 'radio', 99999),
-(14, 'select', 2),
-(15, 'radio', 1);
+INSERT INTO `oc_option` (`option_id`, `type`, `display_type`, `sort_order`) VALUES
+(1, 'radio', 0, 2),
+(2, 'checkbox', 0, 2),
+(4, 'text', 0, 3),
+(5, 'select', 0, 4),
+(6, 'textarea', 0, 5),
+(7, 'file', 0, 999),
+(8, 'date', 0, 7),
+(9, 'time', 0, 8),
+(10, 'datetime', 0, 9),
+(11, 'select', 0, 2),
+(12, 'date', 0, 11),
+(13, 'radio', 0, 99999),
+(14, 'select', 0, 2),
+(15, 'radio', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -2513,7 +2954,35 @@ INSERT INTO `oc_option_description` (`option_id`, `language_id`, `name`) VALUES
 (11, 1, 'ILOŚĆ'),
 (13, 1, 'del'),
 (14, 1, 'WYBIERZ KOLOR'),
-(15, 1, 'WYBIERZ KOLOR');
+(15, 1, 'WYBIERZ KOLOR'),
+(1, 2, 'Radio'),
+(2, 2, 'Checkbox'),
+(4, 2, 'Text'),
+(6, 2, 'Textarea'),
+(8, 2, 'Date'),
+(7, 2, 'File'),
+(5, 2, 'Select'),
+(9, 2, 'Time'),
+(10, 2, 'Date &amp; Time'),
+(12, 2, 'Delivery Date'),
+(11, 2, 'ILOŚĆ'),
+(13, 2, 'del'),
+(14, 2, 'WYBIERZ KOLOR'),
+(15, 2, 'WYBIERZ KOLOR'),
+(1, 3, 'Radio'),
+(2, 3, 'Checkbox'),
+(4, 3, 'Text'),
+(6, 3, 'Textarea'),
+(8, 3, 'Date'),
+(7, 3, 'File'),
+(5, 3, 'Select'),
+(9, 3, 'Time'),
+(10, 3, 'Date &amp; Time'),
+(12, 3, 'Delivery Date'),
+(11, 3, 'ILOŚĆ'),
+(13, 3, 'del'),
+(14, 3, 'WYBIERZ KOLOR'),
+(15, 3, 'WYBIERZ KOLOR');
 
 -- --------------------------------------------------------
 
@@ -2550,7 +3019,10 @@ INSERT INTO `oc_option_value` (`option_value_id`, `option_id`, `image`, `sort_or
 (50, 14, '', 0),
 (49, 13, '', 1),
 (53, 15, 'catalog/colors/822.96x96.jpg', 2),
-(52, 15, 'catalog/colors/krasnij_gloss.jpg', 1);
+(52, 15, 'catalog/colors/krasnij_gloss.jpg', 1),
+(54, 15, 'catalog/product/bottel/photo5343900835303762628.jpg', 0),
+(55, 15, 'catalog/product/bottel/Sloj_65.png', 0),
+(56, 15, 'catalog/product/shaker/49.png', 0);
 
 -- --------------------------------------------------------
 
@@ -2586,8 +3058,53 @@ INSERT INTO `oc_option_value_description` (`option_value_id`, `language_id`, `op
 (46, 1, 11, '100'),
 (51, 1, 14, '500 ml'),
 (50, 1, 14, '700 ml'),
-(53, 1, 15, ' желный'),
-(52, 1, 15, ' красный');
+(53, 3, 15, ' желный 281'),
+(43, 2, 1, 'Large'),
+(31, 2, 1, 'Medium'),
+(45, 2, 2, 'Checkbox 4'),
+(44, 2, 2, 'Checkbox 3'),
+(32, 2, 1, 'Small'),
+(42, 2, 5, 'Yellow'),
+(41, 2, 5, 'Green'),
+(39, 2, 5, 'Red'),
+(40, 2, 5, 'Blue'),
+(23, 2, 2, 'Checkbox 1'),
+(24, 2, 2, 'Checkbox 2'),
+(49, 2, 13, 'green'),
+(47, 2, 11, '200'),
+(46, 2, 11, '100'),
+(51, 2, 14, '500 ml'),
+(50, 2, 14, '700 ml'),
+(53, 1, 15, ' желный 281'),
+(43, 3, 1, 'Large'),
+(31, 3, 1, 'Medium'),
+(45, 3, 2, 'Checkbox 4'),
+(44, 3, 2, 'Checkbox 3'),
+(32, 3, 1, 'Small'),
+(42, 3, 5, 'Yellow'),
+(41, 3, 5, 'Green'),
+(39, 3, 5, 'Red'),
+(40, 3, 5, 'Blue'),
+(23, 3, 2, 'Checkbox 1'),
+(24, 3, 2, 'Checkbox 2'),
+(49, 3, 13, 'green'),
+(47, 3, 11, '200'),
+(46, 3, 11, '100'),
+(51, 3, 14, '500 ml'),
+(50, 3, 14, '700 ml'),
+(52, 3, 15, '  красный 221'),
+(53, 2, 15, ' желный 281'),
+(52, 1, 15, ' красный 221'),
+(52, 2, 15, ' красный 221'),
+(54, 3, 15, 'черный'),
+(54, 1, 15, 'черный'),
+(54, 2, 15, 'черный'),
+(55, 2, 15, 'Зеленый'),
+(55, 1, 15, 'Зеленый'),
+(55, 3, 15, 'Зеленый'),
+(56, 2, 15, 'черный'),
+(56, 1, 15, 'черный'),
+(56, 3, 15, 'черный');
 
 -- --------------------------------------------------------
 
@@ -2795,7 +3312,29 @@ INSERT INTO `oc_order_status` (`order_status_id`, `language_id`, `name`) VALUES
 (10, 1, 'Неудавшийся'),
 (11, 1, 'Возмещенный'),
 (12, 1, 'Полностью измененный'),
-(13, 1, 'Полный возврат');
+(13, 1, 'Полный возврат'),
+(1, 2, 'Ожидание'),
+(2, 2, 'В обработке'),
+(3, 2, 'Доставлено'),
+(7, 2, 'Отменено'),
+(5, 2, 'Сделка завершена'),
+(8, 2, 'Возврат'),
+(9, 2, 'Отмена и аннулирование'),
+(10, 2, 'Неудавшийся'),
+(11, 2, 'Возмещенный'),
+(12, 2, 'Полностью измененный'),
+(13, 2, 'Полный возврат'),
+(1, 3, 'Ожидание'),
+(2, 3, 'В обработке'),
+(3, 3, 'Доставлено'),
+(7, 3, 'Отменено'),
+(5, 3, 'Сделка завершена'),
+(8, 3, 'Возврат'),
+(9, 3, 'Отмена и аннулирование'),
+(10, 3, 'Неудавшийся'),
+(11, 3, 'Возмещенный'),
+(12, 3, 'Полностью измененный'),
+(13, 3, 'Полный возврат');
 
 -- --------------------------------------------------------
 
@@ -2878,9 +3417,9 @@ CREATE TABLE `oc_product` (
 --
 
 INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`) VALUES
-(51, ' 1', '', '', '', '', '', '', '', 1, 7, 'catalog/product/bottel/Sloj_65.png', 0, 1, '19.0000', 0, 0, '2018-09-17', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 1, 1, 85, '2018-09-17 15:18:12', '2018-10-09 21:04:33'),
-(52, 'shaker', '', '', '', '', '', '', '', 1, 7, 'catalog/product/shaker/33.png', 0, 1, '10.0000', 0, 0, '2018-09-17', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 5, '2018-09-17 17:01:17', '2018-09-17 17:01:34'),
-(53, 'shaker', '', '', '', '', '', '', '', 1, 7, 'catalog/product/shaker/49.png', 0, 1, '10.0000', 0, 0, '2018-09-17', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 1, '2018-09-17 17:02:03', '2018-09-17 17:02:11'),
+(51, ' 1', '', '', '', '', '', '', '', 1, 7, 'catalog/product/bottel/Sloj_65.png', 0, 1, '19.0000', 0, 0, '2018-09-17', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 1, 1, 197, '2018-09-17 15:18:12', '2018-10-16 12:27:45'),
+(52, 'shaker', '', '', '', '', '', '', '', 1, 7, 'catalog/product/shaker/33.png', 0, 1, '10.0000', 0, 0, '2018-09-17', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 12, '2018-09-17 17:01:17', '2018-09-17 17:01:34'),
+(53, 'shaker', '', '', '', '', '', '', '', 1, 7, 'catalog/product/shaker/49.png', 0, 1, '10.0000', 0, 0, '2018-09-17', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 6, '2018-09-17 17:02:03', '2018-09-17 17:02:11'),
 (54, 'shaker', '', '', '', '', '', '', '', 1, 7, 'catalog/product/shaker/50.png', 0, 1, '10.0000', 0, 0, '2018-09-17', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2018-09-17 17:02:38', '2018-09-17 17:02:38');
 
 -- --------------------------------------------------------
@@ -2918,10 +3457,18 @@ CREATE TABLE `oc_product_description` (
 --
 
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(51, 1, 'PRO SERIES SHAKER', ' &lt;section class=&quot;productCastomInfo container&quot;&gt;\r\n        &lt;div class=&quot;row&quot;&gt;\r\n            &lt;div class=&quot;col-12 col col-md-12 col-lg-5&quot;&gt;\r\n                &lt;div class=&quot;productCastomInfoWrapIMG&quot;&gt;\r\n                 &lt;img src=&quot;/image/catalog/product/bottel/discription/productInfo.png&quot; alt=&quot;my-bottle&quot;&gt;\r\n                &lt;/div&gt;\r\n            &lt;/div&gt;\r\n            &lt;div class=&quot;col-12 col col-md-12 col-lg-7&quot;&gt;\r\n                &lt;div class=&quot;row&quot;&gt;\r\n                    &lt;div class=&quot;col col-md-6 col-12&quot;&gt;\r\n                        &lt;figure class=&quot;productCastomInfoFigure&quot;&gt;\r\n                            &lt;div&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/Slice_1.png&quot; alt=&quot;alt&quot;&gt;\r\n                            &lt;/div&gt;\r\n                           &lt;ul&gt;\r\n                               &lt;li&gt;Nie ma fasfsad ma fasfsad dfsf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasd dfsf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsma fasfsadf dfsma fasfsadf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsf dfsma fasfsadf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsf ma fasfsad&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsf&lt;/li&gt;    \r\n                           &lt;/ul&gt;\r\n                        &lt;/figure&gt;\r\n                    &lt;/div&gt; &lt;!-- end col --&gt;\r\n                    &lt;div class=&quot;col col-md-6 col-12&quot;&gt;\r\n                            &lt;figure class=&quot;productCastomInfoFigure&quot;&gt;\r\n                                &lt;div&gt;\r\n                                    &lt;img src=&quot;/image/catalog/product/bottel/discription/Slice_2.png&quot; alt=&quot;alt&quot;&gt;\r\n                                &lt;/div&gt;\r\n                               &lt;ul&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad ma fasfsad dfsf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasd dfsf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsma fasfsadf dfsma fasfsadf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsf dfsma fasfsadf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsf ma fasfsad&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsf&lt;/li&gt;    \r\n                               &lt;/ul&gt;\r\n                            &lt;/figure&gt;\r\n                        &lt;/div&gt; &lt;!-- end col --&gt;\r\n                &lt;/div&gt;&lt;!-- end row --&gt;\r\n            &lt;/div&gt;\r\n        &lt;/div&gt; &lt;!-- end row --&gt;\r\n        &lt;section class=&quot;productCastomInfo_ItemOne row&quot;&gt;\r\n                &lt;div class=&quot;col col-md-12 col-sm-12 col-lg-7&quot;&gt;\r\n                    &lt;div class=&quot;productCastomInfo_ItemOne_text&quot;&gt;\r\n                        &lt;article&gt;\r\n                            &lt;h2 class=&quot;titleAndBorderb&quot;&gt;\r\n                                Our best-selling shaker.elevated.\r\n                            &lt;/h2&gt;\r\n                            &lt;p&gt;\r\n                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima tempora laudantium quisquam nostrum cumque culpa ipsum. Nostrum, quidem quis! Est hic sit illo quia quae recusandae dignissimos reiciendis! Quis, accusantium.\r\n                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus obcaecati eius id quis! Quaerat cumque dolores unde vitae consectetur nam, voluptatum perspiciatis ad iste id sed repudiandae modi nostrum.\r\n                                lore\r\n                            &lt;/p&gt;\r\n                            &lt;button class=&quot;BTNdark&quot;&gt;\r\n                                BUY NOW  &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;\r\n                            &lt;/button&gt;\r\n                        &lt;/article&gt;\r\n                    &lt;/div&gt;\r\n                &lt;/div&gt;\r\n                &lt;div class=&quot;col-12 col col-md-12 col-lg-5 productCastomInfo_ItemOne_IMG&quot;&gt;\r\n                    &lt;img src=&quot;/image/catalog/product/bottel/discription/68.png&quot; alt=&quot;img&quot;&gt;\r\n                &lt;/div&gt;\r\n        &lt;/section&gt;&lt;!-- end productCastomInfo_ItemOne  --&gt;\r\n        &lt;section class=&quot;productCastomInfo_ItemTwo row&quot;&gt;\r\n            &lt;div class=&quot;col col-md-12 col-sm-12 col-lg-7&quot;&gt;\r\n                &lt;div class=&quot;productCastomInfo_ItemOne_text&quot;&gt;\r\n                    &lt;ul&gt;\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/23.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/234.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/342.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/72.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n                    &lt;/ul&gt;\r\n                &lt;/div&gt;\r\n            &lt;/div&gt;\r\n            &lt;div class=&quot;col-12 col col-md-12 col-lg-5 productCastomInfo_ItemOne_IMG&quot;&gt;\r\n                &lt;img src=&quot;/image/catalog/product/bottel/discription/111.png&quot; alt=&quot;img&quot;&gt;\r\n            &lt;/div&gt;\r\n        &lt;/section&gt;\r\n    &lt;/section&gt;&lt;!-- end productCastomInfo.container --&gt;', '', 'PRO SERIES SHAKER', '', ''),
+(51, 2, 'PRO SERIES SHAKER', ' &lt;section class=&quot;productCastomInfo container&quot;&gt;\r\n        &lt;div class=&quot;row&quot;&gt;\r\n            &lt;div class=&quot;col-12 col col-md-12 col-lg-5&quot;&gt;\r\n                &lt;div class=&quot;productCastomInfoWrapIMG&quot;&gt;\r\n                 &lt;img src=&quot;/image/catalog/product/bottel/discription/productInfo.png&quot; alt=&quot;my-bottle&quot;&gt;\r\n                &lt;/div&gt;\r\n            &lt;/div&gt;\r\n            &lt;div class=&quot;col-12 col col-md-12 col-lg-7&quot;&gt;\r\n                &lt;div class=&quot;row&quot;&gt;\r\n                    &lt;div class=&quot;col col-md-6 col-12&quot;&gt;\r\n                        &lt;figure class=&quot;productCastomInfoFigure&quot;&gt;\r\n                            &lt;div&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/Slice_1.png&quot; alt=&quot;alt&quot;&gt;\r\n                            &lt;/div&gt;\r\n                           &lt;ul&gt;\r\n                               &lt;li&gt;Nie ma fasfsad ma fasfsad dfsf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasd dfsf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsma fasfsadf dfsma fasfsadf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsf dfsma fasfsadf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsf ma fasfsad&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsf&lt;/li&gt;    \r\n                           &lt;/ul&gt;\r\n                        &lt;/figure&gt;\r\n                    &lt;/div&gt; &lt;!-- end col --&gt;\r\n                    &lt;div class=&quot;col col-md-6 col-12&quot;&gt;\r\n                            &lt;figure class=&quot;productCastomInfoFigure&quot;&gt;\r\n                                &lt;div&gt;\r\n                                    &lt;img src=&quot;/image/catalog/product/bottel/discription/Slice_2.png&quot; alt=&quot;alt&quot;&gt;\r\n                                &lt;/div&gt;\r\n                               &lt;ul&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad ma fasfsad dfsf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasd dfsf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsma fasfsadf dfsma fasfsadf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsf dfsma fasfsadf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsf ma fasfsad&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsf&lt;/li&gt;    \r\n                               &lt;/ul&gt;\r\n                            &lt;/figure&gt;\r\n                        &lt;/div&gt; &lt;!-- end col --&gt;\r\n                &lt;/div&gt;&lt;!-- end row --&gt;\r\n            &lt;/div&gt;\r\n        &lt;/div&gt; &lt;!-- end row --&gt;\r\n        &lt;section class=&quot;productCastomInfo_ItemOne row&quot;&gt;\r\n                &lt;div class=&quot;col col-md-12 col-sm-12 col-lg-7&quot;&gt;\r\n                    &lt;div class=&quot;productCastomInfo_ItemOne_text&quot;&gt;\r\n                        &lt;article&gt;\r\n                            &lt;h2 class=&quot;titleAndBorderb&quot;&gt;\r\n                                Our best-selling shaker.elevated.\r\n                            &lt;/h2&gt;\r\n                            &lt;p&gt;\r\n                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima tempora laudantium quisquam nostrum cumque culpa ipsum. Nostrum, quidem quis! Est hic sit illo quia quae recusandae dignissimos reiciendis! Quis, accusantium.\r\n                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus obcaecati eius id quis! Quaerat cumque dolores unde vitae consectetur nam, voluptatum perspiciatis ad iste id sed repudiandae modi nostrum.\r\n                                lore\r\n                            &lt;/p&gt;\r\n                            &lt;button class=&quot;BTNdark&quot;&gt;\r\n                                BUY NOW  &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;\r\n                            &lt;/button&gt;\r\n                        &lt;/article&gt;\r\n                    &lt;/div&gt;\r\n                &lt;/div&gt;\r\n                &lt;div class=&quot;col-12 col col-md-12 col-lg-5 productCastomInfo_ItemOne_IMG&quot;&gt;\r\n                    &lt;img src=&quot;/image/catalog/product/bottel/discription/68.png&quot; alt=&quot;img&quot;&gt;\r\n                &lt;/div&gt;\r\n        &lt;/section&gt;&lt;!-- end productCastomInfo_ItemOne  --&gt;\r\n        &lt;section class=&quot;productCastomInfo_ItemTwo row&quot;&gt;\r\n            &lt;div class=&quot;col col-md-12 col-sm-12 col-lg-7&quot;&gt;\r\n                &lt;div class=&quot;productCastomInfo_ItemOne_text&quot;&gt;\r\n                    &lt;ul&gt;\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/23.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/234.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/342.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/72.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n                    &lt;/ul&gt;\r\n                &lt;/div&gt;\r\n            &lt;/div&gt;\r\n            &lt;div class=&quot;col-12 col col-md-12 col-lg-5 productCastomInfo_ItemOne_IMG&quot;&gt;\r\n                &lt;img src=&quot;/image/catalog/product/bottel/discription/111.png&quot; alt=&quot;img&quot;&gt;\r\n            &lt;/div&gt;\r\n        &lt;/section&gt;\r\n    &lt;/section&gt;&lt;!-- end productCastomInfo.container --&gt;', '', 'PRO SERIES SHAKER', '', ''),
 (52, 1, 'shaker', '', '', 'shaker', '', ''),
 (53, 1, 'shaker 2', '', '', 'shaker', '', ''),
-(54, 1, 'shaker 3', '', '', 'shaker', '', '');
+(54, 1, 'shaker 3', '', '', 'shaker', '', ''),
+(51, 3, 'PRO SERIES SHAKER', ' &lt;section class=&quot;productCastomInfo container&quot;&gt;\r\n        &lt;div class=&quot;row&quot;&gt;\r\n            &lt;div class=&quot;col-12 col col-md-12 col-lg-5&quot;&gt;\r\n                &lt;div class=&quot;productCastomInfoWrapIMG&quot;&gt;\r\n                 &lt;img src=&quot;/image/catalog/product/bottel/discription/productInfo.png&quot; alt=&quot;my-bottle&quot;&gt;\r\n                &lt;/div&gt;\r\n            &lt;/div&gt;\r\n            &lt;div class=&quot;col-12 col col-md-12 col-lg-7&quot;&gt;\r\n                &lt;div class=&quot;row&quot;&gt;\r\n                    &lt;div class=&quot;col col-md-6 col-12&quot;&gt;\r\n                        &lt;figure class=&quot;productCastomInfoFigure&quot;&gt;\r\n                            &lt;div&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/Slice_1.png&quot; alt=&quot;alt&quot;&gt;\r\n                            &lt;/div&gt;\r\n                           &lt;ul&gt;\r\n                               &lt;li&gt;Nie ma fasfsad ma fasfsad dfsf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasd dfsf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsma fasfsadf dfsma fasfsadf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsf dfsma fasfsadf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsf ma fasfsad&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsf&lt;/li&gt;    \r\n                           &lt;/ul&gt;\r\n                        &lt;/figure&gt;\r\n                    &lt;/div&gt; &lt;!-- end col --&gt;\r\n                    &lt;div class=&quot;col col-md-6 col-12&quot;&gt;\r\n                            &lt;figure class=&quot;productCastomInfoFigure&quot;&gt;\r\n                                &lt;div&gt;\r\n                                    &lt;img src=&quot;/image/catalog/product/bottel/discription/Slice_2.png&quot; alt=&quot;alt&quot;&gt;\r\n                                &lt;/div&gt;\r\n                               &lt;ul&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad ma fasfsad dfsf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasd dfsf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsma fasfsadf dfsma fasfsadf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsf dfsma fasfsadf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsf ma fasfsad&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsf&lt;/li&gt;    \r\n                               &lt;/ul&gt;\r\n                            &lt;/figure&gt;\r\n                        &lt;/div&gt; &lt;!-- end col --&gt;\r\n                &lt;/div&gt;&lt;!-- end row --&gt;\r\n            &lt;/div&gt;\r\n        &lt;/div&gt; &lt;!-- end row --&gt;\r\n        &lt;section class=&quot;productCastomInfo_ItemOne row&quot;&gt;\r\n                &lt;div class=&quot;col col-md-12 col-sm-12 col-lg-7&quot;&gt;\r\n                    &lt;div class=&quot;productCastomInfo_ItemOne_text&quot;&gt;\r\n                        &lt;article&gt;\r\n                            &lt;h2 class=&quot;titleAndBorderb&quot;&gt;\r\n                                Our best-selling shaker.elevated.\r\n                            &lt;/h2&gt;\r\n                            &lt;p&gt;\r\n                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima tempora laudantium quisquam nostrum cumque culpa ipsum. Nostrum, quidem quis! Est hic sit illo quia quae recusandae dignissimos reiciendis! Quis, accusantium.\r\n                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus obcaecati eius id quis! Quaerat cumque dolores unde vitae consectetur nam, voluptatum perspiciatis ad iste id sed repudiandae modi nostrum.\r\n                                lore\r\n                            &lt;/p&gt;\r\n                            &lt;button class=&quot;BTNdark&quot;&gt;\r\n                                BUY NOW  &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;\r\n                            &lt;/button&gt;\r\n                        &lt;/article&gt;\r\n                    &lt;/div&gt;\r\n                &lt;/div&gt;\r\n                &lt;div class=&quot;col-12 col col-md-12 col-lg-5 productCastomInfo_ItemOne_IMG&quot;&gt;\r\n                    &lt;img src=&quot;/image/catalog/product/bottel/discription/68.png&quot; alt=&quot;img&quot;&gt;\r\n                &lt;/div&gt;\r\n        &lt;/section&gt;&lt;!-- end productCastomInfo_ItemOne  --&gt;\r\n        &lt;section class=&quot;productCastomInfo_ItemTwo row&quot;&gt;\r\n            &lt;div class=&quot;col col-md-12 col-sm-12 col-lg-7&quot;&gt;\r\n                &lt;div class=&quot;productCastomInfo_ItemOne_text&quot;&gt;\r\n                    &lt;ul&gt;\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/23.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/234.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/342.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/72.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n                    &lt;/ul&gt;\r\n                &lt;/div&gt;\r\n            &lt;/div&gt;\r\n            &lt;div class=&quot;col-12 col col-md-12 col-lg-5 productCastomInfo_ItemOne_IMG&quot;&gt;\r\n                &lt;img src=&quot;/image/catalog/product/bottel/discription/111.png&quot; alt=&quot;img&quot;&gt;\r\n            &lt;/div&gt;\r\n        &lt;/section&gt;\r\n    &lt;/section&gt;&lt;!-- end productCastomInfo.container --&gt;', '', 'PRO SERIES SHAKER', '', ''),
+(52, 2, 'shaker', '', '', 'shaker', '', ''),
+(53, 2, 'shaker 2', '', '', 'shaker', '', ''),
+(54, 2, 'shaker 3', '', '', 'shaker', '', ''),
+(51, 1, 'PRO SERIES SHAKER', ' &lt;section class=&quot;productCastomInfo container&quot;&gt;\r\n        &lt;div class=&quot;row&quot;&gt;\r\n            &lt;div class=&quot;col-12 col col-md-12 col-lg-5&quot;&gt;\r\n                &lt;div class=&quot;productCastomInfoWrapIMG&quot;&gt;\r\n                 &lt;img src=&quot;/image/catalog/product/bottel/discription/productInfo.png&quot; alt=&quot;my-bottle&quot;&gt;\r\n                &lt;/div&gt;\r\n            &lt;/div&gt;\r\n            &lt;div class=&quot;col-12 col col-md-12 col-lg-7&quot;&gt;\r\n                &lt;div class=&quot;row&quot;&gt;\r\n                    &lt;div class=&quot;col col-md-6 col-12&quot;&gt;\r\n                        &lt;figure class=&quot;productCastomInfoFigure&quot;&gt;\r\n                            &lt;div&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/Slice_1.png&quot; alt=&quot;alt&quot;&gt;\r\n                            &lt;/div&gt;\r\n                           &lt;ul&gt;\r\n                               &lt;li&gt;Nie ma fasfsad ma fasfsad dfsf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasd dfsf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsma fasfsadf dfsma fasfsadf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsf dfsma fasfsadf&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsf ma fasfsad&lt;/li&gt;\r\n                               &lt;li&gt;Nie ma fasfsad dfsf&lt;/li&gt;    \r\n                           &lt;/ul&gt;\r\n                        &lt;/figure&gt;\r\n                    &lt;/div&gt; &lt;!-- end col --&gt;\r\n                    &lt;div class=&quot;col col-md-6 col-12&quot;&gt;\r\n                            &lt;figure class=&quot;productCastomInfoFigure&quot;&gt;\r\n                                &lt;div&gt;\r\n                                    &lt;img src=&quot;/image/catalog/product/bottel/discription/Slice_2.png&quot; alt=&quot;alt&quot;&gt;\r\n                                &lt;/div&gt;\r\n                               &lt;ul&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad ma fasfsad dfsf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasd dfsf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsma fasfsadf dfsma fasfsadf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsf dfsma fasfsadf&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsf ma fasfsad&lt;/li&gt;\r\n                                   &lt;li&gt;Nie ma fasfsad dfsf&lt;/li&gt;    \r\n                               &lt;/ul&gt;\r\n                            &lt;/figure&gt;\r\n                        &lt;/div&gt; &lt;!-- end col --&gt;\r\n                &lt;/div&gt;&lt;!-- end row --&gt;\r\n            &lt;/div&gt;\r\n        &lt;/div&gt; &lt;!-- end row --&gt;\r\n        &lt;section class=&quot;productCastomInfo_ItemOne row&quot;&gt;\r\n                &lt;div class=&quot;col col-md-12 col-sm-12 col-lg-7&quot;&gt;\r\n                    &lt;div class=&quot;productCastomInfo_ItemOne_text&quot;&gt;\r\n                        &lt;article&gt;\r\n                            &lt;h2 class=&quot;titleAndBorderb&quot;&gt;\r\n                                Our best-selling shaker.elevated.\r\n                            &lt;/h2&gt;\r\n                            &lt;p&gt;\r\n                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima tempora laudantium quisquam nostrum cumque culpa ipsum. Nostrum, quidem quis! Est hic sit illo quia quae recusandae dignissimos reiciendis! Quis, accusantium.\r\n                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus obcaecati eius id quis! Quaerat cumque dolores unde vitae consectetur nam, voluptatum perspiciatis ad iste id sed repudiandae modi nostrum.\r\n                                lore\r\n                            &lt;/p&gt;\r\n                            &lt;button class=&quot;BTNdark&quot;&gt;\r\n                                BUY NOW  &lt;i class=&quot;fa fa-caret-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;\r\n                            &lt;/button&gt;\r\n                        &lt;/article&gt;\r\n                    &lt;/div&gt;\r\n                &lt;/div&gt;\r\n                &lt;div class=&quot;col-12 col col-md-12 col-lg-5 productCastomInfo_ItemOne_IMG&quot;&gt;\r\n                    &lt;img src=&quot;/image/catalog/product/bottel/discription/68.png&quot; alt=&quot;img&quot;&gt;\r\n                &lt;/div&gt;\r\n        &lt;/section&gt;&lt;!-- end productCastomInfo_ItemOne  --&gt;\r\n        &lt;section class=&quot;productCastomInfo_ItemTwo row&quot;&gt;\r\n            &lt;div class=&quot;col col-md-12 col-sm-12 col-lg-7&quot;&gt;\r\n                &lt;div class=&quot;productCastomInfo_ItemOne_text&quot;&gt;\r\n                    &lt;ul&gt;\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/23.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/234.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/342.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n\r\n                        &lt;li class=&quot;row&quot;&gt;\r\n                            &lt;div class=&quot;col col-lg-3 col-md-3 col-12&quot;&gt;\r\n                                &lt;img src=&quot;/image/catalog/product/bottel/discription/72.png&quot; alt=&quot;img&quot;&gt;\r\n                            &lt;/div&gt;                            \r\n                            &lt;div class=&quot;col col-lg-9&quot;&gt;\r\n                                &lt;p class=&quot;titleAndBorderb&quot;&gt;\r\n                                    New pro series lid\r\n                                &lt;/p&gt;\r\n                                &lt;p class=&quot;textInfoProduct&quot;&gt;\r\n                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore ratione quae ducimus, recusandae ea quasi inventore nobis porro unde iste eius repellat cupiditate labore ipsa, dolorem iusto. Porro, in?\r\n                                &lt;/p&gt;\r\n                            &lt;/div&gt;                            \r\n                        &lt;/li&gt;\r\n                    &lt;/ul&gt;\r\n                &lt;/div&gt;\r\n            &lt;/div&gt;\r\n            &lt;div class=&quot;col-12 col col-md-12 col-lg-5 productCastomInfo_ItemOne_IMG&quot;&gt;\r\n                &lt;img src=&quot;/image/catalog/product/bottel/discription/111.png&quot; alt=&quot;img&quot;&gt;\r\n            &lt;/div&gt;\r\n        &lt;/section&gt;\r\n    &lt;/section&gt;&lt;!-- end productCastomInfo.container --&gt;', '', 'PRO SERIES SHAKER', '', ''),
+(52, 3, 'shaker', '', '', 'shaker', '', ''),
+(53, 3, 'shaker 2', '', '', 'shaker', '', ''),
+(54, 3, 'shaker 3', '', '', 'shaker', '', '');
 
 -- --------------------------------------------------------
 
@@ -2969,7 +3516,7 @@ CREATE TABLE `oc_product_image` (
 --
 
 INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
-(2371, 51, 'catalog/product/bottel/back1.jpeg', 0);
+(2376, 51, 'catalog/product/bottel/back1.jpeg', 0);
 
 -- --------------------------------------------------------
 
@@ -2990,10 +3537,10 @@ CREATE TABLE `oc_product_option` (
 --
 
 INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`, `value`, `required`) VALUES
-(239, 51, 11, '', 1),
-(240, 51, 14, '', 1),
+(242, 51, 15, '', 1),
 (241, 51, 7, '', 0),
-(242, 51, 15, '', 1);
+(240, 51, 14, '', 1),
+(239, 51, 11, '', 1);
 
 -- --------------------------------------------------------
 
@@ -3023,10 +3570,13 @@ CREATE TABLE `oc_product_option_value` (
 
 INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
 (33, 242, 51, 15, 52, 3, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(28, 239, 51, 11, 46, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(29, 239, 51, 11, 47, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(35, 242, 51, 15, 55, 1, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(34, 242, 51, 15, 54, 1, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(36, 242, 51, 15, 56, 0, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (31, 240, 51, 14, 50, 0, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (30, 240, 51, 14, 51, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(29, 239, 51, 11, 47, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(28, 239, 51, 11, 46, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (32, 242, 51, 15, 53, 2, 0, '0.0000', '+', 0, '+', '0.00000000', '+');
 
 -- --------------------------------------------------------
@@ -3235,7 +3785,13 @@ CREATE TABLE `oc_return_action` (
 INSERT INTO `oc_return_action` (`return_action_id`, `language_id`, `name`) VALUES
 (1, 1, 'Возвращены средства'),
 (2, 1, 'Выдан в кредит'),
-(3, 1, 'Отправлен другой товар для замены');
+(3, 1, 'Отправлен другой товар для замены'),
+(1, 2, 'Возвращены средства'),
+(2, 2, 'Выдан в кредит'),
+(3, 2, 'Отправлен другой товар для замены'),
+(1, 3, 'Возвращены средства'),
+(2, 3, 'Выдан в кредит'),
+(3, 3, 'Отправлен другой товар для замены');
 
 -- --------------------------------------------------------
 
@@ -3273,7 +3829,17 @@ INSERT INTO `oc_return_reason` (`return_reason_id`, `language_id`, `name`) VALUE
 (2, 1, 'Получен не тот (ошибочный) товар'),
 (3, 1, 'Ошибочный заказ'),
 (4, 1, 'Ошибка, пожалуйста укажите/приложите подробности'),
-(5, 1, 'Другое (другая причина), пожалуйста укажите/приложите подробности');
+(5, 1, 'Другое (другая причина), пожалуйста укажите/приложите подробности'),
+(1, 2, 'Получен/доставлен неисправным (сломан)'),
+(2, 2, 'Получен не тот (ошибочный) товар'),
+(3, 2, 'Ошибочный заказ'),
+(4, 2, 'Ошибка, пожалуйста укажите/приложите подробности'),
+(5, 2, 'Другое (другая причина), пожалуйста укажите/приложите подробности'),
+(1, 3, 'Получен/доставлен неисправным (сломан)'),
+(2, 3, 'Получен не тот (ошибочный) товар'),
+(3, 3, 'Ошибочный заказ'),
+(4, 3, 'Ошибка, пожалуйста укажите/приложите подробности'),
+(5, 3, 'Другое (другая причина), пожалуйста укажите/приложите подробности');
 
 -- --------------------------------------------------------
 
@@ -3294,7 +3860,13 @@ CREATE TABLE `oc_return_status` (
 INSERT INTO `oc_return_status` (`return_status_id`, `language_id`, `name`) VALUES
 (1, 1, 'Рассматриваемый'),
 (3, 1, 'Готов (к отправке)'),
-(2, 1, 'Заказ в ожидании');
+(2, 1, 'Заказ в ожидании'),
+(1, 2, 'Рассматриваемый'),
+(3, 2, 'Готов (к отправке)'),
+(2, 2, 'Заказ в ожидании'),
+(1, 3, 'Рассматриваемый'),
+(3, 3, 'Готов (к отправке)'),
+(2, 3, 'Заказ в ожидании');
 
 -- --------------------------------------------------------
 
@@ -3340,11 +3912,9 @@ INSERT INTO `oc_seo_url` (`seo_url_id`, `store_id`, `language_id`, `query`, `key
 (938, 0, 1, 'category_id=70', 'just-for-fun'),
 (937, 0, 1, 'category_id=69', 'dc-comics'),
 (936, 0, 1, 'category_id=68', 'subscription'),
-(941, 0, 1, 'product_id=51', 'pro-series-shaker'),
-(930, 0, 1, 'category_id=59', 'odziez-sportowa'),
-(926, 0, 1, 'category_id=60', 'produkty'),
-(927, 0, 1, 'category_id=61', 'akcesoria-fitness'),
-(929, 0, 1, 'category_id=62', 'marki'),
+(947, 0, 1, 'product_id=51', 'pro-series-shaker'),
+(949, 0, 2, 'category_id=59', 'sportivnaya-odezhda'),
+(948, 0, 1, 'category_id=62', 'brendy'),
 (931, 0, 1, 'category_id=63', 'bottle'),
 (933, 0, 1, 'category_id=64', 'shaker'),
 (932, 0, 1, 'category_id=65', 'awsome'),
@@ -3407,8 +3977,53 @@ CREATE TABLE `oc_session` (
 --
 
 INSERT INTO `oc_session` (`session_id`, `data`, `expire`) VALUES
+('066b0a63bbc90245c12d135471', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 17:08:07'),
+('09d7312ac0f9bf4f4195eac39c', '{\"user_id\":\"1\",\"user_token\":\"BWPQmg5eWOI7hPIHtlaQroY6F3LEz11f\",\"language\":\"ru-ru\",\"currency\":\"RUB\",\"directory_file_manager\":\"product\\/bottel\",\"page_file_manager\":null}', '2018-10-20 07:14:15'),
+('0d1a69c83fdbd997af0d56fac4', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 19:07:58'),
+('13a0c063d64a77c04f2bc35c72', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"account\":\"guest\",\"guest\":{\"customer_group_id\":\"1\",\"firstname\":\"\\u0411\\u043e\\u0433\\u0434\\u0430\\u043d\",\"lastname\":\"\\u041c\\u043e\\u0440\\u043e\\u0437\",\"email\":\"bogdan.moroz96@gmail.com\",\"telephone\":\"38068923123\",\"custom_field\":[],\"shipping_address\":\"1\"},\"payment_address\":{\"firstname\":\"\\u0411\\u043e\\u0433\\u0434\\u0430\\u043d\",\"lastname\":\"\\u041c\\u043e\\u0440\\u043e\\u0437\",\"company\":\"21\\u044321\\u044312\\u0443\",\"address_1\":\"\\u0428\\u0435\\u0432\\u0447\\u0435\\u043d\\u043a\\u0430 61\\u0430\",\"address_2\":\"12\\u044312\\u044312\\u0443\",\"postcode\":\"44500\",\"city\":\"\\u041a\\u0430\\u043c\\u0435\\u043d\\u044c-\\u041a\\u0430\\u0448\\u0438\\u0440\\u0441\\u043a\\u0438\\u0439\",\"country_id\":\"80\",\"zone_id\":\"19\",\"country\":\"\\u0413\\u0440\\u0443\\u0437\\u0438\\u044f\",\"iso_code_2\":\"GE\",\"iso_code_3\":\"GEO\",\"address_format\":\"\",\"custom_field\":[],\"zone\":\"Shida Kartli\",\"zone_code\":\"SK\"},\"shipping_address\":{\"firstname\":\"\\u0411\\u043e\\u0433\\u0434\\u0430\\u043d\",\"lastname\":\"\\u041c\\u043e\\u0440\\u043e\\u0437\",\"company\":\"21\\u044321\\u044312\\u0443\",\"address_1\":\"\\u0428\\u0435\\u0432\\u0447\\u0435\\u043d\\u043a\\u0430 61\\u0430\",\"address_2\":\"12\\u044312\\u044312\\u0443\",\"postcode\":\"44500\",\"city\":\"\\u041a\\u0430\\u043c\\u0435\\u043d\\u044c-\\u041a\\u0430\\u0448\\u0438\\u0440\\u0441\\u043a\\u0438\\u0439\",\"country_id\":\"80\",\"zone_id\":\"19\",\"country\":\"\\u0413\\u0440\\u0443\\u0437\\u0438\\u044f\",\"iso_code_2\":\"GE\",\"iso_code_3\":\"GEO\",\"address_format\":\"\",\"zone\":\"Shida Kartli\",\"zone_code\":\"SK\",\"custom_field\":[]},\"shipping_methods\":{\"flat\":{\"title\":\"\\u0424\\u0438\\u043a\\u0441\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u043d\\u0430\\u044f \\u0441\\u0442\\u043e\\u0438\\u043c\\u043e\\u0441\\u0442\\u044c \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438\",\"quote\":{\"flat\":{\"code\":\"flat.flat\",\"title\":\"\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430 \\u0441 \\u0444\\u0438\\u043a\\u0441\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u043d\\u043e\\u0439 \\u0441\\u0442\\u043e\\u0438\\u043c\\u043e\\u0441\\u0442\\u044c\\u044e \\u0434\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438\",\"cost\":\"5.00\",\"tax_class_id\":\"9\",\"text\":\"5\\u0440.\"}},\"sort_order\":\"1\",\"error\":false}}}', '2018-10-16 19:34:16'),
+('1af6bb3b98b3e38359209a21c4', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-11 11:54:02'),
+('1e821ed1e4312e077627cb6d31', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-19 21:50:05'),
+('1ecc8ace302c9f5684a1c2212a', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 09:52:03'),
+('1efdd3ab09212923aa71b34432', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"Wwh0jfz1J7zziS4mCJ5ADqtSmBxDGb2K\",\"install\":\"1m0awl4O62\",\"directory_file_manager\":\"product\\/shaker\",\"page_file_manager\":null}', '2018-10-16 11:58:40'),
 ('21a3e550e9df521b42f24b7ae2', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"d_blog_module_debug\":0}', '2018-10-02 18:42:46'),
-('f3d21b30677d8c258148131daa', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"SatQJaU7rldDJyaiQTx7mrd6uqFj0gMn\",\"install\":\"le6CdhYWlp\",\"directory_file_manager\":\"colors\",\"page_file_manager\":null,\"vouchers\":[],\"compare\":[\"51\"],\"d_blog_module_debug\":0,\"wishlist\":[\"51\"]}', '2018-10-10 14:29:54');
+('278fc9e9081f97e0b8a09e19a2', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-12 15:17:19'),
+('2c26a736efe70da63c0791775b', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-12 15:19:30'),
+('2d91b3ccfb3964023f84c9efce', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 09:13:42'),
+('32d4246baf42eab593107bd70d', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-12 15:22:53'),
+('3b0d568784192e6d6644e5104d', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-12 15:02:27'),
+('3d4967cd6d9af0ba5fb0fa7c53', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 09:26:58'),
+('41583abb055f9915e47a5d048d', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 09:16:07'),
+('43e6f254322bd08e709626ce9e', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-11 14:25:15'),
+('44d679ea5bcbf25cd2f1b4ef0a', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 12:05:41'),
+('6148800e7dd852fee6e4903b1a', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-10 17:25:25'),
+('6c7f5412c19899e4a308d16172', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-12 15:21:09'),
+('74fbc1935cec7c7f905306be77', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 11:17:21'),
+('7ba89bae1cbf6810e07f043c8f', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 11:56:21'),
+('940310015662dd91288f1e19bd', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 07:31:33'),
+('9998d2f8274178eabcfaafcd44', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-15 21:17:12'),
+('9eef7290dff90f591e5d0b4526', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-12 15:00:15'),
+('9f453de7713604a875409c517a', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 13:13:35'),
+('a12e41bc81cbc02b653356104c', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 09:15:22'),
+('b6affa5ac67d12f48ee3fcfd75', '{\"language\":\"en-gb\",\"currency\":\"RUB\"}', '2018-10-12 18:08:02'),
+('b6cf005cf73e883c7b5928c960', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 13:13:35'),
+('bc66eb981e09102a315aca75a5', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-10 17:23:14'),
+('bca68ad3b5d84ff5c4dc8a2590', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"d_blog_module_debug\":0}', '2018-10-16 12:05:13'),
+('bd86baf81058190626b6d5595c', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-12 15:04:15'),
+('be51461ffaa7e2049402486662', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-12 14:54:00'),
+('c5cee75b0f4af16df1f835e562', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 09:55:55'),
+('c91414f8d0e8b262c85d5f16f9', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 14:39:34'),
+('d3386fe3cfffe2418c07c05bf9', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-17 17:05:23'),
+('d8546bad9e4b05930caa7f65cb', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 14:37:45'),
+('dcfd091d007fa00207667a2c60', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"d_blog_module_debug\":0}', '2018-10-15 21:08:38'),
+('dd522d7e2776a101346c464937', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-12 15:36:20'),
+('ea5d4cb25396a9c241d401658d', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-17 21:22:32'),
+('f15fdb78337452a278892114d6', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"8cvKNyXPkqddoyVqcxHOemagx5dPrANd\"}', '2018-10-15 21:18:45'),
+('f353a9b98ff28479186c98996d', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-12 14:55:27'),
+('f3d21b30677d8c258148131daa', '{\"language\":\"ru-ru\",\"currency\":\"RUB\",\"user_id\":\"1\",\"user_token\":\"aR37ltXu4xbflTJUJhUgATi82K5orRnk\",\"install\":\"j416tz2476\",\"directory_file_manager\":\"colors\",\"page_file_manager\":null,\"vouchers\":[],\"compare\":[\"51\"],\"d_blog_module_debug\":0,\"wishlist\":[\"51\"]}', '2018-10-24 20:11:19'),
+('f545271821971b7153f8437439', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-12 15:17:05'),
+('f7a90c1acb30fd483882142293', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-16 20:52:09'),
+('f7f98028b6bd0c63079cc490be', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-12 15:12:05'),
+('ff459f8b5c02d0be82a4902b9b', '{\"language\":\"ru-ru\",\"currency\":\"RUB\"}', '2018-10-12 15:01:03');
 
 -- --------------------------------------------------------
 
@@ -3430,56 +4045,29 @@ CREATE TABLE `oc_setting` (
 --
 
 INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `serialized`) VALUES
-(687, 0, 'config', 'config_compression', '0', 0),
-(688, 0, 'config', 'config_secure', '0', 0),
-(689, 0, 'config', 'config_password', '1', 0),
-(690, 0, 'config', 'config_shared', '0', 0),
-(691, 0, 'config', 'config_encryption', 'oRPUBlabHrSXNtUIR6s0UlcAMkN4Zec67haA7o5iaSsdyfZqAS2vx1ovn1zk6QulrTBX1Ta8F6wZc3YsZvKZCz53UvvOUUW9hBiVrcQbcWgW8NzK1MFwrrBXRjomVXLDdCpTgv5yJQYwVRY9ct0betPx0WjMhhsQs7c9mcTOYv8bCl5GmDx610qTeZU9LSv91JcJS0gPq9c2WBzXNUgMP1GjYcGU1CVDRAFY8RepCHxVzFgq9HYcBo3mlwMJX10IWh0pXb8z3FyIviTCU3ZknQDgcAruhdfK00ajinffebpWXtErgs4dq0eXl9ulutIv3SujzTZT2htxm3ha7L1ttnLdfMat8QGIMSLPmrjQ7vVKeepeLSe5wZtuUPJGLWVz1L6jdrfkbtfeSoOQuNXTxyrfTJ5q9TxAxwwJrlXwFvS6PyrX7cD7eMkMapqoGAK84mJdoFWHKMmLuqOorHzdVB8u3xyly4JHWGk85dEMRboSoBbIBlixCSjseJfPULSmMJ4vRn7SSmfOkOmw9X3fTNelpNW7jR5JZyZ3FNXqnRqfmghuSsx3GNfRO4wXAwbnmz9j6xl0nfTzgoKkv4Q4JgnDYoXbKRfV13WfpUgvm3kiwdNFVQl6Ul52XKxYTXHY85GB7IfzgMbTwGAXRmOD6ANRnasTD3QnKOxBfFMrE373OrJDSv3Y33cCmYFArJ1NqFsrC7rWxqh35pzcbyhnE7rzUVHaLcqeFESpBKTyG2O8MBByA32IkkBYQrZwWANvTO41dSLJiLXWozWshcG2HbsoiJNB6EfmU0TdB7JIREydkiSdrT6lTEyqisypczcKJziAy53fWGi3oHDYaq8BLaM38HPy2BOMqoVgcz1ZyCOXlAGrQRm8hnfXyZuV1CWyPUen7gJfGa0cl3WQAfoZYFgwbw9682gIMVeON57LNnXYu0dWscmL7OcZYeAmOsHKGLx4a1vdsCV5CB3dW0Yx4mE3wKHK1YxvD933AmhDcGvVJfriHw8TQ1MMYAE2s0k4', 0),
-(697, 0, 'config', 'config_error_filename', 'error.log', 0),
-(696, 0, 'config', 'config_error_log', '1', 0),
-(695, 0, 'config', 'config_error_display', '1', 0),
+(1223, 0, 'config', 'config_compression', '0', 0),
+(1224, 0, 'config', 'config_secure', '0', 0),
+(1225, 0, 'config', 'config_password', '1', 0),
+(1226, 0, 'config', 'config_shared', '0', 0),
+(1227, 0, 'config', 'config_encryption', 'oRPUBlabHrSXNtUIR6s0UlcAMkN4Zec67haA7o5iaSsdyfZqAS2vx1ovn1zk6QulrTBX1Ta8F6wZc3YsZvKZCz53UvvOUUW9hBiVrcQbcWgW8NzK1MFwrrBXRjomVXLDdCpTgv5yJQYwVRY9ct0betPx0WjMhhsQs7c9mcTOYv8bCl5GmDx610qTeZU9LSv91JcJS0gPq9c2WBzXNUgMP1GjYcGU1CVDRAFY8RepCHxVzFgq9HYcBo3mlwMJX10IWh0pXb8z3FyIviTCU3ZknQDgcAruhdfK00ajinffebpWXtErgs4dq0eXl9ulutIv3SujzTZT2htxm3ha7L1ttnLdfMat8QGIMSLPmrjQ7vVKeepeLSe5wZtuUPJGLWVz1L6jdrfkbtfeSoOQuNXTxyrfTJ5q9TxAxwwJrlXwFvS6PyrX7cD7eMkMapqoGAK84mJdoFWHKMmLuqOorHzdVB8u3xyly4JHWGk85dEMRboSoBbIBlixCSjseJfPULSmMJ4vRn7SSmfOkOmw9X3fTNelpNW7jR5JZyZ3FNXqnRqfmghuSsx3GNfRO4wXAwbnmz9j6xl0nfTzgoKkv4Q4JgnDYoXbKRfV13WfpUgvm3kiwdNFVQl6Ul52XKxYTXHY85GB7IfzgMbTwGAXRmOD6ANRnasTD3QnKOxBfFMrE373OrJDSv3Y33cCmYFArJ1NqFsrC7rWxqh35pzcbyhnE7rzUVHaLcqeFESpBKTyG2O8MBByA32IkkBYQrZwWANvTO41dSLJiLXWozWshcG2HbsoiJNB6EfmU0TdB7JIREydkiSdrT6lTEyqisypczcKJziAy53fWGi3oHDYaq8BLaM38HPy2BOMqoVgcz1ZyCOXlAGrQRm8hnfXyZuV1CWyPUen7gJfGa0cl3WQAfoZYFgwbw9682gIMVeON57LNnXYu0dWscmL7OcZYeAmOsHKGLx4a1vdsCV5CB3dW0Yx4mE3wKHK1YxvD933AmhDcGvVJfriHw8TQ1MMYAE2s0k4', 0),
 (4, 0, 'total_voucher', 'total_voucher_sort_order', '8', 0),
 (5, 0, 'total_voucher', 'total_voucher_status', '1', 0),
-(692, 0, 'config', 'config_file_max_size', '300000', 0),
-(693, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
-(694, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', 0),
-(663, 0, 'config', 'config_stock_checkout', '0', 0),
-(664, 0, 'config', 'config_affiliate_group_id', '1', 0),
-(665, 0, 'config', 'config_affiliate_approval', '0', 0),
-(666, 0, 'config', 'config_affiliate_auto', '0', 0),
-(667, 0, 'config', 'config_affiliate_commission', '5', 0),
-(668, 0, 'config', 'config_affiliate_id', '4', 0),
-(669, 0, 'config', 'config_return_id', '0', 0),
-(670, 0, 'config', 'config_return_status_id', '2', 0),
-(671, 0, 'config', 'config_captcha', '', 0),
-(672, 0, 'config', 'config_captcha_page', '[\"review\",\"return\",\"contact\"]', 1),
-(673, 0, 'config', 'config_logo', 'catalog/logo/logo.png', 0),
-(674, 0, 'config', 'config_icon', 'catalog/cart.png', 0),
-(675, 0, 'config', 'config_mail_engine', 'mail', 0),
-(676, 0, 'config', 'config_mail_parameter', '', 0),
-(677, 0, 'config', 'config_mail_smtp_hostname', '', 0),
-(678, 0, 'config', 'config_mail_smtp_username', '', 0),
-(679, 0, 'config', 'config_mail_smtp_password', '', 0),
-(680, 0, 'config', 'config_mail_smtp_port', '25', 0),
-(681, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
-(682, 0, 'config', 'config_mail_alert', '[\"order\"]', 1),
-(683, 0, 'config', 'config_mail_alert_email', '', 0),
-(684, 0, 'config', 'config_maintenance', '0', 0),
-(685, 0, 'config', 'config_seo_url', '0', 0),
-(686, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
-(660, 0, 'config', 'config_api_id', '1', 0),
-(661, 0, 'config', 'config_stock_display', '0', 0),
-(662, 0, 'config', 'config_stock_warning', '0', 0),
-(659, 0, 'config', 'config_fraud_status_id', '2', 0),
-(658, 0, 'config', 'config_complete_status', '[\"3\",\"5\"]', 1),
-(657, 0, 'config', 'config_processing_status', '[\"2\",\"3\",\"1\",\"12\",\"5\"]', 1),
-(656, 0, 'config', 'config_order_status_id', '1', 0),
-(655, 0, 'config', 'config_checkout_id', '5', 0),
-(653, 0, 'config', 'config_cart_weight', '1', 0),
-(654, 0, 'config', 'config_checkout_guest', '1', 0),
-(650, 0, 'config', 'config_login_attempts', '5', 0),
-(651, 0, 'config', 'config_account_id', '3', 0),
-(652, 0, 'config', 'config_invoice_prefix', 'INV-2018-00', 0),
+(1228, 0, 'config', 'config_file_max_size', '300000', 0),
+(1229, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
+(1230, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', 0),
+(1222, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
+(1221, 0, 'config', 'config_seo_url', '0', 0),
+(1220, 0, 'config', 'config_maintenance', '0', 0),
+(1219, 0, 'config', 'config_mail_alert_email', '', 0),
+(1218, 0, 'config', 'config_mail_alert', '[\"order\"]', 1),
+(1217, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
+(1216, 0, 'config', 'config_mail_smtp_port', '25', 0),
+(1215, 0, 'config', 'config_mail_smtp_password', '', 0),
+(1214, 0, 'config', 'config_mail_smtp_username', '', 0),
+(1213, 0, 'config', 'config_mail_smtp_hostname', '', 0),
+(1212, 0, 'config', 'config_mail_parameter', '', 0),
+(1211, 0, 'config', 'config_mail_engine', 'mail', 0),
+(1210, 0, 'config', 'config_icon', 'catalog/cart.png', 0),
 (95, 0, 'payment_free_checkout', 'payment_free_checkout_status', '1', 0),
 (96, 0, 'payment_free_checkout', 'free_checkout_order_status_id', '1', 0),
 (97, 0, 'payment_free_checkout', 'payment_free_checkout_sort_order', '1', 0),
@@ -3579,24 +4167,14 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (197, 0, 'report_marketing', 'report_marketing_status', '1', 0),
 (198, 0, 'report_marketing', 'report_marketing_sort_order', '12', 0),
 (231, 0, 'developer', 'developer_sass', '0', 0),
-(649, 0, 'config', 'config_customer_price', '0', 0),
-(648, 0, 'config', 'config_customer_group_display', '[\"1\"]', 1),
-(646, 0, 'config', 'config_customer_search', '0', 0),
-(647, 0, 'config', 'config_customer_group_id', '1', 0),
-(644, 0, 'config', 'config_customer_online', '0', 0),
-(645, 0, 'config', 'config_customer_activity', '0', 0),
-(643, 0, 'config', 'config_tax_customer', 'shipping', 0),
-(642, 0, 'config', 'config_tax_default', 'shipping', 0),
-(641, 0, 'config', 'config_tax', '0', 0),
-(640, 0, 'config', 'config_voucher_max', '1000', 0),
-(639, 0, 'config', 'config_voucher_min', '1', 0),
-(638, 0, 'config', 'config_review_guest', '1', 0),
-(637, 0, 'config', 'config_review_status', '1', 0),
-(636, 0, 'config', 'config_limit_admin', '20', 0),
-(634, 0, 'config', 'config_weight_class_id', '1', 0),
-(635, 0, 'config', 'config_product_count', '1', 0),
-(633, 0, 'config', 'config_length_class_id', '1', 0),
-(632, 0, 'config', 'config_currency_auto', '1', 0),
+(1209, 0, 'config', 'config_logo', 'catalog/logo/logo.png', 0),
+(1208, 0, 'config', 'config_captcha_page', '[\"review\",\"return\",\"contact\"]', 1),
+(1207, 0, 'config', 'config_captcha', '', 0),
+(1205, 0, 'config', 'config_return_id', '0', 0),
+(1206, 0, 'config', 'config_return_status_id', '2', 0),
+(1204, 0, 'config', 'config_affiliate_id', '4', 0),
+(1203, 0, 'config', 'config_affiliate_commission', '5', 0),
+(1202, 0, 'config', 'config_affiliate_auto', '0', 0),
 (773, 0, 'theme_default', 'theme_default_product_description_length', '100', 0),
 (774, 0, 'theme_default', 'theme_default_image_category_width', '80', 0),
 (772, 0, 'theme_default', 'theme_default_product_limit', '15', 0),
@@ -3606,30 +4184,67 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (280, 0, 'oc3x_storage_cleaner', 'oc3x_storage_cleaner_status', '1', 0),
 (281, 0, 'oc3x_storage_cleaner', 'oc3x_storage_cleaner_size', '1', 0),
 (775, 0, 'theme_default', 'theme_default_image_category_height', '80', 0),
-(631, 0, 'config', 'config_currency', 'RUB', 0),
-(630, 0, 'config', 'config_admin_language', 'ru-ru', 0),
-(629, 0, 'config', 'config_language', 'ru-ru', 0),
-(628, 0, 'config', 'config_zone_id', '', 0),
-(627, 0, 'config', 'config_country_id', '176', 0),
-(626, 0, 'config', 'config_comment', '', 0),
-(625, 0, 'config', 'config_open', '', 0),
-(624, 0, 'config', 'config_image', 'catalog/logo/logo.png', 0),
-(623, 0, 'config', 'config_fax', '', 0),
-(622, 0, 'config', 'config_telephone', '495 888-88-88', 0),
-(621, 0, 'config', 'config_email', 'padilo300@gmail.com', 0),
-(620, 0, 'config', 'config_geocode', '', 0),
-(619, 0, 'config', 'config_address', 'г. Москва, ул. Ленина 10 оф. 32', 0),
-(618, 0, 'config', 'config_owner', 'Иванов Иван', 0),
-(617, 0, 'config', 'config_name', 'my-bottle', 0),
-(616, 0, 'config', 'config_layout_id', '4', 0),
-(615, 0, 'config', 'config_theme', 'default', 0),
-(614, 0, 'config', 'config_meta_keyword', '', 0),
-(613, 0, 'config', 'config_meta_description', 'Мой магазин', 0),
-(612, 0, 'config', 'config_meta_title', 'my-bottle', 0),
+(1201, 0, 'config', 'config_affiliate_approval', '0', 0),
+(1200, 0, 'config', 'config_affiliate_group_id', '1', 0),
+(1199, 0, 'config', 'config_stock_checkout', '0', 0),
+(1198, 0, 'config', 'config_stock_warning', '0', 0),
+(1197, 0, 'config', 'config_stock_display', '0', 0),
+(1196, 0, 'config', 'config_api_id', '1', 0),
+(1195, 0, 'config', 'config_fraud_status_id', '2', 0),
+(1194, 0, 'config', 'config_complete_status', '[\"3\",\"5\"]', 1),
 (886, 0, 'module_d_blog_module', 'module_d_blog_module_status', '1', 0),
 (887, 0, 'module_d_blog_module', 'module_d_blog_module_setting', '{\"category\":{\"main_category_id\":\"1\",\"layout_type\":\"grid\",\"layout\":[\"1\"],\"post_page_limit\":\"5\",\"image_display\":\"1\",\"image_width\":\"1200\",\"image_height\":\"750\",\"sub_category_display\":\"1\",\"sub_category_col\":\"6\",\"sub_category_image\":\"1\",\"sub_category_post_count\":\"1\",\"sub_category_image_width\":\"120\",\"sub_category_image_height\":\"75\"},\"post\":{\"image_display\":\"1\",\"image_width\":\"1200\",\"image_height\":\"300\",\"popup_display\":\"1\",\"popup_width\":\"1400\",\"popup_height\":\"875\",\"author_display\":\"0\",\"date_display\":\"1\",\"date_format\":\"l  Y\",\"review_display\":\"0\",\"rating_display\":\"0\",\"category_label_display\":\"0\",\"short_description_length\":\"150\",\"style_short_description_display\":\"0\",\"nav_display\":\"1\",\"nav_same_category\":\"0\"},\"post_thumb\":{\"image_width\":\"300\",\"image_height\":\"105\",\"title_length\":\"100\",\"short_description_length\":\"300\",\"description_length\":\"300\",\"category_label_display\":\"0\",\"author_display\":\"0\",\"date_display\":\"1\",\"date_format\":\"F  Y\",\"rating_display\":\"0\",\"description_display\":\"1\",\"tag_display\":\"0\",\"views_display\":\"0\",\"review_display\":\"0\",\"read_more_display\":\"1\",\"animate\":\"\"},\"review\":{\"guest\":\"1\",\"social_login\":\"1\",\"page_limit\":\"5\",\"rating_display\":\"1\",\"customer_display\":\"1\",\"moderate\":\"0\",\"image_user_display\":\"1\",\"image_limit\":\"5\",\"image_upload_width\":\"500\",\"image_upload_height\":\"500\"},\"review_thumb\":{\"image_width\":\"70\",\"image_height\":\"70\",\"no_image\":\"catalog\\/d_blog_module\\/no_profile_image.png\",\"date_display\":\"1\",\"image_display\":\"1\",\"rating_display\":\"1\",\"image_user_display\":\"1\",\"image_user_width\":\"70\",\"image_user_height\":\"70\"},\"author\":{\"layout_type\":\"grid\",\"layout\":[\"1\"],\"post_page_limit\":\"7\",\"image_width\":\"400\",\"image_height\":\"400\",\"category_display\":\"1\",\"category_col\":\"6\",\"category_image\":\"1\",\"category_post_count\":\"1\",\"category_image_width\":\"120\",\"category_image_height\":\"75\"},\"theme\":\"default\",\"design\":{\"custom_style\":\"\",\"ssl_url\":\"\"}}', 1),
 (888, 0, 'd_blog_module', 'd_blog_module_status', '1', 0),
-(889, 0, 'd_blog_module', 'd_blog_module_setting', '{\"category\":{\"main_category_id\":\"1\",\"layout_type\":\"grid\",\"layout\":[\"1\"],\"post_page_limit\":\"5\",\"image_display\":\"1\",\"image_width\":\"1200\",\"image_height\":\"750\",\"sub_category_display\":\"1\",\"sub_category_col\":\"6\",\"sub_category_image\":\"1\",\"sub_category_post_count\":\"1\",\"sub_category_image_width\":\"120\",\"sub_category_image_height\":\"75\"},\"post\":{\"image_display\":\"1\",\"image_width\":\"1200\",\"image_height\":\"300\",\"popup_display\":\"1\",\"popup_width\":\"1400\",\"popup_height\":\"875\",\"author_display\":\"0\",\"date_display\":\"1\",\"date_format\":\"l  Y\",\"review_display\":\"0\",\"rating_display\":\"0\",\"category_label_display\":\"0\",\"short_description_length\":\"150\",\"style_short_description_display\":\"0\",\"nav_display\":\"1\",\"nav_same_category\":\"0\"},\"post_thumb\":{\"image_width\":\"300\",\"image_height\":\"105\",\"title_length\":\"100\",\"short_description_length\":\"300\",\"description_length\":\"300\",\"category_label_display\":\"0\",\"author_display\":\"0\",\"date_display\":\"1\",\"date_format\":\"F  Y\",\"rating_display\":\"0\",\"description_display\":\"1\",\"tag_display\":\"0\",\"views_display\":\"0\",\"review_display\":\"0\",\"read_more_display\":\"1\",\"animate\":\"\"},\"review\":{\"guest\":\"1\",\"social_login\":\"1\",\"page_limit\":\"5\",\"rating_display\":\"1\",\"customer_display\":\"1\",\"moderate\":\"0\",\"image_user_display\":\"1\",\"image_limit\":\"5\",\"image_upload_width\":\"500\",\"image_upload_height\":\"500\"},\"review_thumb\":{\"image_width\":\"70\",\"image_height\":\"70\",\"no_image\":\"catalog\\/d_blog_module\\/no_profile_image.png\",\"date_display\":\"1\",\"image_display\":\"1\",\"rating_display\":\"1\",\"image_user_display\":\"1\",\"image_user_width\":\"70\",\"image_user_height\":\"70\"},\"author\":{\"layout_type\":\"grid\",\"layout\":[\"1\"],\"post_page_limit\":\"7\",\"image_width\":\"400\",\"image_height\":\"400\",\"category_display\":\"1\",\"category_col\":\"6\",\"category_image\":\"1\",\"category_post_count\":\"1\",\"category_image_width\":\"120\",\"category_image_height\":\"75\"},\"theme\":\"default\",\"design\":{\"custom_style\":\"\",\"ssl_url\":\"\"}}', 1);
+(889, 0, 'd_blog_module', 'd_blog_module_setting', '{\"category\":{\"main_category_id\":\"1\",\"layout_type\":\"grid\",\"layout\":[\"1\"],\"post_page_limit\":\"5\",\"image_display\":\"1\",\"image_width\":\"1200\",\"image_height\":\"750\",\"sub_category_display\":\"1\",\"sub_category_col\":\"6\",\"sub_category_image\":\"1\",\"sub_category_post_count\":\"1\",\"sub_category_image_width\":\"120\",\"sub_category_image_height\":\"75\"},\"post\":{\"image_display\":\"1\",\"image_width\":\"1200\",\"image_height\":\"300\",\"popup_display\":\"1\",\"popup_width\":\"1400\",\"popup_height\":\"875\",\"author_display\":\"0\",\"date_display\":\"1\",\"date_format\":\"l  Y\",\"review_display\":\"0\",\"rating_display\":\"0\",\"category_label_display\":\"0\",\"short_description_length\":\"150\",\"style_short_description_display\":\"0\",\"nav_display\":\"1\",\"nav_same_category\":\"0\"},\"post_thumb\":{\"image_width\":\"300\",\"image_height\":\"105\",\"title_length\":\"100\",\"short_description_length\":\"300\",\"description_length\":\"300\",\"category_label_display\":\"0\",\"author_display\":\"0\",\"date_display\":\"1\",\"date_format\":\"F  Y\",\"rating_display\":\"0\",\"description_display\":\"1\",\"tag_display\":\"0\",\"views_display\":\"0\",\"review_display\":\"0\",\"read_more_display\":\"1\",\"animate\":\"\"},\"review\":{\"guest\":\"1\",\"social_login\":\"1\",\"page_limit\":\"5\",\"rating_display\":\"1\",\"customer_display\":\"1\",\"moderate\":\"0\",\"image_user_display\":\"1\",\"image_limit\":\"5\",\"image_upload_width\":\"500\",\"image_upload_height\":\"500\"},\"review_thumb\":{\"image_width\":\"70\",\"image_height\":\"70\",\"no_image\":\"catalog\\/d_blog_module\\/no_profile_image.png\",\"date_display\":\"1\",\"image_display\":\"1\",\"rating_display\":\"1\",\"image_user_display\":\"1\",\"image_user_width\":\"70\",\"image_user_height\":\"70\"},\"author\":{\"layout_type\":\"grid\",\"layout\":[\"1\"],\"post_page_limit\":\"7\",\"image_width\":\"400\",\"image_height\":\"400\",\"category_display\":\"1\",\"category_col\":\"6\",\"category_image\":\"1\",\"category_post_count\":\"1\",\"category_image_width\":\"120\",\"category_image_height\":\"75\"},\"theme\":\"default\",\"design\":{\"custom_style\":\"\",\"ssl_url\":\"\"}}', 1),
+(1185, 0, 'config', 'config_customer_price', '0', 0),
+(1193, 0, 'config', 'config_processing_status', '[\"2\",\"3\",\"1\",\"12\",\"5\"]', 1),
+(1192, 0, 'config', 'config_order_status_id', '1', 0),
+(1191, 0, 'config', 'config_checkout_id', '5', 0),
+(1190, 0, 'config', 'config_checkout_guest', '1', 0),
+(1189, 0, 'config', 'config_cart_weight', '1', 0),
+(1188, 0, 'config', 'config_invoice_prefix', 'INV-2018-00', 0),
+(1187, 0, 'config', 'config_account_id', '3', 0),
+(1186, 0, 'config', 'config_login_attempts', '5', 0),
+(1184, 0, 'config', 'config_customer_group_display', '[\"1\"]', 1),
+(1183, 0, 'config', 'config_customer_group_id', '1', 0),
+(1182, 0, 'config', 'config_customer_search', '0', 0),
+(1181, 0, 'config', 'config_customer_activity', '0', 0),
+(1180, 0, 'config', 'config_customer_online', '0', 0),
+(1178, 0, 'config', 'config_tax_default', 'shipping', 0),
+(1179, 0, 'config', 'config_tax_customer', 'shipping', 0),
+(1177, 0, 'config', 'config_tax', '0', 0),
+(1176, 0, 'config', 'config_voucher_max', '1000', 0),
+(1175, 0, 'config', 'config_voucher_min', '1', 0),
+(1174, 0, 'config', 'config_review_guest', '1', 0),
+(1173, 0, 'config', 'config_review_status', '1', 0),
+(1163, 0, 'config', 'config_country_id', '176', 0),
+(1164, 0, 'config', 'config_zone_id', '', 0),
+(1165, 0, 'config', 'config_language', 'ru-ru', 0),
+(1166, 0, 'config', 'config_admin_language', 'ru-ru', 0),
+(1167, 0, 'config', 'config_currency', 'RUB', 0),
+(1168, 0, 'config', 'config_currency_auto', '1', 0),
+(1169, 0, 'config', 'config_length_class_id', '1', 0),
+(1170, 0, 'config', 'config_weight_class_id', '1', 0),
+(1171, 0, 'config', 'config_product_count', '1', 0),
+(1172, 0, 'config', 'config_limit_admin', '20', 0),
+(1162, 0, 'config', 'config_comment', '', 0),
+(1159, 0, 'config', 'config_fax', '', 0),
+(1160, 0, 'config', 'config_image', 'catalog/logo/logo.png', 0),
+(1161, 0, 'config', 'config_open', '', 0),
+(1150, 0, 'config', 'config_meta_keyword', '', 0),
+(1151, 0, 'config', 'config_theme', 'default', 0),
+(1152, 0, 'config', 'config_layout_id', '4', 0),
+(1153, 0, 'config', 'config_name', 'my-bottle', 0),
+(1154, 0, 'config', 'config_owner', 'Иванов Иван', 0),
+(1155, 0, 'config', 'config_address', 'г. Москва, ул. Ленина 10 оф. 32', 0),
+(1156, 0, 'config', 'config_geocode', '', 0),
+(1157, 0, 'config', 'config_email', 'padilo300@gmail.com', 0),
+(1158, 0, 'config', 'config_telephone', '495 888-88-88', 0),
+(1149, 0, 'config', 'config_meta_description', 'Мой магазин', 0),
+(1148, 0, 'config', 'config_meta_title', 'my-bottle', 0),
+(1231, 0, 'config', 'config_error_display', '1', 0),
+(1232, 0, 'config', 'config_error_log', '1', 0),
+(1233, 0, 'config', 'config_error_filename', 'error.log', 0);
 
 -- --------------------------------------------------------
 
@@ -3701,7 +4316,15 @@ INSERT INTO `oc_stock_status` (`stock_status_id`, `language_id`, `name`) VALUES
 (7, 1, 'В наличии'),
 (8, 1, 'Предзаказ'),
 (5, 1, 'Нет в наличии'),
-(6, 1, 'Ожидание 2-3 дня');
+(6, 1, 'Ожидание 2-3 дня'),
+(7, 2, 'В наличии'),
+(8, 2, 'Предзаказ'),
+(5, 2, 'Нет в наличии'),
+(6, 2, 'Ожидание 2-3 дня'),
+(7, 3, 'В наличии'),
+(8, 3, 'Предзаказ'),
+(5, 3, 'Нет в наличии'),
+(6, 3, 'Ожидание 2-3 дня');
 
 -- --------------------------------------------------------
 
@@ -3873,7 +4496,34 @@ INSERT INTO `oc_upload` (`upload_id`, `name`, `filename`, `code`, `date_added`) 
 (18, '822.96x96.jpg', '822.96x96.jpg.LiHHTD4dzwAFvwGKxfT2Qu6oqDjQNxdF', 'e8cfefa7ad5e45593a46f587d5534e71df4ecb2f', '2018-10-10 16:51:39'),
 (19, '822.96x96.jpg', '822.96x96.jpg.KsqC6El9E7C6A07S1JNSrbIjPYvoioeK', '951dc1a1a045104f873fe5bcaa77ab96d41597eb', '2018-10-10 16:51:53'),
 (20, '822.96x96.jpg', '822.96x96.jpg.xYu9vE7SDJ0ikhs8A93fBJS90enqskT1', '72ccbb79d62a655ba20e05f169b19ca61c79b032', '2018-10-10 16:55:26'),
-(21, '822.96x96.jpg', '822.96x96.jpg.pk9rf8OtunbqX9V7MRNlqmpMnOY9JXCC', 'fd859c0551f16715b8a982243a1ddffc4d300df2', '2018-10-10 16:57:03');
+(21, '822.96x96.jpg', '822.96x96.jpg.pk9rf8OtunbqX9V7MRNlqmpMnOY9JXCC', 'fd859c0551f16715b8a982243a1ddffc4d300df2', '2018-10-10 16:57:03'),
+(22, 'upcart.png', 'upcart.png.iDDwM6lLlKRzu4rqKdboEVueKOm0Bk2z', '75cde7a050c1b1117c8b512186426a2d27125975', '2018-10-12 20:44:02'),
+(23, '1313.jpg', '1313.jpg.Imm3RM8gWj3SOw9aiERfETRQpNrKvNHe', '80d235898bf1a6edae3b8d86d97e08fff040e62c', '2018-10-15 20:50:11'),
+(24, 'android-chrome-192x192.png', 'android-chrome-192x192.png.8XvDRFffeSZK0Qou924yM4sOHQywGo4K', '20e5dc5a685857e07a17e7503e08fff1686ff0e3', '2018-10-15 23:12:19'),
+(25, 'primer.png', 'primer.png.gpdmlkwaVJHTuPz345hEIcOsNtnce0h3', 'e37e8830c40f3927d80051b7fc11d26b0bb09b0b', '2018-10-16 09:47:01'),
+(26, 'primer.png', 'primer.png.8DhQ62NsBmKPv2cWcy7iWdvvTkkkzunk', 'ae31af3710a21bd10b02368803b4af5bd2ed5267', '2018-10-16 09:48:50'),
+(27, '08.jpg', '08.jpg.zgu9OPPBGHV142yG5C7hNZzstiTNLPNq', 'bb5c66c0d4656e0c81085c5a37cce389388117a2', '2018-10-16 09:50:52'),
+(28, '08.jpg', '08.jpg.S1MmW3NDH3BayBTRPS4o1qvbNneIOHcY', '4b26dfaa8a10fa484e5823d3f591b65ed9777b8d', '2018-10-16 09:51:36'),
+(29, '08.jpg', '08.jpg.FWNs8mbQHRq4ffpy5kCEcKolRmFD3N63', '78cfdf06b7997118b5542689146a25052d9628cc', '2018-10-16 09:51:55'),
+(30, '08.jpg', '08.jpg.OOVWAMArtQGKUfN04qG6ZZy5t9LhxCzp', '3a86943a20d329e4c0a5245631ed881fb85e9dda', '2018-10-16 09:55:28'),
+(31, '08.jpg', '08.jpg.XA8clUpG1v1vfrHwbA3ewoEB8Zb1DA9o', '369b48e839261fa3cecf32989169d4ccc03c05af', '2018-10-16 09:57:27'),
+(32, '08.jpg', '08.jpg.xU9vkU2nh5uBAoxx9p5DVFjgtAAlKdDD', 'fc32b763af5975c1dc5548137d59a7d67d19f3af', '2018-10-16 10:01:02'),
+(33, '08.jpg', '08.jpg.KKYd0VOjn24IUzJzLEaLKlC2tyF5cvzq', '14703aeaf9ee2019c8c4718ec89e02a71cc09cfb', '2018-10-16 10:01:56'),
+(34, 'WindowsLogo.png', 'WindowsLogo.png.K3wiWzvflnh6llyz8WqFyS5RGQLKpjJZ', '8b48817ea4ee18c3a7f699d954f14cca6d99028d', '2018-10-16 10:03:13'),
+(35, 'WindowsLogo.png', 'WindowsLogo.png.vWV9rpmgBbmLeoeyXv104KjCnCVdGrDP', '1b36dc697681bee4cde540efdb463e11e288ce4a', '2018-10-16 10:04:24'),
+(36, 'michelinx-mpluss-100.jpg', 'michelinx-mpluss-100.jpg.S2LptO256achcdz5uDqOljtza1QNKSGX', '590f4022d792a476780e1f20cb618b42dbfd2a26', '2018-10-16 10:07:33'),
+(37, 'ifcart-empty126588.png', 'ifcart-empty126588.png.Vg9qkC6t8f70C8UKcK8uq9ZKDz6C9s0p', '038efa66a6b5f68ce79ab22dcf2652db0b0e6a38', '2018-10-16 13:05:33'),
+(38, 'ifSed-0122323371.png', 'ifSed-0122323371.png.WfspU0JR7A9hROzkKwdDv8G0NaKsa7j6', 'a1c886dc05ef3d93236637c81c5c7e0225b0ef48', '2018-10-16 13:08:40'),
+(39, 'ifSed-0122323371.png', 'ifSed-0122323371.png.pUKs4hu4Wj3v5YtlIlEc14nLyK7b4kLK', '48f80eea346f445ae0f58fee160ede1a0b045809', '2018-10-16 13:09:06'),
+(40, '1313.jpg', '1313.jpg.PZOcnbpdi5H0i8HQwIaYTLI9fXNSbcVt', '290c5779c54046943f8c70cd87e4d2a755aef05b', '2018-10-16 19:07:18'),
+(41, 'ifSed-0122323371.png', 'ifSed-0122323371.png.gUGjBu4fVYqDHzY7u7XMez0qSdD8pe6O', 'f77ccf7ff641099fbea13f374f8012bfea7de57c', '2018-10-16 19:09:34'),
+(42, 'Snimokekranaot2018-10-2114-07-15.png', 'Snimokekranaot2018-10-2114-07-15.png.qyI52GbGB4PIJHdSZFmkRG9WxWQuWMCb', 'f7b965ef73e0104561e16e2fd3b61372fb737765', '2018-10-21 17:50:16'),
+(43, 'Snimokekranaot2018-10-2117-55-14.png', 'Snimokekranaot2018-10-2117-55-14.png.3xyPcJGlmyNz0Ty00TPx2FFC9q3pqXtd', '4478b7e6c696d08cdad48d5824af3e8a60faf416', '2018-10-21 17:58:42'),
+(44, 'Snimokekranaot2018-10-2117-55-14.png', 'Snimokekranaot2018-10-2117-55-14.png.E8Y9aNY31mRyDM8KV4HC2DYwzgENd8iR', '0f8b76d710ae253a4ed267ac4fa06f2cdd5626b1', '2018-10-21 18:02:28'),
+(45, 'Snimokekranaot2018-10-2114-07-15.png', 'Snimokekranaot2018-10-2114-07-15.png.eHNFitBD36adm0i6aI2s4jZbVpl83GJ2', '8594762456392fc39fa456f093cc20f5927b4256', '2018-10-21 18:02:53'),
+(46, 'Snimokekranaot2018-10-2117-55-14.png', 'Snimokekranaot2018-10-2117-55-14.png.fe1evDS67Nr1CbTH1TjAymQR3FlJJ3GG', '6a84fa43902f3b1ca74be76b0b305c5d9b4e994c', '2018-10-21 18:03:19'),
+(47, 'Snimokekranaot2018-10-2114-07-15.png', 'Snimokekranaot2018-10-2114-07-15.png.9M9MfF6FVjxmwmFlSpZ49M3nCWxIhoWA', '0e662432ded21058ecf42b768a568d1fc4daae9b', '2018-10-21 18:04:20'),
+(48, 'Snimokekranaot2018-10-2117-55-14.png', 'Snimokekranaot2018-10-2117-55-14.png.DpD5iHSucdsGIi97zzkTfgPbL3eoyqmH', 'ce2e9d481432da1214dd560b91371cf541648b4b', '2018-10-21 18:05:11');
 
 -- --------------------------------------------------------
 
@@ -3998,7 +4648,13 @@ CREATE TABLE `oc_voucher_theme_description` (
 INSERT INTO `oc_voucher_theme_description` (`voucher_theme_id`, `language_id`, `name`) VALUES
 (6, 1, 'Новый год'),
 (7, 1, 'День рождения'),
-(8, 1, 'Другое');
+(8, 1, 'Другое'),
+(6, 2, 'Новый год'),
+(7, 2, 'День рождения'),
+(8, 2, 'Другое'),
+(6, 3, 'Новый год'),
+(7, 3, 'День рождения'),
+(8, 3, 'Другое');
 
 -- --------------------------------------------------------
 
@@ -4040,7 +4696,11 @@ CREATE TABLE `oc_weight_class_description` (
 
 INSERT INTO `oc_weight_class_description` (`weight_class_id`, `language_id`, `title`, `unit`) VALUES
 (1, 1, 'Килограмм', 'кг'),
-(2, 1, 'Грамм', 'г');
+(2, 1, 'Грамм', 'г'),
+(1, 2, 'Килограмм', 'кг'),
+(2, 2, 'Грамм', 'г'),
+(1, 3, 'Килограмм', 'кг'),
+(2, 3, 'Грамм', 'г');
 
 -- --------------------------------------------------------
 
@@ -5215,7 +5875,7 @@ ALTER TABLE `oc_banner`
 -- AUTO_INCREMENT для таблицы `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
-  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
 --
 -- AUTO_INCREMENT для таблицы `oc_bm_author`
 --
@@ -5260,7 +5920,7 @@ ALTER TABLE `oc_bm_review`
 -- AUTO_INCREMENT для таблицы `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `cart_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT для таблицы `oc_category`
 --
@@ -5370,12 +6030,12 @@ ALTER TABLE `oc_extension`
 -- AUTO_INCREMENT для таблицы `oc_extension_install`
 --
 ALTER TABLE `oc_extension_install`
-  MODIFY `extension_install_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `extension_install_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT для таблицы `oc_extension_path`
 --
 ALTER TABLE `oc_extension_path`
-  MODIFY `extension_path_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=508;
+  MODIFY `extension_path_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=834;
 --
 -- AUTO_INCREMENT для таблицы `oc_filter`
 --
@@ -5400,7 +6060,7 @@ ALTER TABLE `oc_information`
 -- AUTO_INCREMENT для таблицы `oc_language`
 --
 ALTER TABLE `oc_language`
-  MODIFY `language_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `language_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT для таблицы `oc_layout`
 --
@@ -5450,7 +6110,7 @@ ALTER TABLE `oc_megamenu_widgets`
 -- AUTO_INCREMENT для таблицы `oc_modification`
 --
 ALTER TABLE `oc_modification`
-  MODIFY `modification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `modification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT для таблицы `oc_module`
 --
@@ -5465,7 +6125,7 @@ ALTER TABLE `oc_option`
 -- AUTO_INCREMENT для таблицы `oc_option_value`
 --
 ALTER TABLE `oc_option_value`
-  MODIFY `option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 --
 -- AUTO_INCREMENT для таблицы `oc_order`
 --
@@ -5530,7 +6190,7 @@ ALTER TABLE `oc_product_discount`
 -- AUTO_INCREMENT для таблицы `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
-  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2372;
+  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2377;
 --
 -- AUTO_INCREMENT для таблицы `oc_product_option`
 --
@@ -5540,7 +6200,7 @@ ALTER TABLE `oc_product_option`
 -- AUTO_INCREMENT для таблицы `oc_product_option_value`
 --
 ALTER TABLE `oc_product_option_value`
-  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT для таблицы `oc_product_reward`
 --
@@ -5590,12 +6250,12 @@ ALTER TABLE `oc_review`
 -- AUTO_INCREMENT для таблицы `oc_seo_url`
 --
 ALTER TABLE `oc_seo_url`
-  MODIFY `seo_url_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=942;
+  MODIFY `seo_url_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=950;
 --
 -- AUTO_INCREMENT для таблицы `oc_setting`
 --
 ALTER TABLE `oc_setting`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=890;
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1234;
 --
 -- AUTO_INCREMENT для таблицы `oc_statistics`
 --
@@ -5640,7 +6300,7 @@ ALTER TABLE `oc_translation`
 -- AUTO_INCREMENT для таблицы `oc_upload`
 --
 ALTER TABLE `oc_upload`
-  MODIFY `upload_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `upload_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT для таблицы `oc_user`
 --
