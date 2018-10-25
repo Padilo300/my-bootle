@@ -23,7 +23,7 @@
       <div class="panel-group" id="accordion">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title">{{ text_checkout_option }}</h4>
+            <h4 class="panel-title " id="castom_login">{{ text_checkout_option }}</h4>
           </div>
           <div class="panel-collapse collapse" id="collapse-checkout-option">
             <div class="panel-body"></div>
@@ -86,7 +86,8 @@
       {{ content_bottom }}</div>
     {{ column_right }}</div>
 </div>
-<script type="text/javascript"><!--
+<script type="text/javascript">
+
 $(document).on('change', 'input[name=\'account\']', function() {
 	if ($('#collapse-payment-address').parent().find('.panel-heading .panel-title > *').is('a')) {
 		if (this.value == 'register') {
@@ -145,15 +146,17 @@ $(document).delegate('#button-account', 'click', function() {
         url: 'index.php?route=checkout/' + $('input[name=\'account\']:checked').val(),
         dataType: 'html',
         beforeSend: function() {
-        	$('#button-account').button('loading');
+            $('#button-account').button('loading');
+            
 		},
         complete: function() {
-			$('#button-account').button('reset');
+            $('#button-account').button('reset');
+            
         },
         success: function(html) {
             $('.alert-dismissible, .text-danger').remove();
 			$('.form-group').removeClass('has-error');
-
+            
             $('#collapse-payment-address .panel-body').html(html);
 
 			if ($('input[name=\'account\']:checked').val() == 'register') {
@@ -811,4 +814,14 @@ $(document).delegate('#button-payment-method', 'click', function() {
     });
 });
 //--></script>
+<script>
+   
+$(document).ready(function () {
+
+$('#button-account').on('click', function(){
+    $('#castom_login  a').trigger('click');
+    alert('asfdsdf');
+});
+});
+</script>
 {{ footer }}

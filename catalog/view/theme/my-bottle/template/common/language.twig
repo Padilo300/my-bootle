@@ -1,18 +1,41 @@
+<style>
+  .selectLang{
+    border-radius: 5px !important;
+    height: 27px;
+    padding: 1px 10px;
+  }
+  .language-selectList{
+    top: -29px !important;
+    left: 56px !important;
+    border: 1px solid #9995;
+    background: #fff !important;
+  }
+  .language-selectList__item{
+    background: #fff !important;
+    color: #14a3c7 !important;
+  }
+</style>
 {% if languages|length > 1 %}
 <div class="pull-left">
-  <form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-language">
+  <form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-language" class="languageToogle">
     <div class="btn-group">
-      <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-      {% for language in languages %}
-      {% if language.code == code %} 
-      <img src="catalog/language/{{ language.code }}/{{ language.code }}.png" alt="{{ language.name }}" title="{{ language.name }}">
-      {% endif %}
-      {% endfor %}
-      <span class="hidden-xs hidden-sm hidden-md">{{ text_language }}</span>&nbsp;<i class="fa fa-caret-down"></i></button>
-      <ul class="dropdown-menu">
+      <button class="btn btn-link selectLang " data-toggle="dropdown">
+        {% for language in languages %}
+          {% if language.code == code %} 
+          {% endif %}
+        {% endfor %}
+      <span class="hidden-xs hidden-sm hidden-md">
+        {{ text_language }}
+      </span>
+      &nbsp;<i class="fa fa-caret-right"></i>
+      </button>
+      <ul class="dropdown-menu language-selectList">
         {% for language in languages %}
         <li>
-          <button class="btn btn-link btn-block language-select" type="button" name="{{ language.code }}"><img src="catalog/language/{{ language.code }}/{{ language.code }}.png" alt="{{ language.name }}" title="{{ language.name }}" /> {{ language.name }}</button>
+          <button class="btn btn-link btn-block language-select language-selectList__item" type="button" name="{{ language.code }}">
+            <img src="catalog/language/{{ language.code }}/{{ language.code }}.png" alt="{{ language.name }}" title="{{ language.name }}" /> 
+              {{ language.name }}
+          </button>
         </li>
         {% endfor %}
       </ul>

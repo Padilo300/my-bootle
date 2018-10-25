@@ -1,5 +1,8 @@
 <?php
 // Version
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
 define('VERSION', '3.0.2.0');
 
 // Configuration

@@ -52,14 +52,14 @@
                         <div class="col col-xs-12">
                             <div class="headSale_textWrap">
                                 <span>
-                                    dodatkowy rabat 
+                                    {{ dodatkowy_rabat }}
                                     <b>
                                         20%
                                     </b>   
                                 </span>
                 
                                 <span>
-                                    kod: 
+                                    {{ kod }}: 
                                     <b>
                                         seozon
                                     </b>
@@ -74,25 +74,24 @@
                     <div class="col col-xs-12">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a href="/" class="nav-link">
-                                    button
+                                <a href="/index.php?route=information/information&information_id=6" class="nav-link">
+                                    {{castom_delivery}}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/"  class="nav-link">
-                                    button
+                                <a href="/index.php?route=information/information&information_id=3"  class="nav-link">
+                                    {{castom_payment}}
                                 </a>
                             </li>
                             <li class="nav-item" >
-                                <a href="/"  class="nav-link">
-                                    button
+                                <a href="/index.php?route=information/information&information_id=4"  class="nav-link">
+                                    {{castom_contact}}
                                 </a>
                             </li>
                         </ul>
 
                         <span class="textSale">
-                            <i class="fa fa-cube" aria-hidden="true"></i>   Free Shipping with $35 purchase
-                        </span>
+                            <i class="fa fa-cube" aria-hidden="true"></i>   {{ dodatkowy_rabat }} $35                         </span>
 
                         <span class="socialCircule">
                             <a href="https://instagram.com">
@@ -121,16 +120,7 @@
                                     </h1>
                                 {% endif %}
                                     {{ language }}
-                                    <div class="btn-group dropright languageToogle">
-                                        <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            PLN
-                                        </button>
-                                       
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">RU</a>
-                                            <a class="dropdown-item" href="#">US</a>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <div class="col col-xs-12 col-xl-5 col-lg-6 col-md-6 col-12">

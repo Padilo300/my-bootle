@@ -3411,304 +3411,304 @@ a.text-dark:hover, a.text-dark:focus {
 
 @-webkit-keyframes shake-slow {
   2% {
-    -webkit-transform: translate(0px, -8px) rotate(0.5deg);
-            transform: translate(0px, -8px) rotate(0.5deg); }
+    -webkit-transform: translate(-9px, -8px) rotate(-2.5deg);
+            transform: translate(-9px, -8px) rotate(-2.5deg); }
   4% {
-    -webkit-transform: translate(9px, -1px) rotate(3.5deg);
-            transform: translate(9px, -1px) rotate(3.5deg); }
+    -webkit-transform: translate(-8px, -4px) rotate(3.5deg);
+            transform: translate(-8px, -4px) rotate(3.5deg); }
   6% {
-    -webkit-transform: translate(-1px, 6px) rotate(0.5deg);
-            transform: translate(-1px, 6px) rotate(0.5deg); }
+    -webkit-transform: translate(-7px, 3px) rotate(3.5deg);
+            transform: translate(-7px, 3px) rotate(3.5deg); }
   8% {
-    -webkit-transform: translate(2px, 1px) rotate(-1.5deg);
-            transform: translate(2px, 1px) rotate(-1.5deg); }
+    -webkit-transform: translate(-8px, 6px) rotate(0.5deg);
+            transform: translate(-8px, 6px) rotate(0.5deg); }
   10% {
-    -webkit-transform: translate(-7px, -4px) rotate(-1.5deg);
-            transform: translate(-7px, -4px) rotate(-1.5deg); }
+    -webkit-transform: translate(3px, 9px) rotate(2.5deg);
+            transform: translate(3px, 9px) rotate(2.5deg); }
   12% {
-    -webkit-transform: translate(2px, -7px) rotate(0.5deg);
-            transform: translate(2px, -7px) rotate(0.5deg); }
+    -webkit-transform: translate(-9px, 9px) rotate(3.5deg);
+            transform: translate(-9px, 9px) rotate(3.5deg); }
   14% {
-    -webkit-transform: translate(8px, 10px) rotate(-1.5deg);
-            transform: translate(8px, 10px) rotate(-1.5deg); }
+    -webkit-transform: translate(-8px, 1px) rotate(-0.5deg);
+            transform: translate(-8px, 1px) rotate(-0.5deg); }
   16% {
-    -webkit-transform: translate(-6px, 9px) rotate(0.5deg);
-            transform: translate(-6px, 9px) rotate(0.5deg); }
+    -webkit-transform: translate(-9px, -4px) rotate(-2.5deg);
+            transform: translate(-9px, -4px) rotate(-2.5deg); }
   18% {
-    -webkit-transform: translate(-8px, -5px) rotate(-0.5deg);
-            transform: translate(-8px, -5px) rotate(-0.5deg); }
+    -webkit-transform: translate(-9px, -1px) rotate(-1.5deg);
+            transform: translate(-9px, -1px) rotate(-1.5deg); }
   20% {
-    -webkit-transform: translate(8px, -5px) rotate(3.5deg);
-            transform: translate(8px, -5px) rotate(3.5deg); }
+    -webkit-transform: translate(-4px, -5px) rotate(-2.5deg);
+            transform: translate(-4px, -5px) rotate(-2.5deg); }
   22% {
-    -webkit-transform: translate(9px, -8px) rotate(-0.5deg);
-            transform: translate(9px, -8px) rotate(-0.5deg); }
+    -webkit-transform: translate(6px, -4px) rotate(-2.5deg);
+            transform: translate(6px, -4px) rotate(-2.5deg); }
   24% {
-    -webkit-transform: translate(4px, 5px) rotate(-2.5deg);
-            transform: translate(4px, 5px) rotate(-2.5deg); }
+    -webkit-transform: translate(7px, 6px) rotate(-1.5deg);
+            transform: translate(7px, 6px) rotate(-1.5deg); }
   26% {
-    -webkit-transform: translate(5px, -3px) rotate(-1.5deg);
-            transform: translate(5px, -3px) rotate(-1.5deg); }
+    -webkit-transform: translate(-9px, -7px) rotate(0.5deg);
+            transform: translate(-9px, -7px) rotate(0.5deg); }
   28% {
-    -webkit-transform: translate(9px, 1px) rotate(2.5deg);
-            transform: translate(9px, 1px) rotate(2.5deg); }
+    -webkit-transform: translate(8px, -3px) rotate(1.5deg);
+            transform: translate(8px, -3px) rotate(1.5deg); }
   30% {
-    -webkit-transform: translate(-3px, -7px) rotate(2.5deg);
-            transform: translate(-3px, -7px) rotate(2.5deg); }
+    -webkit-transform: translate(3px, 8px) rotate(0.5deg);
+            transform: translate(3px, 8px) rotate(0.5deg); }
   32% {
-    -webkit-transform: translate(8px, 3px) rotate(-1.5deg);
-            transform: translate(8px, 3px) rotate(-1.5deg); }
+    -webkit-transform: translate(3px, -9px) rotate(-1.5deg);
+            transform: translate(3px, -9px) rotate(-1.5deg); }
   34% {
-    -webkit-transform: translate(-8px, -4px) rotate(-1.5deg);
-            transform: translate(-8px, -4px) rotate(-1.5deg); }
+    -webkit-transform: translate(-2px, 0px) rotate(-0.5deg);
+            transform: translate(-2px, 0px) rotate(-0.5deg); }
   36% {
-    -webkit-transform: translate(4px, 0px) rotate(0.5deg);
-            transform: translate(4px, 0px) rotate(0.5deg); }
+    -webkit-transform: translate(-2px, -3px) rotate(0.5deg);
+            transform: translate(-2px, -3px) rotate(0.5deg); }
   38% {
-    -webkit-transform: translate(5px, -1px) rotate(1.5deg);
-            transform: translate(5px, -1px) rotate(1.5deg); }
+    -webkit-transform: translate(-1px, 9px) rotate(0.5deg);
+            transform: translate(-1px, 9px) rotate(0.5deg); }
   40% {
-    -webkit-transform: translate(-6px, -5px) rotate(0.5deg);
-            transform: translate(-6px, -5px) rotate(0.5deg); }
+    -webkit-transform: translate(1px, -9px) rotate(-0.5deg);
+            transform: translate(1px, -9px) rotate(-0.5deg); }
   42% {
-    -webkit-transform: translate(-6px, 3px) rotate(-1.5deg);
-            transform: translate(-6px, 3px) rotate(-1.5deg); }
+    -webkit-transform: translate(4px, -2px) rotate(-1.5deg);
+            transform: translate(4px, -2px) rotate(-1.5deg); }
   44% {
-    -webkit-transform: translate(-8px, -1px) rotate(3.5deg);
-            transform: translate(-8px, -1px) rotate(3.5deg); }
+    -webkit-transform: translate(1px, -9px) rotate(2.5deg);
+            transform: translate(1px, -9px) rotate(2.5deg); }
   46% {
-    -webkit-transform: translate(8px, -3px) rotate(-1.5deg);
-            transform: translate(8px, -3px) rotate(-1.5deg); }
+    -webkit-transform: translate(9px, 1px) rotate(3.5deg);
+            transform: translate(9px, 1px) rotate(3.5deg); }
   48% {
-    -webkit-transform: translate(-8px, 4px) rotate(-1.5deg);
-            transform: translate(-8px, 4px) rotate(-1.5deg); }
+    -webkit-transform: translate(-9px, -3px) rotate(1.5deg);
+            transform: translate(-9px, -3px) rotate(1.5deg); }
   50% {
-    -webkit-transform: translate(-3px, 0px) rotate(2.5deg);
-            transform: translate(-3px, 0px) rotate(2.5deg); }
+    -webkit-transform: translate(-3px, 3px) rotate(-0.5deg);
+            transform: translate(-3px, 3px) rotate(-0.5deg); }
   52% {
-    -webkit-transform: translate(-7px, -5px) rotate(1.5deg);
-            transform: translate(-7px, -5px) rotate(1.5deg); }
+    -webkit-transform: translate(-9px, 9px) rotate(-1.5deg);
+            transform: translate(-9px, 9px) rotate(-1.5deg); }
   54% {
-    -webkit-transform: translate(10px, 7px) rotate(-2.5deg);
-            transform: translate(10px, 7px) rotate(-2.5deg); }
+    -webkit-transform: translate(-9px, -9px) rotate(-1.5deg);
+            transform: translate(-9px, -9px) rotate(-1.5deg); }
   56% {
-    -webkit-transform: translate(-1px, -4px) rotate(-2.5deg);
-            transform: translate(-1px, -4px) rotate(-2.5deg); }
+    -webkit-transform: translate(5px, -9px) rotate(-0.5deg);
+            transform: translate(5px, -9px) rotate(-0.5deg); }
   58% {
-    -webkit-transform: translate(2px, 9px) rotate(2.5deg);
-            transform: translate(2px, 9px) rotate(2.5deg); }
+    -webkit-transform: translate(5px, -6px) rotate(-2.5deg);
+            transform: translate(5px, -6px) rotate(-2.5deg); }
   60% {
-    -webkit-transform: translate(-8px, -3px) rotate(0.5deg);
-            transform: translate(-8px, -3px) rotate(0.5deg); }
+    -webkit-transform: translate(-4px, -2px) rotate(3.5deg);
+            transform: translate(-4px, -2px) rotate(3.5deg); }
   62% {
-    -webkit-transform: translate(-9px, -9px) rotate(-0.5deg);
-            transform: translate(-9px, -9px) rotate(-0.5deg); }
+    -webkit-transform: translate(2px, -9px) rotate(-1.5deg);
+            transform: translate(2px, -9px) rotate(-1.5deg); }
   64% {
-    -webkit-transform: translate(-1px, -7px) rotate(-1.5deg);
-            transform: translate(-1px, -7px) rotate(-1.5deg); }
+    -webkit-transform: translate(-5px, 1px) rotate(-2.5deg);
+            transform: translate(-5px, 1px) rotate(-2.5deg); }
   66% {
-    -webkit-transform: translate(-6px, -2px) rotate(3.5deg);
-            transform: translate(-6px, -2px) rotate(3.5deg); }
+    -webkit-transform: translate(2px, 1px) rotate(-2.5deg);
+            transform: translate(2px, 1px) rotate(-2.5deg); }
   68% {
-    -webkit-transform: translate(8px, -3px) rotate(3.5deg);
-            transform: translate(8px, -3px) rotate(3.5deg); }
+    -webkit-transform: translate(0px, 9px) rotate(2.5deg);
+            transform: translate(0px, 9px) rotate(2.5deg); }
   70% {
-    -webkit-transform: translate(-3px, -2px) rotate(-0.5deg);
-            transform: translate(-3px, -2px) rotate(-0.5deg); }
+    -webkit-transform: translate(2px, 1px) rotate(-2.5deg);
+            transform: translate(2px, 1px) rotate(-2.5deg); }
   72% {
-    -webkit-transform: translate(9px, 3px) rotate(0.5deg);
-            transform: translate(9px, 3px) rotate(0.5deg); }
+    -webkit-transform: translate(5px, 9px) rotate(2.5deg);
+            transform: translate(5px, 9px) rotate(2.5deg); }
   74% {
-    -webkit-transform: translate(10px, -3px) rotate(2.5deg);
-            transform: translate(10px, -3px) rotate(2.5deg); }
+    -webkit-transform: translate(-5px, 4px) rotate(3.5deg);
+            transform: translate(-5px, 4px) rotate(3.5deg); }
   76% {
-    -webkit-transform: translate(-1px, 8px) rotate(-0.5deg);
-            transform: translate(-1px, 8px) rotate(-0.5deg); }
+    -webkit-transform: translate(-8px, -2px) rotate(1.5deg);
+            transform: translate(-8px, -2px) rotate(1.5deg); }
   78% {
-    -webkit-transform: translate(2px, 2px) rotate(0.5deg);
-            transform: translate(2px, 2px) rotate(0.5deg); }
+    -webkit-transform: translate(3px, 9px) rotate(-2.5deg);
+            transform: translate(3px, 9px) rotate(-2.5deg); }
   80% {
-    -webkit-transform: translate(0px, -4px) rotate(2.5deg);
-            transform: translate(0px, -4px) rotate(2.5deg); }
+    -webkit-transform: translate(7px, 10px) rotate(0.5deg);
+            transform: translate(7px, 10px) rotate(0.5deg); }
   82% {
-    -webkit-transform: translate(1px, 6px) rotate(-0.5deg);
-            transform: translate(1px, 6px) rotate(-0.5deg); }
+    -webkit-transform: translate(7px, 10px) rotate(-1.5deg);
+            transform: translate(7px, 10px) rotate(-1.5deg); }
   84% {
-    -webkit-transform: translate(2px, 0px) rotate(1.5deg);
-            transform: translate(2px, 0px) rotate(1.5deg); }
+    -webkit-transform: translate(3px, -9px) rotate(3.5deg);
+            transform: translate(3px, -9px) rotate(3.5deg); }
   86% {
-    -webkit-transform: translate(-6px, 8px) rotate(1.5deg);
-            transform: translate(-6px, 8px) rotate(1.5deg); }
+    -webkit-transform: translate(10px, 3px) rotate(-2.5deg);
+            transform: translate(10px, 3px) rotate(-2.5deg); }
   88% {
-    -webkit-transform: translate(8px, -1px) rotate(-0.5deg);
-            transform: translate(8px, -1px) rotate(-0.5deg); }
+    -webkit-transform: translate(-8px, -1px) rotate(0.5deg);
+            transform: translate(-8px, -1px) rotate(0.5deg); }
   90% {
-    -webkit-transform: translate(-1px, -1px) rotate(0.5deg);
-            transform: translate(-1px, -1px) rotate(0.5deg); }
+    -webkit-transform: translate(-9px, -2px) rotate(2.5deg);
+            transform: translate(-9px, -2px) rotate(2.5deg); }
   92% {
-    -webkit-transform: translate(2px, 8px) rotate(-2.5deg);
-            transform: translate(2px, 8px) rotate(-2.5deg); }
+    -webkit-transform: translate(-9px, 4px) rotate(1.5deg);
+            transform: translate(-9px, 4px) rotate(1.5deg); }
   94% {
-    -webkit-transform: translate(5px, 6px) rotate(1.5deg);
-            transform: translate(5px, 6px) rotate(1.5deg); }
+    -webkit-transform: translate(9px, 8px) rotate(-1.5deg);
+            transform: translate(9px, 8px) rotate(-1.5deg); }
   96% {
-    -webkit-transform: translate(0px, -7px) rotate(3.5deg);
-            transform: translate(0px, -7px) rotate(3.5deg); }
+    -webkit-transform: translate(10px, -3px) rotate(-1.5deg);
+            transform: translate(10px, -3px) rotate(-1.5deg); }
   98% {
-    -webkit-transform: translate(-4px, 10px) rotate(-1.5deg);
-            transform: translate(-4px, 10px) rotate(-1.5deg); }
+    -webkit-transform: translate(-6px, 0px) rotate(1.5deg);
+            transform: translate(-6px, 0px) rotate(1.5deg); }
   0%, 100% {
     -webkit-transform: translate(0, 0) rotate(0);
             transform: translate(0, 0) rotate(0); } }
 
 @keyframes shake-slow {
   2% {
-    -webkit-transform: translate(0px, -8px) rotate(0.5deg);
-            transform: translate(0px, -8px) rotate(0.5deg); }
+    -webkit-transform: translate(-9px, -8px) rotate(-2.5deg);
+            transform: translate(-9px, -8px) rotate(-2.5deg); }
   4% {
-    -webkit-transform: translate(9px, -1px) rotate(3.5deg);
-            transform: translate(9px, -1px) rotate(3.5deg); }
+    -webkit-transform: translate(-8px, -4px) rotate(3.5deg);
+            transform: translate(-8px, -4px) rotate(3.5deg); }
   6% {
-    -webkit-transform: translate(-1px, 6px) rotate(0.5deg);
-            transform: translate(-1px, 6px) rotate(0.5deg); }
+    -webkit-transform: translate(-7px, 3px) rotate(3.5deg);
+            transform: translate(-7px, 3px) rotate(3.5deg); }
   8% {
-    -webkit-transform: translate(2px, 1px) rotate(-1.5deg);
-            transform: translate(2px, 1px) rotate(-1.5deg); }
+    -webkit-transform: translate(-8px, 6px) rotate(0.5deg);
+            transform: translate(-8px, 6px) rotate(0.5deg); }
   10% {
-    -webkit-transform: translate(-7px, -4px) rotate(-1.5deg);
-            transform: translate(-7px, -4px) rotate(-1.5deg); }
+    -webkit-transform: translate(3px, 9px) rotate(2.5deg);
+            transform: translate(3px, 9px) rotate(2.5deg); }
   12% {
-    -webkit-transform: translate(2px, -7px) rotate(0.5deg);
-            transform: translate(2px, -7px) rotate(0.5deg); }
+    -webkit-transform: translate(-9px, 9px) rotate(3.5deg);
+            transform: translate(-9px, 9px) rotate(3.5deg); }
   14% {
-    -webkit-transform: translate(8px, 10px) rotate(-1.5deg);
-            transform: translate(8px, 10px) rotate(-1.5deg); }
+    -webkit-transform: translate(-8px, 1px) rotate(-0.5deg);
+            transform: translate(-8px, 1px) rotate(-0.5deg); }
   16% {
-    -webkit-transform: translate(-6px, 9px) rotate(0.5deg);
-            transform: translate(-6px, 9px) rotate(0.5deg); }
+    -webkit-transform: translate(-9px, -4px) rotate(-2.5deg);
+            transform: translate(-9px, -4px) rotate(-2.5deg); }
   18% {
-    -webkit-transform: translate(-8px, -5px) rotate(-0.5deg);
-            transform: translate(-8px, -5px) rotate(-0.5deg); }
+    -webkit-transform: translate(-9px, -1px) rotate(-1.5deg);
+            transform: translate(-9px, -1px) rotate(-1.5deg); }
   20% {
-    -webkit-transform: translate(8px, -5px) rotate(3.5deg);
-            transform: translate(8px, -5px) rotate(3.5deg); }
+    -webkit-transform: translate(-4px, -5px) rotate(-2.5deg);
+            transform: translate(-4px, -5px) rotate(-2.5deg); }
   22% {
-    -webkit-transform: translate(9px, -8px) rotate(-0.5deg);
-            transform: translate(9px, -8px) rotate(-0.5deg); }
+    -webkit-transform: translate(6px, -4px) rotate(-2.5deg);
+            transform: translate(6px, -4px) rotate(-2.5deg); }
   24% {
-    -webkit-transform: translate(4px, 5px) rotate(-2.5deg);
-            transform: translate(4px, 5px) rotate(-2.5deg); }
+    -webkit-transform: translate(7px, 6px) rotate(-1.5deg);
+            transform: translate(7px, 6px) rotate(-1.5deg); }
   26% {
-    -webkit-transform: translate(5px, -3px) rotate(-1.5deg);
-            transform: translate(5px, -3px) rotate(-1.5deg); }
+    -webkit-transform: translate(-9px, -7px) rotate(0.5deg);
+            transform: translate(-9px, -7px) rotate(0.5deg); }
   28% {
-    -webkit-transform: translate(9px, 1px) rotate(2.5deg);
-            transform: translate(9px, 1px) rotate(2.5deg); }
+    -webkit-transform: translate(8px, -3px) rotate(1.5deg);
+            transform: translate(8px, -3px) rotate(1.5deg); }
   30% {
-    -webkit-transform: translate(-3px, -7px) rotate(2.5deg);
-            transform: translate(-3px, -7px) rotate(2.5deg); }
+    -webkit-transform: translate(3px, 8px) rotate(0.5deg);
+            transform: translate(3px, 8px) rotate(0.5deg); }
   32% {
-    -webkit-transform: translate(8px, 3px) rotate(-1.5deg);
-            transform: translate(8px, 3px) rotate(-1.5deg); }
+    -webkit-transform: translate(3px, -9px) rotate(-1.5deg);
+            transform: translate(3px, -9px) rotate(-1.5deg); }
   34% {
-    -webkit-transform: translate(-8px, -4px) rotate(-1.5deg);
-            transform: translate(-8px, -4px) rotate(-1.5deg); }
+    -webkit-transform: translate(-2px, 0px) rotate(-0.5deg);
+            transform: translate(-2px, 0px) rotate(-0.5deg); }
   36% {
-    -webkit-transform: translate(4px, 0px) rotate(0.5deg);
-            transform: translate(4px, 0px) rotate(0.5deg); }
+    -webkit-transform: translate(-2px, -3px) rotate(0.5deg);
+            transform: translate(-2px, -3px) rotate(0.5deg); }
   38% {
-    -webkit-transform: translate(5px, -1px) rotate(1.5deg);
-            transform: translate(5px, -1px) rotate(1.5deg); }
+    -webkit-transform: translate(-1px, 9px) rotate(0.5deg);
+            transform: translate(-1px, 9px) rotate(0.5deg); }
   40% {
-    -webkit-transform: translate(-6px, -5px) rotate(0.5deg);
-            transform: translate(-6px, -5px) rotate(0.5deg); }
+    -webkit-transform: translate(1px, -9px) rotate(-0.5deg);
+            transform: translate(1px, -9px) rotate(-0.5deg); }
   42% {
-    -webkit-transform: translate(-6px, 3px) rotate(-1.5deg);
-            transform: translate(-6px, 3px) rotate(-1.5deg); }
+    -webkit-transform: translate(4px, -2px) rotate(-1.5deg);
+            transform: translate(4px, -2px) rotate(-1.5deg); }
   44% {
-    -webkit-transform: translate(-8px, -1px) rotate(3.5deg);
-            transform: translate(-8px, -1px) rotate(3.5deg); }
+    -webkit-transform: translate(1px, -9px) rotate(2.5deg);
+            transform: translate(1px, -9px) rotate(2.5deg); }
   46% {
-    -webkit-transform: translate(8px, -3px) rotate(-1.5deg);
-            transform: translate(8px, -3px) rotate(-1.5deg); }
+    -webkit-transform: translate(9px, 1px) rotate(3.5deg);
+            transform: translate(9px, 1px) rotate(3.5deg); }
   48% {
-    -webkit-transform: translate(-8px, 4px) rotate(-1.5deg);
-            transform: translate(-8px, 4px) rotate(-1.5deg); }
+    -webkit-transform: translate(-9px, -3px) rotate(1.5deg);
+            transform: translate(-9px, -3px) rotate(1.5deg); }
   50% {
-    -webkit-transform: translate(-3px, 0px) rotate(2.5deg);
-            transform: translate(-3px, 0px) rotate(2.5deg); }
+    -webkit-transform: translate(-3px, 3px) rotate(-0.5deg);
+            transform: translate(-3px, 3px) rotate(-0.5deg); }
   52% {
-    -webkit-transform: translate(-7px, -5px) rotate(1.5deg);
-            transform: translate(-7px, -5px) rotate(1.5deg); }
+    -webkit-transform: translate(-9px, 9px) rotate(-1.5deg);
+            transform: translate(-9px, 9px) rotate(-1.5deg); }
   54% {
-    -webkit-transform: translate(10px, 7px) rotate(-2.5deg);
-            transform: translate(10px, 7px) rotate(-2.5deg); }
+    -webkit-transform: translate(-9px, -9px) rotate(-1.5deg);
+            transform: translate(-9px, -9px) rotate(-1.5deg); }
   56% {
-    -webkit-transform: translate(-1px, -4px) rotate(-2.5deg);
-            transform: translate(-1px, -4px) rotate(-2.5deg); }
+    -webkit-transform: translate(5px, -9px) rotate(-0.5deg);
+            transform: translate(5px, -9px) rotate(-0.5deg); }
   58% {
-    -webkit-transform: translate(2px, 9px) rotate(2.5deg);
-            transform: translate(2px, 9px) rotate(2.5deg); }
+    -webkit-transform: translate(5px, -6px) rotate(-2.5deg);
+            transform: translate(5px, -6px) rotate(-2.5deg); }
   60% {
-    -webkit-transform: translate(-8px, -3px) rotate(0.5deg);
-            transform: translate(-8px, -3px) rotate(0.5deg); }
+    -webkit-transform: translate(-4px, -2px) rotate(3.5deg);
+            transform: translate(-4px, -2px) rotate(3.5deg); }
   62% {
-    -webkit-transform: translate(-9px, -9px) rotate(-0.5deg);
-            transform: translate(-9px, -9px) rotate(-0.5deg); }
+    -webkit-transform: translate(2px, -9px) rotate(-1.5deg);
+            transform: translate(2px, -9px) rotate(-1.5deg); }
   64% {
-    -webkit-transform: translate(-1px, -7px) rotate(-1.5deg);
-            transform: translate(-1px, -7px) rotate(-1.5deg); }
+    -webkit-transform: translate(-5px, 1px) rotate(-2.5deg);
+            transform: translate(-5px, 1px) rotate(-2.5deg); }
   66% {
-    -webkit-transform: translate(-6px, -2px) rotate(3.5deg);
-            transform: translate(-6px, -2px) rotate(3.5deg); }
+    -webkit-transform: translate(2px, 1px) rotate(-2.5deg);
+            transform: translate(2px, 1px) rotate(-2.5deg); }
   68% {
-    -webkit-transform: translate(8px, -3px) rotate(3.5deg);
-            transform: translate(8px, -3px) rotate(3.5deg); }
+    -webkit-transform: translate(0px, 9px) rotate(2.5deg);
+            transform: translate(0px, 9px) rotate(2.5deg); }
   70% {
-    -webkit-transform: translate(-3px, -2px) rotate(-0.5deg);
-            transform: translate(-3px, -2px) rotate(-0.5deg); }
+    -webkit-transform: translate(2px, 1px) rotate(-2.5deg);
+            transform: translate(2px, 1px) rotate(-2.5deg); }
   72% {
-    -webkit-transform: translate(9px, 3px) rotate(0.5deg);
-            transform: translate(9px, 3px) rotate(0.5deg); }
+    -webkit-transform: translate(5px, 9px) rotate(2.5deg);
+            transform: translate(5px, 9px) rotate(2.5deg); }
   74% {
-    -webkit-transform: translate(10px, -3px) rotate(2.5deg);
-            transform: translate(10px, -3px) rotate(2.5deg); }
+    -webkit-transform: translate(-5px, 4px) rotate(3.5deg);
+            transform: translate(-5px, 4px) rotate(3.5deg); }
   76% {
-    -webkit-transform: translate(-1px, 8px) rotate(-0.5deg);
-            transform: translate(-1px, 8px) rotate(-0.5deg); }
+    -webkit-transform: translate(-8px, -2px) rotate(1.5deg);
+            transform: translate(-8px, -2px) rotate(1.5deg); }
   78% {
-    -webkit-transform: translate(2px, 2px) rotate(0.5deg);
-            transform: translate(2px, 2px) rotate(0.5deg); }
+    -webkit-transform: translate(3px, 9px) rotate(-2.5deg);
+            transform: translate(3px, 9px) rotate(-2.5deg); }
   80% {
-    -webkit-transform: translate(0px, -4px) rotate(2.5deg);
-            transform: translate(0px, -4px) rotate(2.5deg); }
+    -webkit-transform: translate(7px, 10px) rotate(0.5deg);
+            transform: translate(7px, 10px) rotate(0.5deg); }
   82% {
-    -webkit-transform: translate(1px, 6px) rotate(-0.5deg);
-            transform: translate(1px, 6px) rotate(-0.5deg); }
+    -webkit-transform: translate(7px, 10px) rotate(-1.5deg);
+            transform: translate(7px, 10px) rotate(-1.5deg); }
   84% {
-    -webkit-transform: translate(2px, 0px) rotate(1.5deg);
-            transform: translate(2px, 0px) rotate(1.5deg); }
+    -webkit-transform: translate(3px, -9px) rotate(3.5deg);
+            transform: translate(3px, -9px) rotate(3.5deg); }
   86% {
-    -webkit-transform: translate(-6px, 8px) rotate(1.5deg);
-            transform: translate(-6px, 8px) rotate(1.5deg); }
+    -webkit-transform: translate(10px, 3px) rotate(-2.5deg);
+            transform: translate(10px, 3px) rotate(-2.5deg); }
   88% {
-    -webkit-transform: translate(8px, -1px) rotate(-0.5deg);
-            transform: translate(8px, -1px) rotate(-0.5deg); }
+    -webkit-transform: translate(-8px, -1px) rotate(0.5deg);
+            transform: translate(-8px, -1px) rotate(0.5deg); }
   90% {
-    -webkit-transform: translate(-1px, -1px) rotate(0.5deg);
-            transform: translate(-1px, -1px) rotate(0.5deg); }
+    -webkit-transform: translate(-9px, -2px) rotate(2.5deg);
+            transform: translate(-9px, -2px) rotate(2.5deg); }
   92% {
-    -webkit-transform: translate(2px, 8px) rotate(-2.5deg);
-            transform: translate(2px, 8px) rotate(-2.5deg); }
+    -webkit-transform: translate(-9px, 4px) rotate(1.5deg);
+            transform: translate(-9px, 4px) rotate(1.5deg); }
   94% {
-    -webkit-transform: translate(5px, 6px) rotate(1.5deg);
-            transform: translate(5px, 6px) rotate(1.5deg); }
+    -webkit-transform: translate(9px, 8px) rotate(-1.5deg);
+            transform: translate(9px, 8px) rotate(-1.5deg); }
   96% {
-    -webkit-transform: translate(0px, -7px) rotate(3.5deg);
-            transform: translate(0px, -7px) rotate(3.5deg); }
+    -webkit-transform: translate(10px, -3px) rotate(-1.5deg);
+            transform: translate(10px, -3px) rotate(-1.5deg); }
   98% {
-    -webkit-transform: translate(-4px, 10px) rotate(-1.5deg);
-            transform: translate(-4px, 10px) rotate(-1.5deg); }
+    -webkit-transform: translate(-6px, 0px) rotate(1.5deg);
+            transform: translate(-6px, 0px) rotate(1.5deg); }
   0%, 100% {
     -webkit-transform: translate(0, 0) rotate(0);
             transform: translate(0, 0) rotate(0); } }
@@ -4336,8 +4336,7 @@ nav {
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
   padding-top: 20px;
-  padding-bottom: 20px;
-  overflow: hidden; }
+  padding-bottom: 20px; }
 
 .headSale {
   background-color: #5ad9f9; }
@@ -4405,7 +4404,7 @@ nav {
     .myBord .myRoom::before {
       content: "";
       display: block;
-      width: 150px;
+      width: 122px;
       position: absolute;
       border-bottom: 1px solid #d8d8d8;
       -webkit-transform: rotate(90deg);
@@ -4418,7 +4417,7 @@ nav {
     .myBord .myRoom::after {
       content: "";
       display: block;
-      width: 150px;
+      width: 122px;
       position: absolute;
       border-bottom: 1px solid #d8d8d8;
       -webkit-transform: rotate(90deg);
@@ -4954,7 +4953,10 @@ nav {
     font-family: Arial, sans-serif;
     font-size: 14px; }
     .custom-radios input[type="radio"] + label span {
-      display: inline-block;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
       width: 29px;
       height: 29px;
       margin: -1px 21px 0 0;
@@ -4966,6 +4968,15 @@ nav {
       text-align: center;
       line-height: 44px;
       position: relative; }
+      .custom-radios input[type="radio"] + label span .img-thumbnail {
+        -webkit-border-radius: 10px;
+                border-radius: 10px;
+        max-width: 98%;
+        height: auto;
+        margin: 0 auto;
+        padding: 1px;
+        background-color: none;
+        border: none; }
   .custom-radios input[type="radio"]#color-1 + label span {
     background-color: #2ecc71; }
   .custom-radios input[type="radio"]#color-2 + label span {

@@ -119,4 +119,13 @@ $(document).ready(function () {
       
    
 
+$('#button-account').on('click', function(){
+    $('#castom_login  a').trigger('click');
+    alert('asfdsdf');
 });
+});
+   
+
+function collapseAll(){
+        $('#castom_login  a[href=\'#collapse-checkout-option\']').trigger('click');
+}

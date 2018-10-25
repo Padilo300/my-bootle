@@ -14,4 +14,9 @@ $_['text_logout']        = 'Выход';
 $_['text_checkout']      = 'Оформление заказа';
 $_['text_search']        = 'Поиск';
 $_['text_all']           = 'Смотреть Все';
+$_['castom_delivery']    = 'Доставка';
+$_['castom_payment']     = 'Оплата';
+$_['castom_contact']     = 'Контакты';
 
+$_['dodatkowy_rabat']    = 'Безплатная доставка при покупке на';
+$_['kod']                = 'код';

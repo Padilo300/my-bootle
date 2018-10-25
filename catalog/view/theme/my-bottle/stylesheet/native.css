@@ -1,9 +1,27 @@
 .breadcrumb > li a{
     white-space: pre-wrap;
-    color: #5ad9f9;
+	color: #5ad9f9;
+	text-transform: uppercase;
 }
 
 
+.logoAndLanguage .languageToogle button{
+	text-align: left;
+}
+@media screen and (max-width: 767px){
+	#form-language > div > ul{
+		left: -90px !important;
+	}
+}
+#product-product #content > div > div.tab-content{
+	margin: 50px auto;
+}
+#checkout-cart #accordion{
+	display: none;
+}
+footer.footer{
+	margin-top: 150px;
+}
 .breadcrumb {
     margin: 0 0 20px 0;
     padding: 8px 0;
@@ -46,3 +64,27 @@
     border-color: #5ad9f9;
 }
 
+.footer{
+	overflow: hidden;
+}
+#checkout-cart div.input-group{
+	display: flex;
+}
+@media screen and (max-width: 767px){
+	.breadcrumb{
+		margin: 10px 0 20px 0;
+		font-size: 0.75em;
+	}
+	.breadcrumb > li{
+		padding: 0 5px 0 7px;
+	}
+	.breadcrumb > li:after{
+		right: 2px;
+	}
+	
+
+}
+.custom-radios input[type="radio"] + label span .img-thumbnail{
+	width: auto;
+	max-height: 100%;
+}

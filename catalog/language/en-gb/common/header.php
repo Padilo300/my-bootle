@@ -14,3 +14,10 @@ $_['text_logout']        = 'Logout';
 $_['text_checkout']      = 'Checkout';
 $_['text_search']        = 'Search';
 $_['text_all']           = 'Show All';
+$_['castom_delivery']    = 'Delivery';
+$_['castom_payment']     = 'Payment';
+$_['castom_contact']     = 'Contact';
+$_['mainPage']           = 'Home';
+
+$_['dodatkowy_rabat']    = 'Free Shipping on purchase';
+$_['kod']                = 'code';
